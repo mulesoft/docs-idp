@@ -1,0 +1,42 @@
+= IDP and Your Data
+
+Einstein Analyzers are prompts that IDP uses to communicate with Einstein Generative AI and produce a result. IDP uses your data to add context and personalization to your prompt, a method known as grounding. In IDP, this data is used as follows: 
+
+[%header%autowidth.spread,cols=".^a,.^a,.^a,.^a]
+|===
+| Object | Fields | Description
+| Knowledge 
+a|
+* Document Title
+* Document Fields 
+* Document Values
+| Generates the result of the required analysis.
+|===
+
+Your data stays inside Einstein and isn't shared with the Large Language Models (LLMs). 
+//See xref:about-einstein-ai#gen-ai-and-your-data[] for more information.
+
+== About Einstein Generative AI
+
+Einstein brings trusted generative AI technology to your business at scale with out-of-the-box capabilities across the Customer 360. You can choose from an ecosystem of public AI models, like OpenAI, one of the proprietary Salesforce models, or your own model to securely connect to your customer data. Salesforce built Einstein generative AI with trust at the forefront, requiring the privacy, compliance, and integrity of business data while using LLMs.
+
+[[gen-ai-and-your-data]]
+== Generative AI and Your Data
+
+At Salesforce, trust is our #1 value. To keep your data secure, Salesforce has agreements in place with LLM providers, like OpenAI. You can leverage generative AI capabilities without your private data being used to train the LLM.
+
+== Trusted Generative AI 
+
+Salesforce generative AI solutions are designed, developed, and delivered based on five principles for trusted generative AI.
+
+* Accuracy: We prioritize accuracy, precision, and recall in our models, and we back our model outputs up with explanations and sources whenever possible. We recommend that a human check model output before sharing with end users. 
+* Safety: We work to mitigate bias, toxicity, and harmful outputs in our models using industry-leading techniques. We protect the privacy of personally identifiable information (PII) in our data by adding guardrails around this data. 
+* Honesty: We ensure that the data we use in our models respects data provenance and we have consent to use the data.  
+* Empowerment: Whenever possible, we design models to include human involvement as part of the workflow. 
+* Sustainability: We strive towards building right-sized models that prioritize accuracy and reducing our carbon footprint.  
+
+Learn more at https://www.salesforceairesearch.com/trusted-ai[Salesforce AI Research: Trusted AI^]. 
+
+== Troubleshooting Einstein Generative AI
+
+Generative AI uses LLMs to generate the output. Because LLMs are trained by other organizations, the output isn’t always what you expect. If the output doesn’t meet your expectations, you can generate a new output by starting over. The generated output from the previous attempt isn’t saved and the new output replaces it. 
