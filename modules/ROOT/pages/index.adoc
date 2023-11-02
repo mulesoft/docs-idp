@@ -1,13 +1,13 @@
 = Intelligent Document Processing (IDP)
 
-Intelligent Document Processing (IDP) enables you to extract data from documents and do further analysis of the content using Einstein AI capabilities. 
+Intelligent Document Processing (IDP) enables you to extract data from documents and do further analysis of the content using Einstein AI capabilities. IDP uses third-party data extraction technologies like AWS Textract and provides a simple interface so you don't need to log in or subscribe to external services.  
 
 Your data stays inside Einstein and isn't shared with the Large Language Models (LLMs). See xref:about-einstein-ai#gen-ai-and-your-data[IDP and Your Data] for more information.
 
 Use IDP to create Document Actions, multi-step flows that enable you to configure document data extraction and assign human reviewers to assert the results. 
 
 [NOTE]
-This feature is supported only in English.
+Einstein features are supported only in English.
 
 == See Also 
 
