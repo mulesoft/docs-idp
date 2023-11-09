@@ -4,7 +4,6 @@ To process a document and extract its data:
 
 . In the navigation panel, click *Document Actions*.
 . Select the type of Document Action to use, for example, *Invoice Action*.
-For example, *Invoice Action*.  
 . Click *Choose file* and select the file to analyze. 
 . (Optional) Configure queries and analyzers using the *Add Queries and Analyzers (Optional)* submenu:
 .. Under *Query*, click *Add New*.
