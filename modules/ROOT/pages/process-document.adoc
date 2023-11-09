@@ -28,7 +28,7 @@ _Queries_ are questions in natural language that enable you to extract specific 
 * When is the due date? 
 * What is the highest price? 
 
-Analyzers are requests in natural language that enable you to further examine the document using Einstein AI capabilities, for example: 
+_Analyzers_ are requests in natural language that enable you to further examine the document using Einstein AI capabilities, for example: 
 
 * Give me a summary of this document 
 * Give me the itemized list of all purchased elements 
