@@ -30,7 +30,7 @@ _Queries_ are questions in natural language that enable you to extract specific 
 
 _Analyzers_ are requests in natural language that enable you to further examine the document using Einstein AI capabilities, for example: 
 
-* Give me a summary of this document 
+* Give me a summary of this document.
 * Give me the itemized list of all purchased elements.
 * What is the type of this document? 
 * Translate this document to Spanish
