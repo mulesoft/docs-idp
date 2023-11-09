@@ -14,7 +14,7 @@ Einstein features are supported only in English.
 
 A document action is a multi-step process that scans a document using LLMs, filters out fields, and returns a structured response as a JSON object. Each document action defines the types of documents it expects as input and the fields to look for. In this pilot, you cannot create or customize document actions, but you can use the pre-configured document actions IDP provides, such as Generic Document, Invoice, and Purchase Order.
 
-If the document action does not extract all the necessary information, use queries and analizers to further refine the document processing and extract the necessary values.
+If the document action does not extract all the necessary information, use queries and analyzers to further refine the document processing and extract the necessary values.
 
 == See Also 
 
