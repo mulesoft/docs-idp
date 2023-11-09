@@ -39,4 +39,4 @@ Learn more at https://www.salesforceairesearch.com/trusted-ai[Salesforce AI Rese
 
 == Troubleshooting Einstein Generative AI
 
-Generative AI uses LLMs to generate the output. Because LLMs are trained by other organizations, the output isn’t always what you expect. If the output doesn’t meet your expectations, you can generate a new output by starting over. The generated output from the previous attempt isn’t saved and the new output replaces it. 
+Generative AI uses LLMs to generate the output. Because LLMs are trained by other organizations, the output isn’t always what you expect. If the output doesn’t meet your expectations, you can generate new output by starting over. The generated output from the previous attempt isn’t saved and the new output replaces it. 
