@@ -1,6 +1,6 @@
 = IDP and Your Data
 
-Einstein Analyzers are prompts that IDP uses to communicate with Einstein Generative AI and produce a result. IDP uses your data to add context and personalization to your prompt, a method known as grounding. In IDP, this data is used as follows: 
+Einstein Analyzers are prompts that IDP uses to communicate with Einstein Generative AI and produce a result. IDP uses your data to add context and personalization to your prompt, a process known as _grounding_. IDP uses this data as follows: 
 
 [%header%autowidth.spread,cols=".^a,.^a,.^a,.^a]
 |===
