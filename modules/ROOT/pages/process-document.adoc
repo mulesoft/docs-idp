@@ -1,0 +1,40 @@
+= Processing Documents 
+
+To process a document and extract its data:
+
+. In the navigation panel, click *Document Actions*.
+. Select the type of Document Action to use, for example, *Invoice Action*.
+. Click *Choose file* and select the file to analyze. 
+. (Optional) Configure queries and analyzers using the *Add Queries and Analyzers (Optional)* submenu:
+.. Under *Query*, click *Add New*.
+.. Provide a question in natural language and a unique identifier for the query. 
+.. Under *Einstein Analyzer*, click *Add New*. 
+.. Provide an analyzer in natural language and a unique identifier for the query. 
++
+[IMPORTANT]
+A Query cannot use the same identifier as an Analyzer; these identifiers must be unique. 
+. Click *Run* to execute the data extraction. 
+
+After the data extraction finishes, you can visualize the result and download it in JSON format. 
+
+Extracted values that have a confidence score lower than 80% require human review. 
+
+== Queries and Analyzers 
+
+_Queries_ are questions in natural language that enable you to extract specific data from the document, for example: 
+
+* What is the subtotal amount?  
+* What is the grand total? 
+* When is the due date? 
+* What is the highest price? 
+
+_Analyzers_ are requests in natural language that enable you to further examine the document using Einstein AI capabilities, for example: 
+
+* Give me a summary of this document.
+* Give me the itemized list of all purchased elements.
+* What is the type of this document? 
+* Translate this document to Spanish.
+
+== See Also 
+
+* xref:review-results.adoc[]
