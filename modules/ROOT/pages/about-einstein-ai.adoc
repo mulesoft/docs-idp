@@ -29,7 +29,7 @@ At Salesforce, trust is our #1 value. To keep your data secure, Salesforce has a
 
 Salesforce generative AI solutions are designed, developed, and delivered based on five principles for trusted generative AI:
 
-* Accuracy: We prioritize accuracy, precision, and recall in our models, and we back our model outputs up with explanations and sources whenever possible. We recommend that a human check model output before sharing with end users. 
+* Accuracy: We prioritize accuracy, precision, and recall in our models, and we back up our model outputs with explanations and sources whenever possible. We recommend that a human check all model output before sharing it with end users. 
 * Safety: We work to mitigate bias, toxicity, and harmful outputs in our models using industry-leading techniques. We protect the privacy of personally identifiable information (PII) in our data by adding guardrails around this data. 
 * Honesty: We ensure that the data we use in our models respects data provenance and we have consent to use the data.  
 * Empowerment: Whenever possible, we design models to include human involvement as part of the workflow. 
