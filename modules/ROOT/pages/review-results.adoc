@@ -1,6 +1,6 @@
 = Reviewing Results
 
-After IDP processes a document and extract its values, the document is sent for review when the extracted values have a confidence score lower than 80%. 
+After IDP processes a document and extracts its values, the document is sent for review when the extracted values have a confidence score lower than 80%. 
 
 To review the results of a processed document: 
 
