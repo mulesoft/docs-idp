@@ -12,7 +12,7 @@ To process a document and extract its data:
 .. Provide an analyzer in natural language and a unique identifier for the query. 
 +
 [IMPORTANT]
-A Query cannot use the same identifier as an Analyzer, these must be unique. 
+A Query cannot use the same identifier as an Analyzer; these identifiers must be unique. 
 . Click *Run* to execute the data extraction. 
 
 After the data extraction finishes, you can visualize the result and download it in JSON format. 
