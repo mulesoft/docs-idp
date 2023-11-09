@@ -21,7 +21,7 @@ Extracted values that have a confidence score lower than 80% require human revie
 
 == Queries and Analyzers 
 
-Queries are questions in natural language that enable you to extract specific data from the document, for example: 
+_Queries_ are questions in natural language that enable you to extract specific data from the document, for example: 
 
 * What is the subtotal amount?  
 * What is the grand total? 
