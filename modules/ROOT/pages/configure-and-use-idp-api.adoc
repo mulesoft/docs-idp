@@ -61,15 +61,16 @@ After you configure the Connected App, make the following API call to get the to
 
 [source,bash,linenums]
 ----
-curl --location --request POST 'https://qax.anypoint.mulesoft.com/accounts/token' \
+curl --location --request POST 'https://anypoint.mulesoft.com/accounts/token' \ // <1>
 --header 'Content-Type: application/json' \
 --data-raw '{
  "grant_type": "client_credentials",
- "client_id": "<connected-app-client-id>", // <1>
- "client_secret": "<connected-app-client-secret>" // <2> 
+ "client_id": "<connected-app-client-id>", // <2>
+ "client_secret": "<connected-app-client-secret>" // <3> 
 }'
 ----
 [calloutlist]
+.. If you are in the EU region, add the `eu1.` subdomain to `anypoint.mulesoft.com`.
 .. Replace `<connected-app-client-id>` with the client ID from your Connected App.
 .. Replace `<connected-app-client-secret>` with the client Secret from your Connected App.
 
