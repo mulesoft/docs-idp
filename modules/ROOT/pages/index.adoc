@@ -1,42 +1,16 @@
 = Doc AI
 
-Doc AI enables you to extract data from documents and further analyze the content using Einstein AI capabilities. Each processed document shows a confidence score for each extracted field. When this value is lower than the defined threshold, the document is sent for review by a human to verify and confirm the accuracy of the extracted values.
+Doc AI enables you to extract data from documents and further analyze the content using AI capabilities. Each processed document shows a confidence score for each extracted field. When this value is lower than the defined threshold, the document is sent for review by a human to verify and confirm the accuracy of the extracted values.
 
-Doc AI uses third-party data extraction technologies like AWS Textract, provides a simple interface so you don't need to log in or subscribe to external services, and enables you to create and publish document actions as APIs that you can consume for further integration with RPA processes, Salesforce Flow, and other systems. 
+Doc AI uses third-party data extraction technologies like AWS Textract, provides a simple interface so you don't need to log in or subscribe to external services, and enables you to create and publish document actions as APIs that you can consume for further integration with RPA processes and other systems. 
 
 A document action is a multi-step process that scans a document using LLMs, filters out fields, and returns a structured response as a JSON object. Each document action defines the types of documents it expects as input and the fields to search for. You can configure Queries to enhance and refine the data extraction process. 
 
 Use Doc AI to programmatically analyze invoices, purchase orders, and other documents and then consume the extracted values as a JSON response that you can use for further integration.
 // You can configure different reviewers for each Document Action. 
-//Your data stays inside Einstein and isn't shared with the Large Language Models (LLMs). See xref:about-einstein-ai#gen-ai-and-your-data[IDP and Your Data] for more information.
-
-////
-== Document Actions
-
-A document action is a multi-step process that scans a document using LLMs, filters out fields, and returns a structured response as a JSON object. Each document action defines the types of documents it expects as input and the fields to search for. You can configure Queries to enhance and refine the data extraction process. 
-
-Doc AI provides some pre-configured document actions such as Generic Document, Invoice, and Purchase Order which you use as starting points to create your own customized document actions. Select the document action type that better aligns with the document to process. 
-
-== Human Reviews
-
-Document actions return a JSON response that contains the extracted fields and their detected values. Each of these values has a confidence score that determines the accuracy of the value during the extraction. When the confidence score is lower than the defined threshold, the document is queued for human review. 
-
-== JSON Response
-
-After a document action finishes processing a document, there are two possible outcomes: 
-
-* All fields are extracted with a confidence level above the configured threshold
-+
-In this case, the JSON response is available for consumption after the extraction finishes. If you are calling Doc AI from a Salesforce Flow, Doc AI makes a callback to the referenced Flow and sends the resulting JSON response. 
-
-* At least one extracted field shows a confidence score below the configured threshold
-+
-In this case, the result is queued for review by a human. After a reviewer verifies and approves the result, the JSON response becomes available for consumption. If the document action was triggered from a Salesforce Flow, Doc AI makes a callback to the referenced Flow and sends the resulting JSON response after the review finishes. 
-////
 
 == See Also 
 
-// Document Processing
 // Creating Document Actions
 // Reviewing Processed Documents
 // Automating Document Processing
