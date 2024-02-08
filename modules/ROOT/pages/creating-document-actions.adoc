@@ -1,0 +1,48 @@
+= Creating Document Actions 
+
+Document actions are configurable schema definitions that enable you to process documents and extract their data. Create document actions using any of the pre-defined types as a template and then customize the fields to fit your business needs. 
+
+To create a document action, complete the following tasks:
+
+. <<upload-files>>
+. <<configure-schema>>
+. <<add-questions>>
+
+[[upload-files]]
+== Upload Sample Files and Preview the Results
+
+. In the navigation panel, click *Document Actions*.
+. Click *Create New*.
+. Select the type of document action to use as a template. 
+. Click *Select files* and upload sample files to analyze and configure the extraction. 
+. Click *Run* to analyze the files and get a preview of the results. 
+
+After uploading the sample files, configure the schema. 
+
+[[configure-schema]]
+== Configure the Schema for the Extraction
+
+. In the *Outputs* panel, click *Fields* and select any of the extrated field names to configure the following settings: 
+** *Visibility*: Defines if this field shows in the output JSON result. 
+** *Threshold*: Defines the minimum required confidence score accepted for this field. If the returned *Confidence* value is below the threshold, the document is queued for human review. 
+** *Required*: Defines if the document goes to review when the required field is missing or cannot be extracted. 
+. If your document contains tables, click *Tables* to configure the extraction settings for the table fields. 
+
+After configuring the schema, add Questions to your document action.
+
+[[add-questions]]
+== Add Questions to Refine the Result
+
+. In the *Outputs* panel, click *Questions*.
+. Click *Add New*.
+. Provide a unique name for the query and a question in natural language.
+. Click *Add*.
++
+When you click *Add and Run*, Doc AI saves the question, processes the document, and shows the results along with a confidence score for the specified question. 
+////
+[IMPORTANT]
+A Query cannot use the same identifier as an Analyzer; these identifiers must be unique. 
+////
+. Click *Save*.
+
+//== Publish a Document Action
