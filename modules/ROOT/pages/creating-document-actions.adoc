@@ -1,8 +1,15 @@
 = Creating Document Actions 
 
-Document actions are configurable schema definitions that enable you to process documents and extract their data. Create document actions using any of the pre-defined types as a template and then customize the fields to fit your business needs. 
+Document actions are configurable schema definitions that enable you to process documents and extract their data. Create document actions using any of the pre-defined types as a template and then specify which fields are mandatory, which fields to exclude from the JSON response, and the minimum confidence score expected for each field. 
 
-To create a document action, complete the following tasks:
+Document actions also support questions in natural language that enable you to extract specific data from the document, for example:
+
+* What is the subtotal amount?
+* What is the grand total?
+* When is the due date?
+* What is the highest price?
+
+Creating a document action requires the following tasks:
 
 . <<upload-files>>
 . <<configure-schema>>
@@ -11,10 +18,12 @@ To create a document action, complete the following tasks:
 [[upload-files]]
 == Upload Sample Files and Preview the Results
 
+To start creating a new document action: 
+
 . In the navigation panel, click *Document Actions*.
 . Click *Create New*.
 . Select the type of document action to use as a template. 
-. Click *Select files* and upload sample files to analyze and configure the extraction. 
+. Click *Select files* and upload sample files to analyze. 
 . Click *Run* to analyze the files and get a preview of the results. 
 
 After uploading the sample files, configure the schema. 
