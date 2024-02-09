@@ -2,6 +2,6 @@
 * xref:index.adoc[Overview]
 * xref:document-processing.adoc[]
 ** xref:creating-document-actions.adoc[]
-//* xref:review-results.adoc[]
+** xref:reviewing-processed-documents.adoc[]
 //* xref:configure-and-use-idp-api.adoc[]
 //* xref:about-einstein-ai.adoc[]

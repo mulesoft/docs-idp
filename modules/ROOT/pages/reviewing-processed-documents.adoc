@@ -1,0 +1,18 @@
+= Reviewing Processed Documents 
+
+After a document is processed, Doc AI can queue it for review if:
+
+* At least one of the extracted values shows a confidence score lower than the threshold defined in the document action for that field.
+* A field mark as required is not detected in the document. 
+
+In this case, a user must review the document to verify the values for the conflicting fields. After the review is finished, the result of the extraction becomes available for consumption. 
+
+//You can review documents in the UI or by using the Doc AI API. 
+
+== Review a Document in the UI
+
+To review a document:
+
+//TODO
+
+== Review a Document using the API
