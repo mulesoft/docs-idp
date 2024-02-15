@@ -61,7 +61,7 @@ A Query cannot use the same identifier as an Analyzer; these identifiers must be
 
 == See Also 
 
-//* xref Adding reviewers
+* xref:adding-reviewers.adoc[]
 //* xref Publishing a Document Action
 //* xref IDP action step 
 //* xref RPA Overview
