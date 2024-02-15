@@ -1,6 +1,6 @@
 = Reviewing Processed Documents 
 
-After a document is processed, Doc AI can queue it for review if:
+After processing a document, IDP queues it for review if:
 
 * At least one of the extracted values shows a confidence score lower than the threshold defined in the document action for that field.
 * A field mark as required is not detected in the document. 
@@ -11,8 +11,17 @@ In this case, a user must review the document to verify the values for the confl
 
 == Review a Document in the UI
 
-To review a document:
+To review the results of a processed document:
 
-//TODO
+. In the navigation panel, click *Review Tasks*.
+. Select the document to review by clicking its name.
+. Navigate the *Results* panel and verify the values extracted from each field.
++
+During this step, you can modify the values that require adjustment.
+. After reviewing all values, click *Submit This Page*.
++
+If there are more than one results page, click *Submit and Next* and continue the process until you review all values.
 
-== Review a Document using the API
+== See Also
+
+* xref:assigning-reviewers.adoc[]
