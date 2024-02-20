@@ -1,0 +1,22 @@
+= Publishing Document Actions
+
+By publishing a document action, you make it available as an API that you can call from other systems. Document actions are always available to RPA, even if you don't publish them. 
+
+You can publish document actions to Anypoint Exchange as an API asset and to Salesforce as an invocable action. 
+
+== Asset Versioning
+
+Every time you modify a document action and republish it, the version number increases. You can see the version change in the *Publish Document Action* window. 
+
+Consider this behavior when publishing document actions and ensure you select the desired version when you call the published document action from other systems. 
+
+== Publish a Document Action
+
+To publish a document action: 
+
+. Open the document in edit mode either by:
+** xref::creating-document-actions.adoc[Creating a new document action].
+** Opening an existing document action in view mode and clicking *Open in Builder*.
+. Click *Publish*.
+. Verify the name and version of the asset and click *Publish*.
+. Wait for the confirmation message and click *Close*.
