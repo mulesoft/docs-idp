@@ -1,0 +1,103 @@
+= Automating Document Processing
+
+IDP enables you to automate the data extraction process by integrating your document actions with Mule applications and other systems. 
+
+== Before You Begin
+
+* Create or ensure the document actions to integrate exist. 
+* Ensure the document actions are published.
+* Ensure you have a Mule application or other type of application prepared to call an API.
+
+== Integrating Document Actions With Your Application
+
+To start integrating IDP with other applications:
+
+//. <<download-api-spec>>
+//. <<publish-api-exchange>>
+
+//API specifications to <<create-mule-app, create a Mule application>> with endpoints that listen to requests and process your documents. 
+. <<create-connected-app>>
+. <<obtain-access-token>>
+. <<call-idp-api>>
+////
+[[download-api-spec]]
+== Download an API Specification 
+
+To download an API specification: 
+
+. Select a Document Action
+. Click *Download API Spec* 
+
+Each Document Action provides a different API specification in OAS format.
+
+////
+
+////
+[[publish-api-exchange]]
+== Publish a New Asset in Anypoint Exchange 
+
+Upload the API specifications you downloaded from IDP to Anypoint Exchange to publish new API assets. Use the following information to create the asset: 
+
+* Asset type: `REST API`
+* Method: `Upload an OAS`
+* File upload: Select the downloaded API specification
+
+After you publish an API asset to Exchange, you can see the API's documentation in the API portal.
+
+See xref::exchange::to-create-an-asset.adoc#create-an-api-asset[] for more details about this process. 
+////
+
+////
+[[create-mule-app]]
+== Create a Mule Application
+
+Instead of publishing the API specification to Exchange, you can use Anypoint Code Builder to create an API specification project and implement the API specifications you downloaded from IDP. 
+
+See xref::code-builder::des-create-api-specs.adoc[] for more details about this process. 
+////
+
+[[create-connected-app]]
+== Create a Connected App to Access the API
+
+To communicate with the IDP API, create a Connected App with the following details: 
+
+* Type: `App acts on its own behalf (client credentials)`
+* Scopes: `Execute Document Actions`
+
+After you create the Connected App, copy its *ID* and *Secret* for further use when obtaining the access token. 
+
+For more instructions about creating a Connected App, see xref::access-management::connected-apps-developers.adoc#create-a-connected-app[].
+
+[[obtain-access-token]]
+== Obtain the Access Token
+
+After you configure the Connected App, make the following API call to get the token: 
+
+[source,bash,linenums]
+----
+curl --location --request POST 'https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token' \ // <1>
+--header 'Content-Type: application/json' \
+--data-raw '{
+ "grant_type": "client_credentials",
+ "client_id": "<connected-app-client-id>", // <2>
+ "client_secret": "<connected-app-client-secret>" // <3> 
+}'
+----
+[calloutlist]
+.. If you are in the EU region, add the `eu1.` subdomain to `anypoint.mulesoft.com`.
+.. Replace `<connected-app-client-id>` with the client ID from your Connected App.
+.. Replace `<connected-app-client-secret>` with the client Secret from your Connected App.
+
+[[call-idp-api]]
+== Make Calls to the IDP API 
+
+After you've set up your API, configured a connected app, and obtained the access token, you can start making calls to the API and trigger the execution of document actions. 
+
+Use the access token to call the endpoint that is in the API specification to make API calls to your IDP instance. 
+
+Because the API's documentation is part of the specification, you can see the documentation in the API portal after you publish the API to Exchange. 
+
+== See Also 
+
+* {creating document actions}
+* {publishing document actios}
