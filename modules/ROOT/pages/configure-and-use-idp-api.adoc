@@ -61,7 +61,7 @@ After you configure the Connected App, make the following API call to get the to
 
 [source,bash,linenums]
 ----
-curl --location --request POST 'https://anypoint.mulesoft.com/accounts/token' \ // <1>
+curl --location --request POST 'https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token' \ // <1>
 --header 'Content-Type: application/json' \
 --data-raw '{
  "grant_type": "client_credentials",
