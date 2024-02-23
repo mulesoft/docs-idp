@@ -2,7 +2,7 @@
 
 IDP enables you to extract data from documents and further analyze the content using AI capabilities. 
 
-IDP uses third-party data extraction technologies as AWS Textract, provides a simple interface so you don't need to log in or subscribe to external services, and enables you to create and publish document actions as APIs that you can use for further integration with Mule applications and other systems. 
+IDP uses third-party data extraction technologies such as AWS Textract, provides a simple interface so you don't need to log in or subscribe to external services, and enables you to create and publish document actions as APIs that you can use for further integration with Mule applications and other systems. 
 
 A document action is a multi-step process that scans a document using LLMs, filters out fields, and returns a structured response as a JSON object. Each document action defines the types of documents it expects as input and the fields to search for. You can configure Queries to enhance and refine the data extraction process. 
 
