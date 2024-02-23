@@ -2,11 +2,14 @@
 
 IDP enables you to automate the data extraction process by integrating your document actions with Mule applications and other systems. 
 
+After you create and publish document actions to Anypoint Exchange, they become available as APIs that you can call programmatically by configuring a Connected App and its corresponding access token.  
+
 == Before You Begin
 
-* Create or ensure the document actions to integrate exist. 
-* Ensure the document actions are published.
-* Ensure you have a Mule application or other type of application prepared to call an API.
+Before you begin integrating IDP with other applications, ensure that: 
+
+* You created one or more document actions. 
+* The document actions are published. 
 
 == Integrating Document Actions With Your Application
 
@@ -18,7 +21,7 @@ To start integrating IDP with other applications:
 //API specifications to <<create-mule-app, create a Mule application>> with endpoints that listen to requests and process your documents. 
 . <<create-connected-app>>
 . <<obtain-access-token>>
-. <<call-idp-api>>
+. <<call-document-actions>>
 ////
 [[download-api-spec]]
 == Download an API Specification 
@@ -57,9 +60,9 @@ See xref::code-builder::des-create-api-specs.adoc[] for more details about this 
 ////
 
 [[create-connected-app]]
-== Create a Connected App to Access the API
+== Create a Connected App
 
-To communicate with the IDP API, create a Connected App with the following details: 
+To communicate with the document action API, create a Connected App with the following details: 
 
 * Type: `App acts on its own behalf (client credentials)`
 * Scopes: `Execute Document Actions`
@@ -71,7 +74,7 @@ For more instructions about creating a Connected App, see xref::access-managemen
 [[obtain-access-token]]
 == Obtain the Access Token
 
-After you configure the Connected App, make the following API call to get the token: 
+After you configure the Connected App, use the following `curl` command to get the token: 
 
 [source,bash,linenums]
 ----
@@ -88,14 +91,14 @@ curl --location --request POST 'https://anypoint.mulesoft.com/accounts/api/v2/oa
 .. Replace `<connected-app-client-id>` with the client ID from your Connected App.
 .. Replace `<connected-app-client-secret>` with the client Secret from your Connected App.
 
-[[call-idp-api]]
-== Make Calls to the IDP API 
+Use the access token when calling the document action API.
 
-After you've set up your API, configured a connected app, and obtained the access token, you can start making calls to the API and trigger the execution of document actions. 
+[[call-document-actions]]
+== Use the Published Document Actions  
 
-Use the access token to call the endpoint that is in the API specification to make API calls to your IDP instance. 
+After you've published document actions, configured a connected app, and obtained the access token, you can start calling the document actions to trigger their execution.
 
-Because the API's documentation is part of the specification, you can see the documentation in the API portal after you publish the API to Exchange. 
+Because the API's documentation is part of the specification, you can see the documentation in the API portal after you publish the document actions to Exchange. 
 
 == See Also 
 
