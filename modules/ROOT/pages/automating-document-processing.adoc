@@ -15,49 +15,9 @@ Before you begin integrating IDP with other applications, ensure that:
 
 To start integrating IDP with other applications:
 
-//. <<download-api-spec>>
-//. <<publish-api-exchange>>
-
-//API specifications to <<create-mule-app, create a Mule application>> with endpoints that listen to requests and process your documents. 
 . <<create-connected-app>>
 . <<obtain-access-token>>
 . <<call-document-actions>>
-////
-[[download-api-spec]]
-== Download an API Specification 
-
-To download an API specification: 
-
-. Select a Document Action
-. Click *Download API Spec* 
-
-Each Document Action provides a different API specification in OAS format.
-
-////
-
-////
-[[publish-api-exchange]]
-== Publish a New Asset in Anypoint Exchange 
-
-Upload the API specifications you downloaded from IDP to Anypoint Exchange to publish new API assets. Use the following information to create the asset: 
-
-* Asset type: `REST API`
-* Method: `Upload an OAS`
-* File upload: Select the downloaded API specification
-
-After you publish an API asset to Exchange, you can see the API's documentation in the API portal.
-
-See xref::exchange::to-create-an-asset.adoc#create-an-api-asset[] for more details about this process. 
-////
-
-////
-[[create-mule-app]]
-== Create a Mule Application
-
-Instead of publishing the API specification to Exchange, you can use Anypoint Code Builder to create an API specification project and implement the API specifications you downloaded from IDP. 
-
-See xref::code-builder::des-create-api-specs.adoc[] for more details about this process. 
-////
 
 [[create-connected-app]]
 == Create a Connected App
@@ -102,5 +62,5 @@ Because the API's documentation is part of the specification, you can see the do
 
 == See Also 
 
-* {creating document actions}
-* {publishing document actios}
+* xref:creating-document-actions.adoc[]
+* xref:publishing-document-actions.adoc[]
