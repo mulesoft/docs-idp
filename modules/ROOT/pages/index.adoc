@@ -1,12 +1,14 @@
-= Doc AI
+= IDP Overview
 
-Doc AI enables you to extract data from documents and further analyze the content using AI capabilities. Each processed document shows a confidence score for each extracted field. When this value is lower than the defined threshold, the document is sent for review by a human to verify and confirm the accuracy of the extracted values.
+IDP enables you to extract data from documents and further analyze the content using AI capabilities. 
 
-Doc AI uses third-party data extraction technologies like AWS Textract, provides a simple interface so you don't need to log in or subscribe to external services, and enables you to create and publish document actions as APIs that you can consume for further integration with RPA processes and other systems. 
+IDP uses third-party data extraction technologies as AWS Textract, provides a simple interface so you don't need to log in or subscribe to external services, and enables you to create and publish document actions as APIs that you can use for further integration with Mule applications and other systems. 
 
 A document action is a multi-step process that scans a document using LLMs, filters out fields, and returns a structured response as a JSON object. Each document action defines the types of documents it expects as input and the fields to search for. You can configure Queries to enhance and refine the data extraction process. 
 
-Use Doc AI to programmatically analyze invoices, purchase orders, and other documents and then consume the extracted values as a JSON response that you can use for further integration.
+Each processed document shows a confidence score for each extracted field. When this value is lower than the defined threshold, the document is sent for review by a human to verify and confirm the accuracy of the extracted values.
+
+Use IDP to programmatically analyze invoices, purchase orders, and other documents and then consume the extracted values as a JSON response that you can use for further integration.
 // You can configure different reviewers for each Document Action. 
 
 == See Also 

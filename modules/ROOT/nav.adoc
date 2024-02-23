@@ -1,5 +1,5 @@
-.xref:index.adoc[Doc AI]
-* xref:index.adoc[Overview]
+.xref:index.adoc[IDP]
+* xref:index.adoc[]
 //* xref:process-document.adoc[]
 //* xref:review-results.adoc[]
 //* xref:configure-and-use-idp-api.adoc[]
