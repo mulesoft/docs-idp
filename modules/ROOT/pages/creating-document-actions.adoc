@@ -53,10 +53,6 @@ After configuring the schema, add Questions to your document action.
 . Click *Add*.
 +
 When you click *Add and Run*, Doc AI saves the question, processes the document, and shows the results along with a confidence score for the specified question. 
-////
-[IMPORTANT]
-A Query cannot use the same identifier as an Analyzer; these identifiers must be unique. 
-////
 . Click *Save*.
 
 == See Also 
