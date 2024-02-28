@@ -40,7 +40,7 @@ After uploading the sample files, configure the schema.
 ** *Visibility*: Defines if this field shows in the output JSON result. 
 ** *Threshold*: Defines the minimum required confidence score accepted for this field. If the returned *Confidence* value is below the threshold, the document is queued for human review. 
 ** *Required*: Defines if the document goes to review when the required field is missing or cannot be extracted. 
-. If your document contains tables, click *Tables* to configure the extraction settings for the table fields. 
+. If your document contains tables, click *Tables* to configure the extraction settings for the table columns. 
 
 After configuring the schema, add Questions to your document action.
 
