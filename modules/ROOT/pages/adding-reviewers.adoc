@@ -1,6 +1,6 @@
 = Adding Reviewers 
 
-Add one or more reviewers to a document action to enable these users to verify the extracted values that show a confidence score below the configured threshold. By default, IDP adds the creator of the document action as a reviewer.
+Add one or more reviewers to a document action to enable these users to verify and submit the documents queued for review due to low confidence score values. By default, IDP adds the creator of the document action as a reviewer. You can add single users or teams as reviewers. 
 
 You can add reviewers while creating a document action or later by opening the document action for editing. 
 
