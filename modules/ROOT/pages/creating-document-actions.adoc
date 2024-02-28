@@ -36,7 +36,7 @@ After uploading the sample files, configure the schema.
 [[configure-schema]]
 == Configure the Schema for the Extraction
 
-. In the *Outputs* panel, click *Fields* and select any of the extrated field names to configure the following settings: 
+. In the *Outputs* panel, click *Fields* and select any of the extracted field names to configure the following settings: 
 ** *Visibility*: Defines if this field shows in the output JSON result. 
 ** *Threshold*: Defines the minimum required confidence score accepted for this field. If the returned *Confidence* value is below the threshold, the document is queued for human review. 
 ** *Required*: Defines if the document goes to review when the required field is missing or cannot be extracted. 
