@@ -1,8 +1,8 @@
 = Automating Document Processing
 
-IDP enables you to automate the data extraction process by integrating your document actions with Mule applications and other systems. 
+IDP provides an API that enables you to automate the data extraction process by integrating your document actions with Mule applications and other systems. 
 
-After you create and publish document actions to Anypoint Exchange, they become available as APIs that you can call programmatically by configuring a Connected App and its corresponding access token.  
+After you create and publish document actions to Anypoint Exchange, you can call the IDP API and trigger the execution of your document actions programmatically by configuring a Connected App and its corresponding access token.
 
 == Before You Begin
 
@@ -56,9 +56,10 @@ Use the access token when calling the document action API.
 [[call-document-actions]]
 == Use the Published Document Actions  
 
-After you've published document actions, configured a connected app, and obtained the access token, you can start calling the document actions to trigger their execution.
+After you've published document actions, configured a connected app, and obtained the access token, you can start calling the IDP API to execute your document actions.
 
-Because the API's documentation is part of the specification, you can see the documentation in the API portal after you publish the document actions to Exchange. 
+
+//Because the API's documentation is part of the specification, you can see the documentation in the API portal after you publish the document actions to Exchange. 
 
 == See Also 
 
