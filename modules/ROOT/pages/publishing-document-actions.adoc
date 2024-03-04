@@ -2,7 +2,13 @@
 
 Publishing a document action to Anypoint Exchange makes it available as an API that you can call from other systems, which enables you to build an automated pipeline for document processing that integrates with other applications. 
 
-Every time you modify a document action and republish it, the version number increases. Consider this behavior when publishing document actions and ensure you call the desired version of the published document action in your integrations. 
+== Versioning
+
+IDP follows semantic versioning but only increases minor version numbers when you republish a document action. 
+
+For example, when you publish a document action for the first time, IDP sets the version to `1.0.0`. If you modify this document action at a later time and republish it, IDP sets the version number to `1.1.0`, and so on.
+
+Consider this behavior when publishing document actions and ensure you call the desired version of the published document action in your integrations. 
 
 == Publish a Document Action
 
