@@ -1,8 +1,10 @@
 = Automating Document Processing
 
-IDP provides an API that enables you to automate the data extraction process by integrating your document actions with Mule applications and other systems. 
+IDP provides an API that enables you to automate the data extraction process by integrating your document actions with RPA processes, Mule applications, and other systems. 
 
-After you create and publish document actions to Anypoint Exchange, you can call the IDP API and trigger the execution of your document actions programmatically by configuring a Connected App and its corresponding access token.
+IDP integrates seamlessly with RPA by using the Send Document and Retrieve Results action steps from your automated processes. After you publish a document action, RPA can interact with it by using the mentioned action steps. 
+
+For integrations with other applications, after you create and publish document actions to Anypoint Exchange, you can call the IDP API and trigger the execution of your document actions programmatically by configuring a Connected App and its corresponding access token.
 
 == Before You Begin
 
@@ -63,5 +65,7 @@ After you've published document actions, configured a connected app, and obtaine
 
 == See Also 
 
+// RPA: Send Document action step
+// RPA: Retrieve Results action step
 * xref:creating-document-actions.adoc[]
 * xref:publishing-document-actions.adoc[]
