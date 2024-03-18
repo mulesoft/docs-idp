@@ -1,30 +1,22 @@
-= Automating Document Processing
+= Automate Document Processing With the IDP API
 
 IDP provides an API that enables you to automate the data extraction process by integrating your document actions with RPA processes, Mule applications, and other systems. 
 
 IDP integrates seamlessly with RPA by using the Send Document and Retrieve Results action steps from your automated processes. After you publish a document action, RPA can interact with it by using the mentioned action steps. 
 
-For integrations with other applications, after you create and publish document actions to Anypoint Exchange, you can call the IDP API and trigger the execution of your document actions programmatically by configuring a Connected App and its corresponding access token.
+Integrating IDP with other applications requires creating a Connected App, obtaining the access token, and calling the IDP API.
 
-== Before You Begin
+== Before You Begin Your Integration
 
 Before you begin integrating IDP with other applications, ensure that: 
 
 * You created one or more document actions. 
 * The document actions are published. 
 
-== Integrating Document Actions With Your Application
-
-To start integrating IDP with other applications:
-
-. <<create-connected-app>>
-. <<obtain-access-token>>
-. <<call-document-actions>>
-
 [[create-connected-app]]
 == Create a Connected App
 
-To communicate with the document action API, create a Connected App with the following details: 
+To communicate with the IDP API, create a Connected App with the following details: 
 
 * Type: `App acts on its own behalf (client credentials)`
 * Scopes: `Execute Document Actions`
@@ -56,12 +48,31 @@ curl --location --request POST 'https://anypoint.mulesoft.com/accounts/api/v2/oa
 Use the access token when calling the document action API.
 
 [[call-document-actions]]
-== Use the Published Document Actions  
+== Execute the Published Document Actions  
 
-After you've published document actions, configured a connected app, and obtained the access token, you can start calling the IDP API to execute your document actions.
+After you publish document actions, configure a connected app, and obtain the access token, you can start calling the IDP API to execute your document actions.
 
+Following are some sample calls that provide guidance about how to construct an API call to IDP:
 
-//Because the API's documentation is part of the specification, you can see the documentation in the API portal after you publish the document actions to Exchange. 
+.Execute a document action 
+[source,bash,linenums]
+----
+curl -H 'Authorization: Bearer {token}' -X POST -H 'Content-Type: multipart/form-data' \ 
+'https://idp-rt.us-east-1.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/v2' \ 
+--form file="@file.pdf"
+----
+
+.Retrieve results 
+[source,bash,linenums]
+----
+curl --location \
+'https://idp-rt.us-east-1.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/{executionId}/v2' \
+--header 'Authorization: Bearer {token}'
+----
+
+=== IDP API Documentation 
+
+The IDP API documentation is part of the specification and shows in the API portal after you publish the document actions to Anypoint Exchange. Refer to the API documentation to confirm the endpoints you must call to trigger document action executions and retrieve results. 
 
 == See Also 
 
