@@ -1,5 +1,5 @@
 name: idp
-title: Doc AI
+title: IDP
 version: master
 nav:
 - modules/ROOT/nav.adoc

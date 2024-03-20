@@ -5,5 +5,3 @@
 * xref:adding-reviewers.adoc[]
 * xref:publishing-document-actions.adoc[]
 * xref:reviewing-processed-documents.adoc[]
-//* xref:configure-and-use-idp-api.adoc[]
-//* xref:about-einstein-ai.adoc[]
