@@ -45,21 +45,24 @@ The following is a sample call that provide guidance about how to construct an A
 [source,bash,linenums]
 ----
 curl -H 'Authorization: Bearer {token}' -X POST -H 'Content-Type: multipart/form-data' \ 
-'https://idp-rt.us-east-1.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/v2' \ 
+'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/v2' \ 
 --form file="@file.pdf"
 ----
 
 == Retrieve the Results 
 
-.Retrieve results 
+After a document action successfully processes a document, or after a reviewer verifies and submits a document queued for review, the results are available for consumption. 
+
+When you use the IDP API to execute your document actions, retrieve the results by calling the `/executions` endpoint of the IDP API and providing an `executionId`. For example: 
+
 [source,bash,linenums]
 ----
 curl --location \
-'https://idp-rt.us-east-1.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/{executionId}/v2' \
+'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/{executionId}/v2' \
 --header 'Authorization: Bearer {token}'
 ----
 
-=== IDP API Documentation 
+== IDP API Documentation 
 
 The IDP API documentation is part of the specification and shows in the API portal after you publish the document actions to Anypoint Exchange. Refer to the API documentation to confirm the endpoints you must call to trigger document action executions and retrieve results. 
 
