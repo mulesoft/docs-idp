@@ -1,0 +1,20 @@
+= Adding Reviewers 
+
+Add one or more reviewers to a document action to enable these users to verify and submit the documents queued for review due to low confidence score values. By default, IDP adds the creator of the document action as a reviewer. You can add single users or teams as reviewers. 
+
+You can add reviewers while creating a document action or later by opening the document action for editing. 
+
+== Add Reviewers During Document Action Creation
+
+To add reviewers to a document action during creation:
+
+. Follow the steps from xref::creating-document-actions.adoc[]. 
+include::partial$add-reviewers.adoc[tag=commonSteps]
+
+== Add Reviewers by Editing a Document Action
+
+To add reviewers to an existing document action: 
+
+. In the navigation panel, click *Document Actions*.
+. Click a document action to open it's view page.
+include::partial$add-reviewers.adoc[tag=commonSteps] 
