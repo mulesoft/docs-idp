@@ -29,6 +29,8 @@ To start creating a new document action:
 . Click *Create New*.
 . Select the type of document action to use as a template. 
 . Click *Select files* and upload sample files to analyze. 
++
+You can upload up to 10 files with a size limit of 8MB per file. 
 . Click *Run* to analyze the files and get a preview of the results. 
 
 After uploading the sample files, configure the schema. 
