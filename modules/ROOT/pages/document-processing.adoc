@@ -1,33 +1,34 @@
-= Document Processing 
+= Getting Started with Document Processing
 
-Doc AI enables you to configure a full pipeline for automatically processing documents and using the extracted values for further integrations. 
-
-To process documents, you create and publish document actions, which you then use from RPA or any other service that can interact with an API. As a result, the document action analyzes the provided document and returns a response in JSON format with all the extracted fields. 
+Before you can start analyzing documents with IDP, you must create and publish document actions, configurable schema definitions that contain the necessary instructions to process your documents. After you publish a document action to Anypoint Exchange, you can programatically call the IDP API to execute the document action and extract data from a document. As a result, the document action analyzes the provided document and returns a response in JSON format with all the extracted fields. If the document is queued for review, the results become available after a human reviewer verifies an approves the document.
 
 == Document Actions 
 
 A document action is a set of instructions that defines the type of document to analyze, a schema of the expected fields, and the Queries that filter and refine the resulting output. The result of processing a document through a document action is a structured JSON object. You can configure the minimum confidence score accepted for each field to extract.
 
-Doc AI provides some pre-configured document actions such as Generic Document, Invoice, and Purchase Order which you use as starting points to create your own customized document actions. When creating a new document action, select the type that better aligns with the document to process. 
+IDP provides some pre-configured document actions such as Generic Document, Invoice, and Purchase Order which you use as starting points to create your own customized document actions. When creating a new document action, select the type that better aligns with the document to process. 
 
-== Document Reviews
+After you create a document action, publish it to Anypoint Exchange to make it available for consumption through the IDP API.
+
+== Reviews
 
 Document actions return a JSON response that contains the extracted fields and their detected values. Each of these values has a confidence score that determines the accuracy of the value during the extraction.
 
-Depending on the result of the extraction, a document might be queued for review according to the following scenarios: 
-
-* All fields are extracted with a confidence level higher than the configured threshold
-+
-In this case, the JSON response is available for consumption after the extraction finishes. 
-//If you are calling Doc AI from a Salesforce Flow, Doc AI makes a callback to the referenced Flow and sends the resulting JSON response. 
+A document is queued for review if any of the following conditions is met: 
 
 * At least one extracted field shows a confidence score lower than the configured threshold
-+
-In this case, the result is queued for review by a human. After a reviewer verifies and approves the result, the JSON response becomes available for consumption. If the document action was triggered from a Salesforce Flow, Doc AI makes a callback to the referenced Flow and sends the resulting JSON response after the review finishes. 
+* At least one field mark as required is missing our could not be extracted
 
+After a reviewer verifies and approves the result, the JSON response becomes available for consumption.
+
+== IDP API 
+
+The IDP API enables you to trigger the execution of any of your published document actions to analyze the provided documents and query the results of the execution. You must configure a Connected App to call the IDP API. 
+
+For configuration and usage instructions, see: xref:automate-document-processing-with-the-idp-api.adoc[].
 
 == See Also
 
-// Creating Document Actions
-// Reviewing Processed Documents
-// Automating Document Processing
+* xref:creating-document-actions.adoc[]
+* xref:publishing-document-actions.adoc[]
+* xref:reviewing-processed-documents.adoc[]
