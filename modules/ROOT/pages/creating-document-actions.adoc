@@ -15,6 +15,11 @@ Creating a document action requires the following tasks:
 . <<configure-schema>>
 . <<add-questions>>
 
+//TODO Confirm functionality
+//Document actions are available for consumption from MuleSoft RPA by using the IDP action step.
+
+After you create a new document action, you can add reviewers and publish it to Anypoint Exchange, which creates an API that you can call from any external system. 
+
 [[upload-files]]
 == Upload Sample Files and Preview the Results
 
@@ -54,4 +59,9 @@ A Query cannot use the same identifier as an Analyzer; these identifiers must be
 ////
 . Click *Save*.
 
-//== Publish a Document Action
+== See Also 
+
+* xref:adding-reviewers.adoc[]
+//* xref Publishing a Document Action
+//* xref IDP action step 
+//* xref RPA Overview

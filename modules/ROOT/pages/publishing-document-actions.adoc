@@ -1,0 +1,26 @@
+= Publishing Document Actions
+
+Publishing a document action to Anypoint Exchange makes it available as an API that you can call from other systems, which enables you to build an automated pipeline for document processing that integrates with other applications. 
+
+== Versioning
+
+IDP follows semantic versioning but only increases minor version numbers when you republish a document action. 
+
+For example, when you publish a document action for the first time, IDP sets the version to `1.0.0`. If you modify this document action at a later time and republish it, IDP sets the version number to `1.1.0`, and so on.
+
+Consider this behavior when publishing document actions and ensure you call the desired version of the published document action in your integrations. 
+
+== Publish a Document Action
+
+To publish a document action: 
+
+. Open the document in edit mode either by:
+** Creating a new document action.
+** Opening an existing document action in view mode and clicking *Open in Builder*.
+. Click *Publish*.
+. Verify the name and version of the asset and click *Publish*.
+. Wait for the confirmation message and click *Close*.
+
+== See Also
+
+* xref:creating-document-actions.adoc[]
