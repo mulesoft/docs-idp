@@ -1,8 +1,8 @@
-= Process Documents and Retrieve Results With the IDP API
+= Process Documents and Retrieve Results With the API
 
 IDP provides an API that enables you to automate the data extraction process by integrating your document actions with Mule applications and other systems. Integrating with IDP requires creating a Connected App, obtaining the access token, and calling the IDP API to execute document actions and retrieve the results.
 
-RPA integrates seamlessly with IDP by using the Send Document and Retrieve Results action steps in your automations. After you publish a document action, RPA can interact with it by using the mentioned action steps.
+Because RPA integrates seamlessly with IDP, you can execute document actions from your automations without configuring the IDP API. After you publish a document action, RPA can interact with it by using the Send Document and Retrieve Results action steps.
 
 == Create a Connected App
 
