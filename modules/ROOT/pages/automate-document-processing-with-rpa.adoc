@@ -1,0 +1,24 @@
+= Process Documents and Retrieve Results With RPA
+
+IDP integrates seamlessly with RPA enabling you to execute published document actions using the Send Document and Retrieve Results action steps from your automation projects. After you publish a document action to Anypoint Exchange, it becomes available for consumption in RPA. You don't need to configure a connection with the IDP API to integrate with RPA. 
+
+For instructions to configure the IDP API and integrate document actions with other applications, see xref:automate-document-processing-with-the-idp-api.adoc[]
+
+== Execute the Published Document Actions  
+
+To execute the published document actions, use the Send Document action step in RPA. This action step enables you to browse through your published document actions and execute them by providing an Execution ID and the path to the file to process. You use the Execution ID when configuring the Retrieve Results action step to pull the results from the execution. 
+
+Because the Send Document action step executes document actions by impersonating a user in your organization, you must configure authentication credentials of a user that has the Execute Versioned Actions permission in Anypoint Platform.  
+
+//See RPA: Send Document action step for complete configuration details. 
+
+== Retrieve Results 
+
+To retrieve the results of a document action execution, use the Retrieve Results action step in RPA. This action step enables you to query the results of a document action execution by providing an Execution ID that you used before in the corresponding Send Document execution.
+
+== See Also 
+
+// RPA: Send Document action step
+// RPA: Retrieve Results action step
+* xref:creating-document-actions.adoc[]
+* xref:publishing-document-actions.adoc[]
