@@ -2,7 +2,7 @@
 
 MuleSoft Intelligent Document Processing (IDP) enables you to read invoices, purchase orders, and other unstructured or semi-structured documents and then analyze and refine the extracted content using AI capabilities to create a structured response.
 
-IDP provides a simple interface, so you don't need to subscribe to external services, and it enables you to create and publish document actions as APIs that you can use for further integration with Mule applications and other systems.  
+IDP provides a simple interface, so you don't need to subscribe to external services, and it enables you to create and publish document actions as APIs that you can use for further integration with RPA, Mule applications, and other systems.  
 
 A document action is a multi-step process that uses multiple AI engines to scan a document, filter out fields, and return a structured response as a JSON object. Each document action defines the types of documents it expects as input, the fields to extract, and the fields to filter out from the response. You can configure Prompts to enhance and refine the data extraction process by asking questions using natural language. 
 
