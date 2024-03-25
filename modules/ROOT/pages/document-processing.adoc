@@ -1,14 +1,14 @@
 = Getting Started with Document Processing
 
-Before you can start analyzing documents with IDP, you must create and publish document actions, configurable schema definitions that contain the necessary instructions to process your documents. After you publish a document action to Anypoint Exchange, you can programatically call the IDP API to execute the document action and extract data from a document. As a result, the document action analyzes the provided document and returns a response in JSON format with all the extracted fields. If the document is queued for review, the results become available after a human reviewer verifies an approves the document.
+Before you can start analyzing documents with IDP, you must create and publish document actions, configurable schema definitions that contain the necessary instructions to process your documents. After you publish a document action to Anypoint Exchange, you can programatically call the IDP API to execute the document action and extract data from a document. As a result, the document action analyzes the provided document and returns a response in JSON format with all the extracted fields. If the document is queued for review, the status of the extraction changes to `MANUAL_VALIDATION_REQUIRED` until a human reviewer verifies and approves the document, which changes the status to `SUCCEEDED`.
 
 == Document Actions 
 
-A document action is a set of instructions that defines the type of document to analyze, a schema of the expected fields, and the Queries that filter and refine the resulting output. The result of processing a document through a document action is a structured JSON object. You can configure the minimum confidence score accepted for each field to extract.
+A document action is a set of instructions that defines the type of document to analyze, a schema of the output fields, and the Prompts that filter and refine the resulting output. The result of processing a document through a document action is a structured JSON object. You can hide fields, mark fields as required, and configure the minimum confidence score accepted for each field to extract.
 
-IDP provides some pre-configured document actions such as Generic Document, Invoice, and Purchase Order which you use as starting points to create your own customized document actions. When creating a new document action, select the type that better aligns with the document to process. 
+IDP provides pre-configured templates for Invoice and Purchase Order which you can select when creating your custom document actions. When creating a new document action, select the type that better aligns with the document to process. 
 
-After you create a document action, publish it to Anypoint Exchange to make it available for consumption through the IDP API.
+After you create a document action, publish it to Anypoint Exchange to make it available for consumption from RPA and through the IDP API.
 
 == Reviews
 
@@ -16,10 +16,10 @@ Document actions return a JSON response that contains the extracted fields and t
 
 A document is queued for review if any of the following conditions is met: 
 
-* At least one extracted field shows a confidence score lower than the configured threshold
-* At least one field mark as required is missing our could not be extracted
+* At least one non-hidden field shows a confidence score lower than the configured threshold
+* At least one non-hidden field marked as required is missing or could not be extracted
 
-After a reviewer verifies and approves the result, the JSON response becomes available for consumption.
+After a reviewer verifies and approves the result, the status of the execution changes to `SUCCEEDED`.
 
 == IDP API 
 
