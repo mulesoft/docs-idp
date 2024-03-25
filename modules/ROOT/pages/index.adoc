@@ -1,10 +1,10 @@
 = IDP Overview
 
-MuleSoft Intelligent Document Processing (IDP) enables you to programmatically read invoices, purchase orders, and other documents and then analyze and refine the extracted content using AI capabilities to create a structured JSON response.
+MuleSoft Intelligent Document Processing (IDP) enables you to read invoices, purchase orders, and other unstructured or semi-structured documents and then analyze and refine the extracted content using AI capabilities to create a structured response.
 
-IDP incorporates third-party data extraction technologies such as AWS Textract, provides a simple interface so you don't need to log in or subscribe to external services, and enables you to create and publish document actions as APIs that you can use for further integration with Mule applications and other systems. 
+IDP provides a simple interface, so you don't need to subscribe to external services, and it enables you to create and publish document actions as APIs that you can use for further integration with Mule applications and other systems.  
 
-A document action is a multi-step process that scans a document using LLMs, filters out fields, and returns a structured response as a JSON object. Each document action defines the types of documents it expects as input, the fields to exctract, and the fields to filter out from the response. You can configure Prompts to enhance and refine the data extraction process by asking questions in natural language. 
+A document action is a multi-step process that uses multiple AI engines to scan a document, filter out fields, and return a structured response as a JSON object. Each document action defines the types of documents it expects as input, the fields to extract, and the fields to filter out from the response. You can configure Prompts to enhance and refine the data extraction process by asking questions using natural language. 
 
 Each processed document shows a confidence score for each extracted field. When this value is lower than the defined threshold, the document is sent for review by a human to verify and confirm the accuracy of the extracted values. You can add single reviewers or teams to each document action. 
 
