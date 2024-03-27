@@ -2,12 +2,10 @@
 
 After processing a document, IDP queues it for review if:
 
-* At least one of the extracted values shows a confidence score lower than the threshold defined in the document action for that field.
-* A field mark as required is not detected in the document. 
+* At least one extracted non-hidden field shows a confidence score lower than the configured threshold.
+* At least one non-hidden field marked as required is missing our could not be extracted.
 
-In this case, a user must review the document to verify the values for the conflicting fields. After the review is finished, the result of the extraction becomes available for consumption. 
-
-//You can review documents in the UI or by using the Doc AI API. 
+In this case, a user must review the document to verify the values for the conflicting fields. After the review is finished, the status of the extraction changes to `SUCCEEDED`.
 
 == Review a Document in the UI
 
