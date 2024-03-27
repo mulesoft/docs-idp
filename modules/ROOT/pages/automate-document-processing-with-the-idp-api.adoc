@@ -9,7 +9,7 @@ Because RPA integrates seamlessly with IDP, you can execute document actions fro
 To communicate with the IDP API, create a Connected App with the following details: 
 
 * Type: `App acts on its own behalf (client credentials)`
-* Scopes: `Execute Document Actions`
+* Scopes: `Execute Versioned Actions`
 
 After you create the Connected App, copy its *ID* and *Secret* for further use when obtaining the access token. 
 
