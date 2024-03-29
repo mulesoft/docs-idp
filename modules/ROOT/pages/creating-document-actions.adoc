@@ -32,6 +32,8 @@ To start creating a new document action, upload sample files to test the extract
 You can upload up to 10 files with a size limit of 8MB per file. 
 . Click *Run* to analyze the files and get a preview of the results. 
 
+The document action editor shows a preview of the analyzed document that you can zoom in and out for better visibility. Navigate the different pages of the document using the Previous (*<*) and Next (*>*) buttons. Switching pages updates the extracted values shown in the *Outputs* section. 
+
 After uploading the sample files, configure the schema. 
 
 [[configure-schema]]
@@ -39,10 +41,15 @@ After uploading the sample files, configure the schema.
 
 Configure the schema by selecting fields to hide from the response, fields that are required, and the minimum confidence score accepted for each field:
 
-. In the *Outputs* panel, click *Fields* and select any of the extracted field names to configure the following settings: 
-** *Visibility*: defines if this field shows in the output JSON result. 
+. In the *Outputs* section, click *Fields* and select any of the extracted field names to configure the following settings: 
++
+--
+** *Visibility*: defines if this field shows in the output JSON result. Click the Visibility (image:visibility-icon.png[2%, 2%, "The Visibility icon"]) button to hide this field. 
 ** *Threshold*: the minimum required confidence score accepted for this field. If the returned *Confidence* value is below the threshold, the document is queued for human review. 
 ** *Required*: select this option to send the document to review if the field is missing or cannot be extracted. 
+
+You can use the Focus (image:focus-icon.png[2%, 2%, "The Focus icon"]) button to center the preview in the corresponding field.
+--
 . If your document contains tables, click *Tables* to configure the extraction settings for the table columns. 
 
 After configuring the schema, add Prompts to your document action.
