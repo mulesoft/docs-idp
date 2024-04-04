@@ -19,7 +19,7 @@ Before you start calling the IDP API to execute document actions and retrieve re
 To communicate with the IDP API, create a Connected App with the following details: 
 
 * Type: `App acts on its own behalf (client credentials)`
-* Scopes: `Execute Document Actions`
+* Scopes: `Execute Versioned Actions`
 
 After you create the Connected App, copy its *ID* and *Secret* for further use when obtaining the access token. 
 
@@ -72,6 +72,19 @@ curl --location \
 'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/{executionId}/v2' \
 --header 'Authorization: Bearer {token}'
 ----
+
+[[execution-status-reference]]
+== Execution Results Reference 
+
+When you query the results of an execution, the IDP API returns any of the following statuses: 
+
+* *ACKNOWLEDGED*: The document action execution request was received.
+* *IN_PROGRESS*: The execution started.
+* *RESULTS_PENDING*: The execution finished and is processing the results.
+* *MANUAL_VALIDATION_REQUIRED*: The execution finished but the results need manual validation.
+* *FAILED*: The execution request finished unsuccessfully.
+* *PARTIAL_SUCCESS*: The execution request finished but some sub-tasks failed.
+* *SUCCEEDED*: The execution request has finished successfully. 
 
 == IDP API Documentation 
 
