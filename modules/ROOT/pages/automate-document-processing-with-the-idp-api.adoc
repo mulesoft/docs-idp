@@ -2,7 +2,9 @@
 
 IDP provides an API that enables you to automate the data extraction process by integrating your document actions with Mule applications and other systems. Integrating with IDP requires creating a Connected App, obtaining the access token, and calling the IDP API to execute document actions and retrieve the results.
 
-Because RPA integrates seamlessly with IDP, you can execute document actions from your automations without configuring the IDP API. After you publish a document action, RPA can interact with it by using the Send Document and Retrieve Results action steps.
+Because RPA integrates seamlessly with IDP, you don't need to configure a Connected App and call the API to execute document actions. After you publish a document action, RPA can interact with it by using the Send Document and Retrieve Results action steps.
+
+For instructions to execute document actions from RPA, see xref:automate-document-processing-with-rpa.adoc[].
 
 == Create a Connected App
 
@@ -61,6 +63,19 @@ curl --location \
 'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/{executionId}/v2' \
 --header 'Authorization: Bearer {token}'
 ----
+
+[[execution-status-reference]]
+== Execution Results Reference 
+
+When you query the results of an execution, the IDP API returns any of the following statuses: 
+
+* *ACKNOWLEDGED*: The document action execution request was received.
+* *IN_PROGRESS*: The execution started.
+* *RESULTS_PENDING*: The execution finished and is processing the results.
+* *MANUAL_VALIDATION_REQUIRED*: The execution finished but the results need manual validation.
+* *FAILED*: The execution request finished unsuccessfully.
+* *PARTIAL_SUCCESS*: The execution request finished but some sub-tasks failed.
+* *SUCCEEDED*: The execution request has finished successfully. 
 
 == IDP API Documentation 
 
