@@ -1,0 +1,6 @@
+
+include::partial$permissions.adoc[tag=pageTitle]
+
+include::partial$permissions.adoc[tag=permissionsIntro]
+
+include::partial$permissions.adoc[tag=permissionsList]

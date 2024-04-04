@@ -1,0 +1,18 @@
+
+// tag::pageTitle[]
+= Permissions
+// end::pageTitle[]
+
+// tag::permissionsIntro[]
+The following is a list of all IDP permissions that show in Access Management under the *Document Actions* category: 
+// end::permissionsIntro[]
+
+// tag::permissionsList[]
+Manage Actions:: Enables a user to have complete access to IDP.
+
+Build Actions:: Enables a user to create, edit, and publish document actions and assign reviewers.
+
+Execute Versioned Actions:: Enables a user to execute a published document action.
+
+Configure Connected Apps:: Enables a user to configure a Connected App to communicate with IDP.
+// end::permissionsList[]
