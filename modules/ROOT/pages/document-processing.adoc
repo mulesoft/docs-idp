@@ -1,14 +1,14 @@
 = Getting Started with Document Processing
 
-Before you can start analyzing documents with IDP, you must create and publish document actions, configurable schema definitions that contain the necessary instructions to process your documents. 
+Before you analyze documents with IDP, you must create and publish document actions, the configurable schema definitions containing the necessary instructions to process your documents. 
 
 After you publish a document action to Anypoint Exchange, you can programatically call the IDP API to execute the document action and extract data from a document. As a result, the document action analyzes the provided document and returns a response in JSON format with all the extracted fields. You can query the IDP API to check the status of an execution at any time.
 
 == Document Actions 
 
-A document action is a set of instructions that defines the type of document to analyze, a schema of the output fields, and the Prompts that filter and refine the resulting output. The result of processing a document through a document action is a structured JSON object. You can hide fields, mark fields as required, and configure the minimum confidence score accepted for each field to extract.
+include::partial$document-action.adoc[tag=definition]
 
-IDP provides pre-configured templates for Invoice and Purchase Order which you can select when creating your custom document actions. When creating a new document action, select the type that better aligns with the document to process. 
+IDP provides preconfigured Invoice and Purchase Order templates, which you can select when creating custom document actions. When creating a new document action, choose the type that better aligns with the document to process.
 
 After you create a document action, publish it to Anypoint Exchange to make it available for consumption from RPA and through the IDP API.
 
@@ -18,20 +18,20 @@ Document actions return a JSON response that contains the extracted fields and t
 
 A document is queued for review if any of the following conditions is met: 
 
-* At least one non-hidden field shows a confidence score lower than the configured threshold
-* At least one non-hidden field marked as required is missing or could not be extracted
+* At least one non-hidden field shows a confidence score lower than the configured threshold.
+* At least one non-hidden field marked as required is missing or could not be extracted.
 
-After a reviewer verifies and approves the result, the status of the execution changes to `SUCCEEDED`. For a list of possible statuses and their definition, see the xref:automate-document-processing-with-the-idp-api.adoc#execution-status-reference[Execution Status Reference].
+After a reviewer verifies and approves the result, the execution status changes to `SUCCEEDED`. For the possible statuses and their definitions, see the xref:automate-document-processing-with-the-idp-api.adoc#execution-status-reference[Execution Status Reference].
 
 == IDP API 
 
-The IDP API enables you to trigger the execution of any of your published document actions to analyze the provided documents and query the results of the execution. You must configure a Connected App to call the IDP API. 
+You can trigger the execution of any of your published document actions to analyze the provided documents and query the results of the execution by using the IDP API. You must configure a connected app to call the IDP API. 
 
 For configuration and usage instructions, see: xref:automate-document-processing-with-the-idp-api.adoc[].
 
 == IDP and RPA Integration
 
-MuleSoft RPA integrates seamlessly with IDP by providing two action steps that enable you to execute your published document actions and query the results: Send Document and Retrieve Results. Because RPA calls the IDP API in the background, you don't need to configure a Connected App and call the API to execute document actions. However, you still need to publish your document actions to make them available to RPA. 
+You can execute your published document actions and query the results by using the Send Document and Retrieve Results action steps from MuleSoft RPA. Because RPA calls the IDP API in the background, you don't need to configure a connected app and call the API to execute document actions. However, you still need to publish your document actions to make them available to RPA. 
 
 For configuration and usage instructions, see: xref:automate-document-processing-with-rpa.adoc[].
 
