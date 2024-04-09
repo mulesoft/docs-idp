@@ -1,0 +1,5 @@
+name: idp
+title: IDP
+version: master
+nav:
+- modules/ROOT/nav.adoc
