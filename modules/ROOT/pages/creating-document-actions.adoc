@@ -1,13 +1,19 @@
 = Creating Document Actions 
 
-Document actions are configurable schema definitions that enable you to process documents and extract their data. Create document actions using any of the pre-defined types as a template and then specify which fields are mandatory, which fields to exclude from the JSON response, and the minimum confidence score expected for each field. 
+include::partial$document-action.adoc[tag=definition] 
 
-Document actions also support questions in natural language that enable you to extract specific data from the document, for example:
+Create a document action using a predefined type as a template, and then specify which fields are mandatory, which fields to exclude from the JSON response, and the minimum confidence score expected for each field. 
+
+You can also extract specific data from a document using questions in natural language, for example:
 
 * What is the subtotal amount?
 * What is the grand total?
 * When is the due date?
 * What is the highest price?
+
+After you create a new document action, you can add reviewers and publish it to Anypoint Exchange, which enables RPA to execute the document action and also creates an API that you can call from any external system. 
+
+When you create a document action, ensure that the configured schema works for each uploaded document. If you can't customize the schema to work with all sample documents, consider creating multiple document actions. For example, purchase orders from multiple vendors might be different enough to require a separate document action for each vendor.
 
 Creating a document action requires the following tasks:
 
@@ -15,43 +21,51 @@ Creating a document action requires the following tasks:
 . <<configure-schema>>
 . <<add-questions>>
 
-//TODO Confirm functionality
-//Document actions are available for consumption from MuleSoft RPA by using the IDP action step.
-
-After you create a new document action, you can add reviewers and publish it to Anypoint Exchange, which creates an API that you can call from any external system. 
-
 [[upload-files]]
 == Upload Sample Files and Preview the Results
 
-To start creating a new document action: 
+To start creating a new document action, upload sample files to test the extraction process: 
 
-. In the navigation panel, click *Document Actions*.
+. In the sidebar, click *Document Actions*.
 . Click *Create New*.
 . Select the type of document action to use as a template. 
 . Click *Select files* and upload sample files to analyze. 
 +
-You can upload up to 10 files with a size limit of 8MB per file. 
+You can upload up to 10 files with a size limit of 8 MB per file. 
 . Click *Run* to analyze the files and get a preview of the results. 
+
+The document action editor shows a preview of the analyzed document that you can zoom in and out for better visibility. Navigate the different pages of the document using the *Previous* (*<*) and *Next* (*>*) buttons. Switching pages updates the extracted values shown in the *Outputs* section. 
 
 After uploading the sample files, configure the schema. 
 
 [[configure-schema]]
 == Configure the Schema for the Extraction
 
-. In the *Outputs* panel, click *Fields* and select any of the extracted field names to configure the following settings: 
-** *Visibility*: Defines if this field shows in the output JSON result. 
-** *Threshold*: Defines the minimum required confidence score accepted for this field. If the returned *Confidence* value is below the threshold, the document is queued for human review. 
-** *Required*: Defines if the document goes to review when the required field is missing or cannot be extracted. 
+Configure the schema by selecting fields to hide from the response, fields that are required, and the minimum confidence score accepted for each field:
+
+. In the *Outputs* section, click *Fields* and select any of the extracted field names to configure the following settings: 
++
+--
+** *Visibility*: defines if this field shows in the output JSON result. Click *Visibility* (image:visibility-icon.png[2%, 2%, "The Visibility icon"]) to hide this field. 
+** *Threshold*: the minimum required confidence score accepted for this field. If the returned *Confidence* value is below the threshold, the document is queued for human review. 
+** *Required*: select this option to send the document to review if the field is missing or can't be extracted. 
+
+You can click *Focus* (image:focus-icon.png[2%, 2%, "The Focus icon"]) to center the preview in the corresponding field.
+--
 . If your document contains tables, click *Tables* to configure the extraction settings for the table columns. 
 
-After configuring the schema, add Questions to your document action.
+After configuring the schema, add Prompts to your document action.
 
 [[add-questions]]
-== Add Questions to Refine the Result
+Add Prompts to refine the results of the extraction by asking questions about the document using natural language:
 
-. In the *Outputs* panel, click *Questions*.
+. In the *Outputs* panel, click *Prompts*.
 . Click *Add New*.
-. Provide a unique name for the query and a question in natural language.
+. Configure the required details: 
+** *Name*: a unique name for the query.
+** *Instruction*: a question or request in natural language.
+** *Required*: select this option to send the document to review if the question can't be answered. 
+** *Confidence Threshold*: the minimum accepted value to prevent the document from getting queued for review. 
 . Click *Add*.
 +
 When you click *Add and Run*, Doc AI saves the question, processes the document, and shows the results along with a confidence score for the specified question. 
