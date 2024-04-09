@@ -1,12 +1,12 @@
 = Publishing Document Actions
 
-Publishing a document action to Anypoint Exchange makes it available as an API that you can call from other systems, which enables you to build an automated pipeline for document processing that integrates with other applications. 
+You can build an automated pipeline for document processing by integrating your published document actions with RPA, Mule applications, and other systems. Publishing a document action to makes it available as an API that you can call.
 
-== Action Versioning
+== Document Action Versioning
 
-To avoid breaking existing integrations when you modify a published document action, IDP supports versioning. IDP follows semantic versioning but only increases minor version numbers when you re-publish a document action. 
+You can use document action versioning to avoid breaking existing integrations when you modify a published document action. IDP follows semantic versioning but only increases the minor version number when you republish a document action. 
 
-For example, when you publish a document action for the first time, IDP sets the version to `1.0.0`. If you modify this document action later and re-publish it, IDP sets the version number to `1.1.0`, and so on.
+For example, when you publish a document action for the first time, IDP sets the version to `1.0.0`. If you modify this document action later and republish it, IDP sets the version number to `1.1.0`, and so on.
 
 Consider this behavior when publishing document actions and ensure you call the desired version of the published document action in your integrations. 
 
