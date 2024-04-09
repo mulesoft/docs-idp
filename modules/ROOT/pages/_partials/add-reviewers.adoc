@@ -1,0 +1,7 @@
+// tag::commonSteps[]
+. In the *Reviewers* panel, click *Edit*.
+. Search for a user or team and click *Add*.
++
+Repeat this step until you finish adding reviewers. 
+. Click *Apply*. 
+// end::commonSteps[]

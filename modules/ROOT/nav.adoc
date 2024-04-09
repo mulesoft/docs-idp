@@ -2,3 +2,4 @@
 * xref:index.adoc[IDP Overview]
 * xref:document-processing.adoc[]
 * xref:creating-document-actions.adoc[]
+* xref:adding-reviewers.adoc[]

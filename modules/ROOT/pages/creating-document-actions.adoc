@@ -73,7 +73,7 @@ When you click *Add and Run*, Doc AI saves the question, processes the document,
 
 == See Also 
 
-//* xref Adding reviewers
+* xref:adding-reviewers.adoc[]
 //* xref Publishing a Document Action
 //* xref IDP action step 
 //* xref RPA Overview
