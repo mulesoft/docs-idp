@@ -1,6 +1,6 @@
 = Publishing Document Actions
 
-You can build an automated pipeline for document processing by integrating your published document actions with RPA, Mule applications, and other systems. Publishing a document action to makes it available as an API that you can call.
+You can build an automated pipeline for document processing by integrating your published document actions with RPA, Mule applications, and other systems. Publishing a document action makes it discoverable in RPA and available in Anypoint Exchange as an API that you can call.
 
 == Document Action Versioning
 
