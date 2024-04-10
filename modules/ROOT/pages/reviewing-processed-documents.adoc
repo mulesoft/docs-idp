@@ -2,8 +2,8 @@
 
 After processing a document, IDP queues it for review if:
 
-* At least one extracted non-hidden field shows a confidence score lower than the configured threshold.
-* At least one non-hidden field marked as required is missing our could not be extracted.
+* At least one field marked as _visible_ shows a confidence score lower than the configured threshold.
+* At least one field marked as _visible_ and _required_ is missing our could not be extracted.
 
 In this case, a user must review the document to verify the values for the conflicting fields. After the review is finished, the status of the extraction changes to `SUCCEEDED`.
 
@@ -12,14 +12,14 @@ In this case, a user must review the document to verify the values for the confl
 To review the results of a processed document:
 
 . In the navigation panel, click *Review Tasks*.
-. Select the document to review by clicking its name.
-. Navigate the *Results* panel and verify the values extracted from each field.
+. Click the name of the document to review.
+. In the *Results* panel, verify the values extracted from each field.
 +
 During this step, you can modify the values that require adjustment.
 . After reviewing all values, click *Submit This Page*.
 +
-If there are more than one results page, click *Submit and Next* and continue the process until you review all values.
+If there are more than one results page, click *Submit and Next* and continue the process until you review all pages.
 
 == See Also
 
-* xref:assigning-reviewers.adoc[]
+* xref:adding-reviewers.adoc[]
