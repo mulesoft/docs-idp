@@ -3,7 +3,7 @@
 After processing a document, IDP queues it for review if:
 
 * At least one field marked as _visible_ shows a confidence score lower than the configured threshold.
-* At least one field marked as _visible_ and _required_ is missing our could not be extracted.
+* At least one field marked as _visible_ and _required_ is missing or could not be extracted.
 
 In this case, a user must review the document to verify the values for the conflicting fields. After the review is finished, the status of the extraction changes to `SUCCEEDED`.
 
