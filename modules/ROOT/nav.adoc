@@ -3,3 +3,4 @@
 * xref:document-processing.adoc[]
 * xref:creating-document-actions.adoc[]
 * xref:adding-reviewers.adoc[]
+* xref:publishing-document-actions.adoc[]
