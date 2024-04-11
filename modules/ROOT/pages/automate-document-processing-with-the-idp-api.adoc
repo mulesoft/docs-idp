@@ -10,37 +10,9 @@ Because RPA integrates seamlessly with IDP, you don't need to configure a Connec
 For instructions to execute document actions from RPA, see xref:automate-document-processing-with-rpa.adoc[].
 ////
 
-== Create a Connected App
+include::partial$connected-app-config.adoc[tag=createConnectedApp]
 
-To communicate with the IDP API, create a Connected App with the following details: 
-
-* Type: `App acts on its own behalf (client credentials)`
-* Scopes: `Execute Versioned Actions`
-
-After you create the Connected App, copy its *ID* and *Secret* for further use when obtaining the access token. 
-
-For more instructions about creating a Connected App, see xref::access-management::connected-apps-developers.adoc#create-a-connected-app[].
-
-== Obtain the Access Token
-
-After you configure the Connected App, use the following `curl` command to get the token: 
-
-[source,bash,linenums]
-----
-curl --location --request POST 'https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token' \ // <1>
---header 'Content-Type: application/json' \
---data-raw '{
- "grant_type": "client_credentials",
- "client_id": "<connected-app-client-id>", // <2>
- "client_secret": "<connected-app-client-secret>" // <3> 
-}'
-----
-[calloutlist]
-.. If you are in the EU region, add the `eu1.` subdomain to `anypoint.mulesoft.com`.
-.. Replace `<connected-app-client-id>` with the client ID from your Connected App.
-.. Replace `<connected-app-client-secret>` with the client Secret from your Connected App.
-
-Use the access token when calling the document action API.
+include::partial$connected-app-config.adoc[tag=obtainAccessToken]
 
 == Execute the Published Document Actions  
 
