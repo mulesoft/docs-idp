@@ -1,21 +1,21 @@
 // tag::createConnectedApp[]
 == Create a Connected App
 
-To communicate with the IDP API, create a Connected App with the following details: 
+To communicate with the IDP API, create a connected app with the following details: 
 
 * Type: `App acts on its own behalf (client credentials)`
 * Scopes: `Execute Versioned Actions`
 
-After you create the Connected App, copy its *ID* and *Secret* for further use when obtaining the access token. 
+After you create the connected app, copy its *ID* and *Secret* for further use when you obtain the access token. 
 
-For more instructions about creating a Connected App, see xref::access-management::connected-apps-developers.adoc#create-a-connected-app[].
+For more instructions about creating a connected app, see xref::access-management::connected-apps-developers.adoc#create-a-connected-app[].
 
 // end::createConnectedApp[]
 
 // tag::obtainAccessToken[]
 == Obtain the Access Token
 
-After you configure the Connected App, use the following `curl` command to get the token: 
+After you configure the connected app, use the following `curl` command to get the token: 
 
 [source,bash,linenums]
 ----
@@ -28,9 +28,9 @@ curl --location --request POST 'https://anypoint.mulesoft.com/accounts/api/v2/oa
 }'
 ----
 [calloutlist]
-.. If you are in the EU region, add the `eu1.` subdomain to `anypoint.mulesoft.com`.
-.. Replace `<connected-app-client-id>` with the client ID from your Connected App.
-.. Replace `<connected-app-client-secret>` with the client Secret from your Connected App.
+.. If you are in the EU region, use the `eu1.anypoint.mulesoft.com` domain.
+.. Replace `<connected-app-client-id>` with the client ID from your connected app.
+.. Replace `<connected-app-client-secret>` with the client secret from your connected app.
 
 Use the access token when calling the IDP API.
 
