@@ -19,7 +19,7 @@ Creating a document action requires the following tasks:
 
 . <<upload-files>>
 . <<configure-schema>>
-. <<add-questions>>
+. <<add-prompts>>
 
 [[upload-files]]
 == Upload Sample Files and Preview the Results
@@ -56,7 +56,9 @@ You can click *Focus* (image:focus-icon.png[2%, 2%, "The Focus icon"]) to center
 
 After configuring the schema, add Prompts to your document action.
 
-[[add-questions]]
+[[add-prompts]]
+== Add Prompts to Refine the Result
+
 Add Prompts to refine the results of the extraction by asking questions about the document using natural language:
 
 . In the *Outputs* panel, click *Prompts*.
