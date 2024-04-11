@@ -1,8 +1,9 @@
 = Process Documents and Retrieve Results With RPA
 
-IDP integrates seamlessly with RPA enabling you to execute published document actions using the Send Document and Retrieve Results action steps from your automation projects. After you publish a document action to Anypoint Exchange, it becomes available for consumption in RPA. You don't need to configure a connection with the IDP API to integrate with RPA. 
+You can execute your published document actions with MuleSoft RPA by using the Send Document and Retrieve Results action steps from your automation projects. 
+After you publish a document action to Anypoint Exchange, it becomes available for consumption in RPA. You must create a connected app and obtain the access token before you can use the IDP action steps in RPA. 
 
-For instructions to configure the IDP API and integrate document actions with other applications, see xref:automate-document-processing-with-the-idp-api.adoc[]
+If you are not using RPA to execute your document actions, see xref:automate-document-processing-with-the-idp-api.adoc[] instead for instructions to configure and call the IDP API.
 
 == Execute the Published Document Actions  
 
