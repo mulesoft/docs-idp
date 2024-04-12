@@ -1,0 +1,65 @@
+= Process Documents and Retrieve Results With the API
+
+You can automate the data extraction process by using the IDP API to integrate your document actions with Mule applications and other systems. Integrating with IDP requires creating a connected app, obtaining the access token, and calling the IDP API to execute document actions and retrieve the results.
+
+Instead of calling the IDP API to execute your document actions, you can use the Send Document and Retrieve Results action steps from MuleSoft RPA. For instructions on integrating your document actions with MuleSoft RPA, see xref:automate-document-processing-with-rpa.adoc[].
+
+////
+Because RPA integrates seamlessly with IDP, you don't need to configure a Connected App and call the API to execute document actions. After you publish a document action, RPA can interact with it by using the Send Document and Retrieve Results action steps.
+
+For instructions to execute document actions from RPA, see xref:automate-document-processing-with-rpa.adoc[].
+////
+
+include::partial$connected-app-config.adoc[tag=createConnectedApp]
+
+include::partial$connected-app-config.adoc[tag=obtainAccessToken]
+
+== Execute the Published Document Actions  
+
+After you publish document actions, configure a connected app, and obtain the access token, you can call the IDP API to execute your document actions.
+
+The following is a sample call that provide guidance about how to construct an API call to execute a document action:
+
+[source,bash,linenums]
+----
+curl -H 'Authorization: Bearer {token}' -X POST -H 'Content-Type: multipart/form-data' \ 
+'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/v2' \ 
+--form file="@file.pdf"
+----
+
+== Retrieve the Results 
+
+After a document action successfully processes a document, or after a reviewer verifies and submits a document queued for review, the results are available for consumption. 
+
+When you use the IDP API to execute your document actions, retrieve the results by calling the `/executions` endpoint and providing an `executionId`, for example: 
+
+[source,bash,linenums]
+----
+curl --location \
+'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/{executionId}/v2' \
+--header 'Authorization: Bearer {token}'
+----
+
+[[execution-status-reference]]
+== Execution Results Reference 
+
+When you query the results of an execution, the IDP API returns any of the following statuses: 
+
+* `ACKNOWLEDGED`: The document action execution request was received.
+* `IN_PROGRESS`: The execution started.
+* `RESULTS_PENDING`: The execution finished and IDP is processing the results.
+* `MANUAL_VALIDATION_REQUIRED`: The execution finished but the results need manual validation.
+* `FAILED`: The execution request finished unsuccessfully.
+* `PARTIAL_SUCCESS`: The execution request finished but some sub-tasks failed.
+* `SUCCEEDED`: The execution request finished successfully. 
+
+== IDP API Documentation 
+
+To confirm the endpoints to call to trigger document action executions and retrieve results, refer to the API documentation. The IDP API documentation is part of the specification and shows in the API portal after you publish the document actions to Anypoint Exchange. 
+
+== See Also 
+
+// RPA: Send Document action step
+// RPA: Retrieve Results action step
+* xref:creating-document-actions.adoc[]
+* xref:publishing-document-actions.adoc[]
