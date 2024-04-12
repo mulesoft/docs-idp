@@ -2,26 +2,24 @@
 
 After processing a document, IDP queues it for review if:
 
-* At least one of the extracted values shows a confidence score lower than the threshold defined in the document action for that field.
-* A field mark as required is not detected in the document. 
+* At least one field marked as _visible_ shows a confidence score lower than the configured threshold.
+* At least one field marked as _visible_ and _required_ is missing or could not be extracted.
 
-In this case, a user must review the document to verify the values for the conflicting fields. After the review is finished, the result of the extraction becomes available for consumption. 
-
-//You can review documents in the UI or by using the Doc AI API. 
+In this case, a user must review the document to verify the values for the conflicting fields. After the review is finished, the status of the extraction changes to `SUCCEEDED`.
 
 == Review a Document in the UI
 
 To review the results of a processed document:
 
 . In the navigation panel, click *Review Tasks*.
-. Select the document to review by clicking its name.
-. Navigate the *Results* panel and verify the values extracted from each field.
+. Click the name of the document to review.
+. In the *Results* panel, verify the values extracted from each field.
 +
 During this step, you can modify the values that require adjustment.
 . After reviewing all values, click *Submit This Page*.
 +
-If there are more than one results page, click *Submit and Next* and continue the process until you review all values.
+If there are more than one results page, click *Submit and Next* and continue the process until you review all pages.
 
 == See Also
 
-* xref:assigning-reviewers.adoc[]
+* xref:adding-reviewers.adoc[]
