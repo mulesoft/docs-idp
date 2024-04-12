@@ -1,0 +1,3 @@
+// tag::definition[]
+A _document action_ is a multi-step process that uses multiple AI engines to scan a document, filter out fields, and return a structured response as a JSON object. Each document action defines the types of documents it expects as input, the fields to extract, and the fields to filter out from the response. You can hide fields, mark fields as required, configure the minimum confidence score accepted for each field to extract, and configure Prompts to enhance and refine the data-extraction process by asking questions using natural language. 
+// end::definition[]
