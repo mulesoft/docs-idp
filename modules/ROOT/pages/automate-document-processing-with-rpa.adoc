@@ -4,6 +4,14 @@ IDP integrates seamlessly with RPA enabling you to execute published document ac
 
 For instructions to configure the IDP API and integrate document actions with other applications, see xref:automate-document-processing-with-the-idp-api.adoc[]
 
+== Before You Begin 
+
+Ensure you have the following Anypoint permissions:
+
+include::partial$permissions.adoc[tag=permissionExecute]
+
+include::partial$permissions.adoc[tag=permissionConfigure]
+
 == Execute the Published Document Actions  
 
 To execute the published document actions, use the Send Document action step in RPA. This action step enables you to browse through your published document actions and execute them by providing an Execution ID and the path to the file to process. You use the Execution ID when configuring the Retrieve Results action step to pull the results from the execution. 

@@ -10,6 +10,14 @@ For example, when you publish a document action for the first time, IDP sets the
 
 Consider this behavior when publishing document actions and ensure you call the desired version of the published document action in your integrations. 
 
+== Before You Begin 
+
+Ensure you have any of the following Anypoint permissions:
+
+include::partial$permissions.adoc[tag=permissionManage]
+
+include::partial$permissions.adoc[tag=permissionBuild]
+
 == Publish a Document Action
 
 To publish a document action: 

@@ -6,12 +6,13 @@ Because RPA integrates seamlessly with IDP, you don't need to configure a Connec
 
 For instructions to execute document actions from RPA, see xref:automate-document-processing-with-rpa.adoc[].
 
-== Before you Begin Using the IDP API 
+== Before You Begin 
 
-Before you start calling the IDP API to execute document actions and retrieve results, ensure you: 
+Ensure you have the following Anypoint permissions:
 
-. <<create-connected-app>>
-. <<obtain-access-token>>
+include::partial$permissions.adoc[tag=permissionExecute]
+
+include::partial$permissions.adoc[tag=permissionConfigure]
 
 [[create-connected-app]]
 == Create a Connected App
