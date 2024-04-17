@@ -7,4 +7,4 @@ include::partial$permissions.adoc[tag=permissionsList]
 
 == See Also
 
-xref:access-management::index.adoc[]
+xref:access-management::managing-permissions.adoc[]
