@@ -1,4 +1,4 @@
-= Process Documents and Retrieve Results With the API
+= Processing Documents and Retrieving Results With the API
 
 You can automate the data extraction process by using the IDP API to integrate your document actions with Mule applications and other systems. Integrating with IDP requires creating a connected app, obtaining the access token, and calling the IDP API to execute document actions and retrieve the results.
 
