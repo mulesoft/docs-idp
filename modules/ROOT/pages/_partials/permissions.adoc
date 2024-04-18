@@ -4,7 +4,7 @@
 // end::pageTitle[]
 
 // tag::permissionsIntro[]
-The following is a list of all Anypoint permissions that show in Access Management under the *Document Actions* category: 
+The following list shows all Anypoint permissions in Access Management under the *Document Actions* category: 
 // end::permissionsIntro[]
 
 // tag::permissionsList[]
