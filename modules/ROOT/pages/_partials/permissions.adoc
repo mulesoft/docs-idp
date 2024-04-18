@@ -10,7 +10,7 @@ The following list shows all Anypoint permissions in Access Management under the
 // tag::permissionsList[]
 
 // tag::permissionManage[]
-Manage Actions:: Enables a user to have complete access to IDP and be a reviewer by default for every document action.
+Manage Actions:: Gives a user complete access to IDP and assigns reviewer permission by default for every document action.
 // end::permissionManage[]
 
 // tag::permissionBuild[]
