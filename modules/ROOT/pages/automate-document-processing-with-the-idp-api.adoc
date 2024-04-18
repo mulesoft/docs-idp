@@ -1,10 +1,14 @@
-= Process Documents and Retrieve Results With the API
+= Processing Documents and Retrieving Results With the API
 
-IDP provides an API that enables you to automate the data extraction process by integrating your document actions with Mule applications and other systems. Integrating with IDP requires creating a Connected App, obtaining the access token, and calling the IDP API to execute document actions and retrieve the results.
+You can automate the data extraction process by using the IDP API to integrate your document actions with Mule applications and other systems. Integrating with IDP requires creating a connected app, obtaining the access token, and calling the IDP API to execute document actions and retrieve the results.
 
+Instead of calling the IDP API to execute your document actions, you can use the Send Document and Retrieve Results action steps from MuleSoft RPA. For instructions on integrating your document actions with MuleSoft RPA, see xref:automate-document-processing-with-rpa.adoc[].
+
+////
 Because RPA integrates seamlessly with IDP, you don't need to configure a Connected App and call the API to execute document actions. After you publish a document action, RPA can interact with it by using the Send Document and Retrieve Results action steps.
 
 For instructions to execute document actions from RPA, see xref:automate-document-processing-with-rpa.adoc[].
+////
 
 == Before You Begin 
 
@@ -14,43 +18,13 @@ include::partial$permissions.adoc[tag=permissionExecute]
 
 include::partial$permissions.adoc[tag=permissionConfigure]
 
-[[create-connected-app]]
-== Create a Connected App
+include::partial$connected-app-config.adoc[tag=createConnectedApp]
 
-To communicate with the IDP API, create a Connected App with the following details: 
-
-* Type: `App acts on its own behalf (client credentials)`
-* Scopes: `Execute Versioned Actions`
-
-After you create the Connected App, copy its *ID* and *Secret* for further use when obtaining the access token. 
-
-For more instructions about creating a Connected App, see xref::access-management::connected-apps-developers.adoc#create-a-connected-app[].
-
-[[obtain-access-token]]
-== Obtain the Access Token
-
-After you configure the Connected App, use the following `curl` command to get the token: 
-
-[source,bash,linenums]
-----
-curl --location --request POST 'https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token' \ // <1>
---header 'Content-Type: application/json' \
---data-raw '{
- "grant_type": "client_credentials",
- "client_id": "<connected-app-client-id>", // <2>
- "client_secret": "<connected-app-client-secret>" // <3> 
-}'
-----
-[calloutlist]
-.. If you are in the EU region, add the `eu1.` subdomain to `anypoint.mulesoft.com`.
-.. Replace `<connected-app-client-id>` with the client ID from your Connected App.
-.. Replace `<connected-app-client-secret>` with the client Secret from your Connected App.
-
-Use the access token when calling the document action API.
+include::partial$connected-app-config.adoc[tag=obtainAccessToken]
 
 == Execute the Published Document Actions  
 
-After you publish document actions, configure a connected app, and obtain the access token, you can start calling the IDP API to execute your document actions.
+After you publish document actions, configure a connected app, and obtain the access token, you can call the IDP API to execute your document actions.
 
 The following is a sample call that provide guidance about how to construct an API call to execute a document action:
 
@@ -65,7 +39,7 @@ curl -H 'Authorization: Bearer {token}' -X POST -H 'Content-Type: multipart/form
 
 After a document action successfully processes a document, or after a reviewer verifies and submits a document queued for review, the results are available for consumption. 
 
-When you use the IDP API to execute your document actions, retrieve the results by calling the `/executions` endpoint of the IDP API and providing an `executionId`. For example: 
+When you use the IDP API to execute your document actions, retrieve the results by calling the `/executions` endpoint and providing an `executionId`, for example: 
 
 [source,bash,linenums]
 ----
@@ -79,17 +53,17 @@ curl --location \
 
 When you query the results of an execution, the IDP API returns any of the following statuses: 
 
-* *ACKNOWLEDGED*: The document action execution request was received.
-* *IN_PROGRESS*: The execution started.
-* *RESULTS_PENDING*: The execution finished and is processing the results.
-* *MANUAL_VALIDATION_REQUIRED*: The execution finished but the results need manual validation.
-* *FAILED*: The execution request finished unsuccessfully.
-* *PARTIAL_SUCCESS*: The execution request finished but some sub-tasks failed.
-* *SUCCEEDED*: The execution request has finished successfully. 
+* `ACKNOWLEDGED`: The document action execution request was received.
+* `IN_PROGRESS`: The execution started.
+* `RESULTS_PENDING`: The execution finished and IDP is processing the results.
+* `MANUAL_VALIDATION_REQUIRED`: The execution finished but the results need manual validation.
+* `FAILED`: The execution request finished unsuccessfully.
+* `PARTIAL_SUCCESS`: The execution request finished but some sub-tasks failed.
+* `SUCCEEDED`: The execution request finished successfully. 
 
 == IDP API Documentation 
 
-The IDP API documentation is part of the specification and shows in the API portal after you publish the document actions to Anypoint Exchange. Refer to the API documentation to confirm the endpoints you must call to trigger document action executions and retrieve results. 
+To confirm the endpoints to call to trigger document action executions and retrieve results, refer to the API documentation. The IDP API documentation is part of the specification and shows in the API portal after you publish the document actions to Anypoint Exchange. 
 
 == See Also 
 
