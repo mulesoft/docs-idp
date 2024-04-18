@@ -1,0 +1,17 @@
+= Quotas and Limits
+
+The following table shows the quotas and limitations of the IDP service:  
+
+[%header%autowidth.spread,cols=".^a,.^a]
+|===
+| Limit | Description
+| Accepted File Formats | PDF, PNG, JPG (150 DPI or more recommended).
+| File Size Limits 
+a| 
+* Upload via UI: 8 MB per file and 10 files max per upload. 
+* Upload via API: 10 MB per file, no limit on the number of files per upload.
+| Prompt Limits | 30 per document action.
+// Please confirm if it is ok to include Languages here. 
+| Languages | Full English Support. Additional languages are not fully supported. 
+| Polling Limits | 10-second interval for retrieving results.
+|===
