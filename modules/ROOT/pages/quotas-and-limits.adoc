@@ -11,7 +11,6 @@ a|
 * Upload via UI: 8 MB per file and 10 files max per upload. 
 * Upload via API: 10 MB per file, no limit on the number of files per upload.
 | Prompt Limits | 30 per document action.
-// Please confirm if it is ok to include Languages here. 
 | Languages | Full English Support. Additional languages are not fully supported. 
-| Polling Limits | 10-second interval for retrieving results.
+| Polling Limits | 10-second interval for retrieving results. Applications must avoid polling for results more often than every 10 seconds. 
 |===
