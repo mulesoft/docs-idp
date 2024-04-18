@@ -21,6 +21,14 @@ Creating a document action requires the following tasks:
 . <<configure-schema>>
 . <<add-prompts>>
 
+== Before You Begin 
+
+Ensure you have any of the following Anypoint permissions:
+
+include::partial$permissions.adoc[tag=permissionManage]
+
+include::partial$permissions.adoc[tag=permissionBuild]
+
 [[upload-files]]
 == Upload Sample Files and Preview the Results
 
@@ -70,7 +78,7 @@ Add Prompts to refine the results of the extraction by asking questions about th
 ** *Confidence Threshold*: the minimum accepted value to prevent the document from getting queued for review. 
 . Click *Add*.
 +
-When you click *Add and Run*, Doc AI saves the question, processes the document, and shows the results along with a confidence score for the specified question. 
+When you click *Add and Run*, IDP saves the question, processes the document, and shows the results along with a confidence score for the specified question. 
 . Click *Save*.
 
 == See Also 

@@ -1,0 +1,10 @@
+
+include::partial$permissions.adoc[tag=pageTitle]
+
+include::partial$permissions.adoc[tag=permissionsIntro]
+
+include::partial$permissions.adoc[tag=permissionsList]
+
+== See Also
+
+xref:access-management::managing-permissions.adoc[]
