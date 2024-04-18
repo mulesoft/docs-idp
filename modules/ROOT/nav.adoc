@@ -6,4 +6,6 @@
 * xref:publishing-document-actions.adoc[]
 * xref:reviewing-processed-documents.adoc[]
 * xref:automate-document-processing-with-the-idp-api.adoc[]
+* xref:automate-document-processing-with-rpa.adoc[]
+* xref:permissions.adoc[]
 * xref:quotas-and-limits.adoc[]

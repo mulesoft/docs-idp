@@ -7,6 +7,12 @@ After processing a document, IDP queues it for review if:
 
 In this case, a user must review the document to verify the values for the conflicting fields. After the review is finished, the status of the extraction changes to `SUCCEEDED`.
 
+== Before You Begin 
+
+Before you can review a document, ensure that: 
+
+* You are assigned as a reviewer in the corresponding document action.
+
 == Review a Document in the UI
 
 To review the results of a processed document:

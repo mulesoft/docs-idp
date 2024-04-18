@@ -4,6 +4,14 @@ Add one or more reviewers to a document action to verify and correct the documen
 
 Add reviewers while creating a document action or later by opening the document action for editing. 
 
+== Before You Begin 
+
+Ensure you have any of the following Anypoint permissions:
+
+include::partial$permissions.adoc[tag=permissionManage]
+
+include::partial$permissions.adoc[tag=permissionBuild]
+
 == Add Reviewers During Document Action Creation
 
 To add reviewers to a document action during creation:
