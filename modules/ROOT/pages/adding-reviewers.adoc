@@ -26,3 +26,9 @@ To add reviewers to an existing document action:
 . In the navigation panel, click *Document Actions*.
 . Click a document action to open its view page.
 include::partial$add-reviewers.adoc[tag=commonSteps] 
+
+== See Also 
+
+* xref:publishing-document-actions.adoc[]
+* xref:creating-document-actions.adoc[]
+* xref:reviewing-processed-documents.adoc[]

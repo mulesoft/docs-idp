@@ -8,7 +8,7 @@ To communicate with the IDP API, create a connected app with the following detai
 
 After you create the connected app, copy its *ID* and *Secret* for further use when you obtain the access token. 
 
-For more instructions about creating a connected app, see xref::access-management::connected-apps-developers.adoc#create-a-connected-app[].
+For more information, see xref:access-management::connected-apps-overview.adoc[].
 
 // end::createConnectedApp[]
 

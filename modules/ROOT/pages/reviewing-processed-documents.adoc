@@ -28,4 +28,6 @@ If there are more than one results page, click *Submit and Next* and continue th
 
 == See Also
 
+* xref:automate-document-processing-with-the-idp-api.adoc[]
+* xref:automate-document-processing-with-rpa.adoc[]
 * xref:adding-reviewers.adoc[]
