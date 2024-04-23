@@ -6,7 +6,7 @@ With the simple IDP interface, you can create and publish document actions as AP
 
 include::partial$document-action.adoc[tag=definition]
 
-The confidence score represents the probability that IDP has properly extracted the value from a document. For example, a confidence score of 100% represents that IDP extracted the value with total accuracy. However, a confidence score of 75% means that there's a 25% chance that the extracted value is not correct.
+The confidence score represents the probability that IDP has properly extracted the value from a document. For example, a confidence score of 100% means that IDP extracted the value with total accuracy. However, a confidence score of 75% means that there's a 25% chance that the extracted value is not correct.
 
 Each processed document shows a confidence score for each extracted field. When this value is lower than the defined threshold, IDP sends the document for review by a human to verify the accuracy of the extracted values. You can add single reviewers or teams to each document action. 
 
