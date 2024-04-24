@@ -4,7 +4,7 @@ include::rpa-home::partial$automation-credits.adoc[tag=intro]
 
 include::rpa-home::partial$automation-credits.adoc[tag=conversionRates]
 
-For more information on usage and pricing metrics, see xref:access-management::pricing-metrics.adoc#metrics-collected-in-anypoint-platform[Metrics Collected in Anypoint Platform].
+For more information on usage and pricing metrics, see xref:general::pricing-metrics.adoc#metrics-collected-in-anypoint-platform[Metrics Collected in Anypoint Platform].
 
 [[monthly-summary-mails]]
 == Monthly Account Summary Emails
