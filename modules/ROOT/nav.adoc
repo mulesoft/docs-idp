@@ -9,3 +9,6 @@
 * xref:automate-document-processing-with-rpa.adoc[]
 * xref:permissions.adoc[]
 * xref:quotas-and-limits.adoc[]
+* xref:ms-automation-credits-usage-types.adoc[]
+** xref:ms-automation-credits-2.adoc[]
+** xref:ms-automation-credits.adoc[]
