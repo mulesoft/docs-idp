@@ -31,4 +31,7 @@ To publish a document action:
 
 == See Also
 
+* xref:reviewing-processed-documents.adoc[]
 * xref:creating-document-actions.adoc[]
+* xref:automate-document-processing-with-the-idp-api.adoc[]
+* xref:automate-document-processing-with-rpa.adoc[]

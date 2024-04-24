@@ -4,12 +4,6 @@ You can automate the data extraction process by using the IDP API to integrate y
 
 Instead of calling the IDP API to execute your document actions, you can use the Send Document and Retrieve Results action steps from MuleSoft RPA. For instructions on integrating your document actions with MuleSoft RPA, see xref:automate-document-processing-with-rpa.adoc[].
 
-////
-Because RPA integrates seamlessly with IDP, you don't need to configure a Connected App and call the API to execute document actions. After you publish a document action, RPA can interact with it by using the Send Document and Retrieve Results action steps.
-
-For instructions to execute document actions from RPA, see xref:automate-document-processing-with-rpa.adoc[].
-////
-
 == Before You Begin 
 
 Ensure you have the following Anypoint permissions:
@@ -67,7 +61,7 @@ To confirm the endpoints to call to trigger document action executions and retri
 
 == See Also 
 
-// RPA: Send Document action step
-// RPA: Retrieve Results action step
+* xref:rpa-builder::toolbox-mulesoft-idp-submit-document-to-mulesoft-idp.adoc[]
+* xref:rpa-builder::toolbox-mulesoft-idp-retrieve-results-from-mulesoft-idp.adoc[]
 * xref:creating-document-actions.adoc[]
 * xref:publishing-document-actions.adoc[]

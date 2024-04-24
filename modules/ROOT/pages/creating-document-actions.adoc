@@ -84,6 +84,5 @@ When you click *Add and Run*, IDP saves the question, processes the document, an
 == See Also 
 
 * xref:adding-reviewers.adoc[]
-//* xref Publishing a Document Action
-//* xref IDP action step 
-//* xref RPA Overview
+* xref:publishing-document-actions.adoc[]
+* xref:rpa-home::index.adoc[]

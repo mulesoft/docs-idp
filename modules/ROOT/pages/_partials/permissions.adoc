@@ -18,7 +18,7 @@ Build Actions:: Enables a user to create, edit, and publish document actions and
 // end::permissionBuild[]
 
 // tag::permissionExecute[]
-Execute Versioned Actions:: Enables a user to execute a published document action and retrieve the results of the execution.
+Execute Published Actions:: Enables a user to execute a published document action and retrieve the results of the execution.
 // end::permissionExecute[]
 
 // tag::permissionConfigure[]
