@@ -2,7 +2,7 @@
 
 You can automate the data extraction process by using the IDP API to integrate your document actions with Mule applications and other systems. Integrating with IDP requires creating a connected app, obtaining the access token, and calling the IDP API to execute document actions and retrieve the results.
 
-Instead of calling the IDP API to execute your document actions, you can use the Send Document and Retrieve Results action steps from MuleSoft RPA. For instructions on integrating your document actions with MuleSoft RPA, see xref:automate-document-processing-with-rpa.adoc[].
+Instead of calling the IDP API to execute your document actions, you can use the Submit Document to MuleSoft IDP and Retrieve Results from MuleSoft IDP action steps from MuleSoft RPA. For instructions on integrating your document actions with MuleSoft RPA, see xref:automate-document-processing-with-rpa.adoc[].
 
 == Before You Begin 
 
@@ -29,7 +29,7 @@ curl -H 'Authorization: Bearer {token}' -X POST -H 'Content-Type: multipart/form
 --form file="@file.pdf"
 ----
 
-== Retrieve the Results 
+== Retrieve the Results of the Execution
 
 After a document action successfully processes a document, or after a reviewer verifies and submits a document queued for review, the results are available for consumption. 
 
