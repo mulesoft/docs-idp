@@ -1,0 +1,11 @@
+include::rpa-home::partial$automation-credits-2.adoc[tag=title]
+
+include::rpa-home::partial$automation-credits-2.adoc[tag=intro]
+
+include::rpa-home::partial$automation-credits-2.adoc[tag=conversionRates]
+
+include::rpa-home::partial$automation-credits-2.adoc[tag=detailsAndSubscriptionPlans]
+
+== See Also 
+
+* xref:ms-automation-credits-usage-types.adoc[]
