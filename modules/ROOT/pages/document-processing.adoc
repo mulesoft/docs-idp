@@ -31,7 +31,7 @@ For configuration and usage instructions, see: xref:automate-document-processing
 
 == IDP and RPA Integration
 
-You can execute your published document actions and query the results by using the Submit Document to MuleSoft IDP and Retrieve Results from MuleSoft IDP action steps from MuleSoft RPA. You must configure a connected app to call IDP and publish your document actions to make them available to RPA. 
+You can execute your published document actions and query the results by using the Submit Document to MuleSoft IDP and Retrieve Results from MuleSoft IDP action steps from MuleSoft RPA. You must configure a connected app to call IDP and you must publish your document actions to make them available to RPA. 
 
 For configuration and usage instructions, see: xref:automate-document-processing-with-rpa.adoc[].
 
