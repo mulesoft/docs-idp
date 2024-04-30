@@ -5,10 +5,6 @@ After you publish a document action to Anypoint Exchange, it becomes available f
 
 If you aren't using RPA to execute your document actions, configure and call the IDP API, as described in xref:automate-document-processing-with-the-idp-api.adoc[].
 
-include::partial$connected-app-config.adoc[tag=createConnectedApp]
-
-include::partial$connected-app-config.adoc[tag=obtainAccessToken]
-
 == Before You Begin 
 
 Ensure you have the following Anypoint permissions:
@@ -16,6 +12,12 @@ Ensure you have the following Anypoint permissions:
 include::partial$permissions.adoc[tag=permissionExecute]
 
 include::partial$permissions.adoc[tag=permissionConfigure]
+
+// Connected App section
+include::partial$connected-app-config.adoc[tag=createConnectedApp]
+
+// Access Token section
+include::partial$connected-app-config.adoc[tag=obtainAccessToken]
 
 == Execute the Published Document Actions  
 
