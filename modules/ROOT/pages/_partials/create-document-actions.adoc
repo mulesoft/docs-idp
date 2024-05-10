@@ -1,0 +1,11 @@
+////
+Used in:
+creating-document-actions.adoc
+adding-reviewers.adoc
+////
+
+// tag::initialSteps[]
+. In the sidebar, click *Document Actions*.
+. Click *Create New*.
+. Select the type of document to use as a template, specify a name for your document action, and click *Create*. 
+// end::initialSteps[]
