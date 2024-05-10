@@ -2,7 +2,7 @@
 
 Add one or more reviewers to a document action to verify and correct the documents queued for review due to low confidence score values or missing required fields. You can add single Anypoint Platform users or teams as reviewers. 
 
-Add reviewers to a new document action during the creation or to an existing one by opening the document action for editing. 
+Add reviewers to a new document action while creating it or an existing document action by editing it. 
 
 == Before You Begin 
 
@@ -14,7 +14,7 @@ include::partial$permissions.adoc[tag=permissionBuild]
 
 == Add Reviewers to a New Document Action
 
-To start the creation of a new document action and add reviewers:
+To create a new document action and add reviewers:
 
 include::partial$create-document-actions.adoc[tag=initialSteps]
 
