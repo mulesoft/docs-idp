@@ -34,9 +34,9 @@ include::partial$permissions.adoc[tag=permissionBuild]
 
 To start creating a new document action, upload sample files to test the extraction process: 
 
-. In the sidebar, click *Document Actions*.
-. Click *Create New*.
-. Select the type of document action to use as a template. 
+//starting steps
+include::partial$create-document-actions.adoc[tag=initialSteps]
+
 . Click *Select files* and upload sample files to analyze. 
 +
 You can upload up to 10 files with a size limit of 8 MB per file. 
