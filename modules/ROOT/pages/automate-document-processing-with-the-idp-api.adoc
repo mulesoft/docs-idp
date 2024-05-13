@@ -26,21 +26,23 @@ The following is a sample call that provides guidance about how to construct an 
 
 [source,bash,linenums]
 ----
-curl -H 'Authorization: Bearer {token}' -X POST -H 'Content-Type: multipart/form-data' \ 
-'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/v2' \ 
---form file="@file.pdf"
+curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions' \
+--header 'Authorization: Bearer {token}' \
+--form 'file=@"{pathToFile}"'
 ----
 
 === Define a Callback URL
 
 You can define a callback URL when you call IDP to execute your document actions. If defined, IDP calls the callback URL when the document action execution finishes. 
 
-To specify the callback URL, include the `callback` field in your API call and define a JSON value with the callback URL. For example: 
+To specify the callback URL, include the `callback` field in your API call and define a JSON value with the callback URL. The following example adds a callback to the previous curl command example:
+
 [source,bash,linenums]
 ----
-curl -H 'Authorization: Bearer {token}' -X POST -H 'Content-Type: multipart/form-data' \ 
-'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/v2' \ 
---form file="@file.pdf" callback={"noAuthUri": "https://mycallbackurl.com"}
+curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions' \
+--header 'Authorization: Bearer {token}' \
+--form 'file=@"{pathToFile}"' \
+--form 'callback="{\"noAuthUrl\":\"{callbackURL}\"}"'
 ----
 
 == Retrieve the Results of the Execution
