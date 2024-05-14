@@ -74,6 +74,10 @@ Add Prompts to refine the results of the extraction by asking questions about th
 . Configure the required details: 
 ** *Name*: a unique name for the query.
 ** *Instruction*: a question or request in natural language.
++
+[WARNING]
+Prompts don't support special characters.
++
 ** *Required*: select this option to send the document to review if the question can't be answered. 
 ** *Confidence Threshold*: the minimum accepted value to prevent the document from getting queued for review. 
 . Click *Add*.
