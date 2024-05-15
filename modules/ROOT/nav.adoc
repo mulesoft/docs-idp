@@ -1,5 +1,6 @@
 .xref:index.adoc[IDP]
 * xref:index.adoc[IDP Overview]
+* xref:release-notes.adoc[Release Notes]
 * xref:document-processing.adoc[]
 * xref:creating-document-actions.adoc[]
 * xref:adding-reviewers.adoc[]
