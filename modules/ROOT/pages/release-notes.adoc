@@ -1,0 +1,1 @@
+include::release-notes::partial$idp/idp-release-notes.adoc[tag=!productDescription]
