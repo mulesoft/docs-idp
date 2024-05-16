@@ -1,4 +1,4 @@
-= Integrating IDP With Anypoint Studio
+= Integrating IDP with Anypoint Studio
 
 Execute a published document action and retrieve the results from Anypoint Studio using the IDP Runtime Service API connector. This connector generates automatically when you publish a document action to Anypoint Exchange.
 
@@ -31,16 +31,16 @@ Before using its operations, configure the connector by providing the following 
 * *host*: the Anypoint endpoint URL. 
 +
 For example: `https://idp-rt.{region}.anypoint.mulesoft.com`.
-* *port*: the HTTP port to use for the connection.
+* *port*: the HTTP port for the connection.
 +
 For example: `443`.
 * *basePath*: the base path of the URL to call, without the protocol. 
-* *protocol*: the protocol to use for the call, in upper case. 
+* *protocol*: the protocol for the call, in upper case. 
 +
 For example: `HTTPS`. 
 * *Response timeout*: the response timeout for this operation. 
-* *clientId*: Client ID of the connected app to use to call IDP. 
-* *clientSecret*: Client Secret of the connected app to use to call IDP. 
+* *clientId*: Client ID of the connected app to call IDP. 
+* *clientSecret*: Client Secret of the connected app to call IDP. 
 * *accessTokenUrl*: the URL to obtain the access token for your connected app. 
 +
 For example: `https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token`.
@@ -80,7 +80,7 @@ output multipart/form-data
 
 ----
 
-The response from this operation contains the execution ID that you must use to retrieve the results of the execution. 
+The response from this operation contains the execution ID that you must use to retrieve the execution results. 
 
 == Retrieve the Results of the Execution
 
