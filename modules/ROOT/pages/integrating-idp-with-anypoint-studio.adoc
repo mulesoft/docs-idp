@@ -32,8 +32,12 @@ Before using its operations, configure the connector by providing the following 
 +
 For example: `https://idp-rt.{region}.anypoint.mulesoft.com`.
 * *port*: the HTTP port to use for the connection.
-* *basePath*: the base path of the URL to call. 
-* *protocol*: the protocol to use for the call. 
++
+For example: `443`.
+* *basePath*: the base path of the URL to call, without the protocol. 
+* *protocol*: the protocol to use for the call, in upper case. 
++
+For example: `HTTPS`. 
 * *Response timeout*: the response timeout for this operation. 
 * *clientId*: Client ID of the connected app to use to call IDP. 
 * *clientSecret*: Client Secret of the connected app to use to call IDP. 
@@ -81,6 +85,54 @@ The response from this operation contains the execution ID that you must use to 
 == Retrieve the Results of the Execution
 
 Use the getDocumentActionExecution operation to get the results of a document action execution by specifying its execution ID.
+
+Following is a sample response from this operation, shortened for better readability: 
+
+[source,linenums]
+----
+{
+    "id": "d68e099e-8d37-4188-905a-0eac68b7bf61",
+    "documentName": "invoice-1.jpg",
+    "status": "SUCCEEDED",
+    "pages": [
+        {
+            "page": 1,
+            "fields": {
+                "invoiceDate": {
+                    "value": "1 June, 1983"
+                },
+                "invoiceNumber": {
+                    "value": "8248"
+                }
+                ...
+            
+            },
+            "tables": {
+                "table1": [
+                    {
+                        "unitPrice": {
+                            "value": ""
+                        },
+                        "price": {
+                            "value": "$ 198.00"
+                        }
+                        ...
+                    }
+                ]
+            },
+            "prompts": {
+                "business": {
+                    "prompt": "what is the company main business",
+                    "source": "document",
+                    "answer": {
+                        "value": null
+                    }
+                }
+            }
+        }
+    ]
+}
+----
 
 == See Also 
 
