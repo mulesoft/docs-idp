@@ -8,6 +8,7 @@
 * xref:reviewing-processed-documents.adoc[]
 * xref:automate-document-processing-with-the-idp-api.adoc[]
 * xref:automate-document-processing-with-rpa.adoc[]
+* xref:integrating-idp-with-anypoint-studio.adoc[]
 * xref:permissions.adoc[]
 * xref:quotas-and-limits.adoc[]
 * xref:ms-automation-credits-usage-types.adoc[]
