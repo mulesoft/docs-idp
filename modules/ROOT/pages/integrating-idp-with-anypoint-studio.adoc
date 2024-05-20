@@ -39,7 +39,7 @@ For example: `https://idp-rt.{region}.anypoint.mulesoft.com`
 +
 For example: `443`
 * *basePath*: Base path of the URL to call, without the protocol 
-* *protocol*: Protocol for the call, in upper case 
+* *protocol*: Protocol for the call, in uppercase 
 +
 For example: `HTTPS`
 * *Response timeout*: Response timeout for this operation
