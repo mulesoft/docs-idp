@@ -1,13 +1,17 @@
 = Integrating IDP with Anypoint Studio
 
-Execute a published document action and retrieve the results from Anypoint Studio using the IDP Runtime Service API connector. This connector generates automatically when you publish a document action to Anypoint Exchange.
+Execute a published document action and retrieve the results from Anypoint Studio using that document action's IDP Runtime Service API connector. This connector generates automatically when you publish a document action to Anypoint Exchange. Then, you can download it as a Mule connector from Exchange.
 
-Each document action version generates a different connector. For example, when you publish a document action for the first time, it generates a connector in Exchange that calls version `1.0.0` of this document action. Then, if you modify the document action and republish it as version `1.1.0`, it generates a different connector that you must download and install in Studio to call this new document action version. Consider this behavior when building your integrations. 
+Each document action version generates a different connector. For example, when you publish a document action for the first time, it generates a connector in Exchange that executes version `1.0.0` of this document action. Then, if you modify the document action and republish it as version `1.1.0`, it generates a different connector that you must download and install in Studio to execute this new document action version. Consider this behavior when building your integrations. 
 
-The IDP REST connector has the following operations: 
+The IDP Runtime Service API connector has the following operations: 
 
-* getDocumentActionExecution
-* postDocumentActionExecution
+* *getDocumentActionExecution*
++
+Retrieves the result of a document action execution. 
+* *postDocumentActionExecution*
++
+Submits a document to IDP for processing.
 
 == Before You Begin 
 
@@ -24,30 +28,30 @@ include::partial$connected-app-config.adoc[tag=createConnectedApp]
 //Obtain Access Token instructions
 include::partial$connected-app-config.adoc[tag=obtainAccessToken]
 
-== Configure the IDP Connector 
+== Configure the IDP Runtime Service API Connector
 
 Before using its operations, configure the connector by providing the following values, either manually or through a Global Configuration Element:
 
-* *host*: the Anypoint endpoint URL. 
+* *host*: Anypoint endpoint URL
 +
-For example: `https://idp-rt.{region}.anypoint.mulesoft.com`.
-* *port*: the HTTP port for the connection.
+For example: `https://idp-rt.{region}.anypoint.mulesoft.com`
+* *port*: HTTP port for the connection
 +
-For example: `443`.
-* *basePath*: the base path of the URL to call, without the protocol. 
-* *protocol*: the protocol for the call, in upper case. 
+For example: `443`
+* *basePath*: Base path of the URL to call, without the protocol 
+* *protocol*: Protocol for the call, in upper case 
 +
-For example: `HTTPS`. 
-* *Response timeout*: the response timeout for this operation. 
-* *clientId*: Client ID of the connected app to call IDP. 
-* *clientSecret*: Client Secret of the connected app to call IDP. 
-* *accessTokenUrl*: the URL to obtain the access token for your connected app. 
+For example: `HTTPS`
+* *Response timeout*: Response timeout for this operation
+* *clientId*: Client ID of the connected app to call IDP
+* *clientSecret*: Client Secret of the connected app to call IDP
+* *accessTokenUrl*: URL to obtain the access token for your connected app
 +
-For example: `https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token`.
+For example: `https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token`
 
 == Submit a Document to IDP
 
-Use the postDocumentActionExecution operation to send a document to IDP and execute the corresponding document action version.
+Use the *postDocumentActionExecution* operation to send a document to IDP and execute the corresponding document action version.
 
 Specify the details of the request in the *Postdocumentactionexecution request data* field of the connector. The following is a sample request: 
 
@@ -84,9 +88,9 @@ The response from this operation contains the execution ID that you must use to 
 
 == Retrieve the Results of the Execution
 
-Use the getDocumentActionExecution operation to get the results of a document action execution by specifying its execution ID.
+Use the *getDocumentActionExecution* operation to get the results of a document action execution by specifying its execution ID.
 
-Following is a sample response from this operation, shortened for better readability: 
+The following is a sample response from this operation, shortened for better readability: 
 
 [source,linenums]
 ----
