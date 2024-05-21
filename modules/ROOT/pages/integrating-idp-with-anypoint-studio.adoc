@@ -1,0 +1,144 @@
+= Integrating IDP with Anypoint Studio
+
+Execute a published document action and retrieve the results from Anypoint Studio using that document action's IDP Runtime Service API connector. This connector generates automatically when you publish a document action to Anypoint Exchange. Then, you can download it as a Mule connector from Exchange.
+
+Each document action version generates a different connector. For example, when you publish a document action for the first time, it generates a connector in Exchange that executes version `1.0.0` of this document action. Then, if you modify the document action and republish it as version `1.1.0`, it generates a different connector that you must download and install in Studio to execute this new document action version. Consider this behavior when building your integrations. 
+
+The IDP Runtime Service API connector has the following operations: 
+
+* *getDocumentActionExecution*
++
+Retrieves the result of a document action execution. 
+* *postDocumentActionExecution*
++
+Submits a document to IDP for processing.
+
+== Before You Begin 
+
+Ensure you have the following Anypoint permissions:
+
+include::partial$permissions.adoc[tag=permissionExecute]
+
+include::partial$permissions.adoc[tag=permissionConfigure]
+
+If you already have a connected app configured for IDP, you don't need the *Configure Connected Apps* permission and you can use your existing connected app instead of creating a new one.
+
+//Create Connected App instructions
+include::partial$connected-app-config.adoc[tag=createConnectedApp]
+//Obtain Access Token instructions
+include::partial$connected-app-config.adoc[tag=obtainAccessToken]
+
+== Configure the IDP Runtime Service API Connector
+
+Before using its operations, configure the connector by providing the following values, either manually or through a Global Configuration Element:
+
+* *host*: Anypoint endpoint URL
++
+For example: `https://idp-rt.{region}.anypoint.mulesoft.com`
+* *port*: HTTP port for the connection
++
+For example: `443`
+* *basePath*: Base path of the URL to call, without the protocol 
+* *protocol*: Protocol for the call, in uppercase 
++
+For example: `HTTPS`
+* *Response timeout*: Response timeout for this operation
+* *clientId*: Client ID of the connected app to call IDP
+* *clientSecret*: Client Secret of the connected app to call IDP
+* *accessTokenUrl*: URL to obtain the access token for your connected app
++
+For example: `https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token`
+
+== Submit a Document to IDP
+
+Use the *postDocumentActionExecution* operation to send a document to IDP and execute the corresponding document action version.
+
+Specify the details of the request in the *Postdocumentactionexecution request data* field of the connector. The following is a sample request: 
+
+[source,bash,linenums]
+----
+%dw 2.0
+output multipart/form-data
+---
+{
+   parts : {
+   	 callback : {
+   	 	  headers : {
+               "Content-Type" : "text/plain"
+               },
+           content : '{"noAuthUrl": "https://{yourCallbackURL}.com"}'
+       },        
+       file : {
+           headers : {
+               "Content-Disposition" : {
+                   "name": "{fileName}",
+                   "filename": "{myFile.jpg}",
+                   "subtype": "form-data"
+                   },
+               "Content-Type" : "image/jpg"
+               },
+           content : payload
+           }
+       }
+}
+
+----
+
+The response from this operation contains the execution ID that you must use to retrieve the execution results. 
+
+== Retrieve the Results of the Execution
+
+Use the *getDocumentActionExecution* operation to get the results of a document action execution by specifying its execution ID.
+
+The following is a sample response from this operation, shortened for better readability: 
+
+[source,linenums]
+----
+{
+    "id": "d68e099e-8d37-4188-905a-0eac68b7bf61",
+    "documentName": "invoice-1.jpg",
+    "status": "SUCCEEDED",
+    "pages": [
+        {
+            "page": 1,
+            "fields": {
+                "invoiceDate": {
+                    "value": "1 June, 1983"
+                },
+                "invoiceNumber": {
+                    "value": "8248"
+                }
+                ...
+            
+            },
+            "tables": {
+                "table1": [
+                    {
+                        "unitPrice": {
+                            "value": ""
+                        },
+                        "price": {
+                            "value": "$ 198.00"
+                        }
+                        ...
+                    }
+                ]
+            },
+            "prompts": {
+                "business": {
+                    "prompt": "what is the company main business",
+                    "source": "document",
+                    "answer": {
+                        "value": null
+                    }
+                }
+            }
+        }
+    ]
+}
+----
+
+== See Also 
+
+* xref:creating-document-actions.adoc[]
+* xref:publishing-document-actions.adoc[]
