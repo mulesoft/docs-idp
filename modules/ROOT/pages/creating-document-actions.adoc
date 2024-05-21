@@ -44,6 +44,8 @@ You can upload up to 10 files with a size limit of 8 MB per file.
 
 The document action editor shows a preview of the analyzed document that you can zoom in and out for better visibility. Navigate the different pages of the document using the *Previous* (*<*) and *Next* (*>*) buttons. Switching pages updates the extracted values shown in the *Outputs* section. 
 
+include::partial$create-document-actions.adoc[tag=highlightedValues]
+
 After uploading the sample files, configure the schema. 
 
 [[configure-schema]]

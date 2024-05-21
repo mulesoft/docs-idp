@@ -22,6 +22,8 @@ To review the results of a processed document:
 . In the *Results* panel, verify the values extracted from each field.
 +
 During this step, you can modify the values that require adjustment.
++
+include::partial$create-document-actions.adoc[tag=highlightedValues]
 . After reviewing all values, click *Submit This Page*.
 +
 If there are more than one results page, click *Submit and Next* and continue the process until you review all pages.

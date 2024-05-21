@@ -9,3 +9,7 @@ adding-reviewers.adoc
 . Click *Create New*.
 . Select the type of document to use as a template, specify a name for your document action, and click *Create*. 
 // end::initialSteps[]
+
+// tag::highlightedValues[]
+IDP highlights fields in yellow when the extracted values have a confidence score below the configured threshold. 
+// end::highlightedValues[]
