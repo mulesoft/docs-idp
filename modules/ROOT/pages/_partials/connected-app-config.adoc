@@ -4,7 +4,7 @@
 To communicate with the IDP API, create a connected app with the following details: 
 
 * Type: `App acts on its own behalf (client credentials)`
-* Scopes: `Execute Versioned Actions`
+* Scopes: `Execute Published Actions`
 
 After you create the connected app, copy its *ID* and *Secret* for further use when you obtain the access token. 
 
