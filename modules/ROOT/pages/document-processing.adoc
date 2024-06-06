@@ -8,7 +8,7 @@ After you publish a document action to Anypoint Exchange, you can programaticall
 
 include::partial$document-action.adoc[tag=definition]
 
-IDP provides preconfigured Invoice and Purchase Order templates, which you can select when creating custom document actions. Each template provides a set of expected fields to extract from the document and generate a structured response. When creating a new document action, choose the type that better aligns with the document to process. For example, the Invoice type can process invoices and similar documents such as receipts. If none of these types align with your documents, use the Generic type to fully customize the fields to extract by asking questions in natural language. 
+IDP provides preconfigured *Invoice* and *Purchase Order* templates for creating custom document actions. Each template provides a set of expected fields to extract from the document into a structured response. When creating a new document action, choose the type that aligns best with the document to process. For example, the *Invoice* type can process invoices, receipts, and similar documents. If none of these types align with your documents, use the *Generic* type to fully customize the fields to extract by asking questions in natural language. 
 
 After you create a document action, publish it to Anypoint Exchange to make it available for consumption from RPA and through the IDP API.
 
