@@ -31,4 +31,4 @@ For all successful executions, IDP retains this data for seven days. For executi
 
 == Data Residency Policy:
 
-IDP utilizes AWS services such as S3 and RDS to store files and the extracted data. IDP currently supports 2 regions: US (Virginia) and EU (Frankfurt, Germany). IDP stores the data closest to your Anypoint control plane region to ensure GDPR requirements. For example, if your Anypoint control plane runs in the EU region, IDP stores your data in the Frankfurt data center.
+IDP uses AWS services such as S3 and RDS to store files and the extracted data. IDP currently supports 2 regions: US (Virginia) and EU (Frankfurt, Germany). IDP stores the data closest to your Anypoint control plane region to ensure GDPR requirements. For example, if your Anypoint control plane runs in the EU region, IDP stores your data in the Frankfurt data center.
