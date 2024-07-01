@@ -15,3 +15,20 @@ a|
 | Languages | Full English Support. Additional languages are not fully supported. 
 | Polling Limits | 10-second interval for retrieving results. Applications must avoid polling for results more often than every 10 seconds. 
 |===
+
+== Document Retention Policy
+
+IDP retains the document files and extracts data as needed to process the document extractions. IDP uses the following features to enhance data retention:
+
+* Document Action Editor
++
+IDP temporarily stores the files you modify in the editor during the testing process and immediately removes these files after you close the editor. IDP also removes the extracted data and the files when you end the session or upload a new file.
+* Document Action Execution Endpoint
++
+When you use the execution endpoint API, IDP stores the files in an S3 bucket and stores the data extracted during the execution securely. 
+
+For all successful executions, IDP retains this data for seven days. For executions that land in human task review, IDP retains this data for seven days after the user task is completed. IDP retains any incomplete tasks for 60 days. Currently, you cannot configure these retention periods.
+
+== Data Residency Policy:
+
+IDP utilizes AWS services such as S3 and RDS to store files and the extracted data. IDP currently supports 2 regions: US (Virginia) and EU (Frankfurt, Germany). IDP stores the data closest to your Anypoint control plane region to ensure GDPR requirements. For example, if your Anypoint control plane runs in the EU region, IDP stores your data in the Frankfurt data center.
