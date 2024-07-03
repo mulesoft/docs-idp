@@ -23,7 +23,7 @@ include::partial$connected-app-config.adoc[tag=obtainAccessToken]
 
 To execute the published document actions, use the Submit Document to MuleSoft IDP action step in RPA. This action step enables you to browse through your published document actions and execute them by providing an Execution ID and the path to the file to process. Use the Execution ID when configuring the Retrieve Results from MuleSoft IDP action step to pull the results from the execution. 
 
-The Submit Document to MuleSoft IDP action step executes document actions by impersonating a user in your organization. Therefore, you must use authentication credentials of a user that has the Execute Versioned Actions permission in Anypoint Platform.  
+The Submit Document to MuleSoft IDP action step executes document actions by impersonating a user in your organization. Therefore, you must use authentication credentials of a user that has the Execute Published Actions permission in Anypoint Platform.  
 
 See xref:rpa-builder::toolbox-mulesoft-idp-submit-document-to-mulesoft-idp.adoc[] for configuration details. 
 
