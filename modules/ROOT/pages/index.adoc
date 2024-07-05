@@ -14,6 +14,8 @@ Each processed document shows a confidence score for each extracted field. When 
 
 When you add prompts to your document actions, you can select wether to use the default or Einstein's response. Einstein can answer complex questions that require further analysis of the document instead of just searching and extracting a field. For example, you can ask Einstein what's the total amount due in an invoice after deducting taxes and other values from the document. 
 
+Use Einstein to analyze generic documents that are non-standard or difficult to read without further analysis of the extracted data. 
+
 == See Also 
 
 * xref:document-processing.adoc[]
