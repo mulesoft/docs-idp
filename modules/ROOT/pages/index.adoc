@@ -10,7 +10,7 @@ The confidence score represents the probability that IDP has properly extracted 
 
 Each processed document shows a confidence score for each extracted field. When this value is lower than the defined threshold, IDP sends the document for review by a human to verify the accuracy of the extracted values. You can add single reviewers or teams to each document action. 
 
-== Enhance Data Extraction With Einstein (Pilot)
+== Enhance Data Extraction With Einstein
 
 When you add prompts to your document actions, you can select wether to use the default or Einstein's response. Einstein can answer complex questions that require further analysis of the document instead of just searching and extracting a field. For example, you can ask Einstein what's the total amount due in an invoice after deducting taxes and other values from the document. 
 
