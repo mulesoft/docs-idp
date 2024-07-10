@@ -90,7 +90,7 @@ Prompts don't support special characters.
 
 After you configure prompts and run an document analysis:
 
-* Locate the results the *Outputs* panel. 
+* Locate the results in the *Outputs* panel. 
 * Click the dropdown button (image:prompt-dropdown.png[4%, 4%, "The prompt dropdown icon."]), next to a prompt's result.
 * Select the option labeled *By Einstein*.
 
