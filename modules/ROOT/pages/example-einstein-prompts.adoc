@@ -70,7 +70,7 @@ An example output JSON is:
 
 == Extract Form Data as Key/Value Pairs Including Handwritten Values
 
-The following example is a prompt that analyzes a medical certificate to extract key/value pairs, assigns a confidence score to each value, and also considers handwriting during the extraction: 
+The following example is a prompt that analyzes a medical certificate to extract key/value pairs, assigns a confidence score to each value, and considers handwriting during the extraction: 
 
 [source]
 ----
