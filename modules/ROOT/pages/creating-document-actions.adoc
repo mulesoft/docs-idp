@@ -96,6 +96,8 @@ After you configure prompts and run a document analysis:
 
 Use Einstein to answer complex questions about the document, such as asking the total of an invoice after deducting taxes and other concepts, or asking in which language the document is written. 
 
+See xref:example-einstein-prompts.adoc[] for additional details. 
+
 == See Also 
 
 * xref:adding-reviewers.adoc[]
