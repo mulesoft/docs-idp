@@ -1,6 +1,6 @@
 = Example Einstein Prompts 
 
-Following are some use cases and example Einstein prompts for each situation. These prompts were created based on the sample data used during each test and are meant to provide insight about creating prompts to analyze and format your custom documents. 
+Following are some use cases and example Einstein prompts for each situation. These prompts are based on the sample data used during each test and provide insight about creating prompts to analyze and format your custom documents. 
 
 You can use these examples as starting points, test them against your documents, and modify them until you obtain the expected result. 
 
