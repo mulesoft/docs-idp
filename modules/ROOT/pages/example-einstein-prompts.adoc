@@ -79,7 +79,7 @@ Present the key value pairs in a JSON formatted response.
 
 If you find a date, then format it in yyyy/mm/dd format.
 If you find an age, simply return the number and drop the "years old".
-If you see a checkmark on a checkbox, extract that value as "Yes", otherwise, mark that option as "No". 
+If you see a checkmark on a checkbox, extract that value as "Yes"; otherwise, mark that option as "No". 
 
 Do not create any facts of information, interpret only the information in the document.
 For each key, value that you find, try to associate a confidence score.
