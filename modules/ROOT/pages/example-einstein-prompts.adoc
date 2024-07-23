@@ -86,7 +86,7 @@ For each key, value that you find, try to associate a confidence score.
 
 To generate a confidence score:
 If you are confident about the information in the text, show a confidence score between 80% to 90%
-If you are not confident, then return a low confidence score.
+If you are not confident, return a low confidence score.
 
 An example output JSON is:
     
