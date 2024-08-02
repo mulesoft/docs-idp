@@ -6,8 +6,14 @@ You can use these examples as starting points, test them against your documents,
 
 == Extract details from a US Driver's License
 
-The following Einstein prompt extracts data from a driver's license ID document and outputs the information in JSON format:
+The following Einstein prompt extracts data from a driver's license ID document and outputs the information in JSON format.
 
+* Example document
++
+image::driver-license-example.png[50%, 50%, "An example driver's license."]
+
+* Example Prompt
++
 [source]
 ----
 Identify key elements from the specified document and return them in JSON format. 
@@ -38,10 +44,44 @@ Do not create new information, provide answers only from the text provided. The 
 }
 ----
 
+* Output 
++
+----
+{
+  "id_data": {
+    "doc_number": "12345678",
+    "first_name": "The Genius",
+    "last_name": "Einstein",
+    "issue_date": "10/30/2024",
+    "dob": "03/14/1879",
+    "exp_date": "10/31/2031",
+    "state_region": "California",
+    "height": "5'5\"",
+    "class": "D",
+    "eye_color": "BROWN",
+    "sex": "M",
+    "weight": "150 lb",
+    "restrictions": "None",
+    "address": {
+      "street": "707 South Oakland Avenue",
+      "city": "Pasadena",
+      "state": "CA",
+      "zip": "91106"
+    }
+  }
+}
+----
+
 == Classify a Document With Multiple Pages
 
-In this example, the source document is a PDF with multiple pages containing a timesheet summary document with multiple entries. The goal is to classify the content by identifying the name of the person in each page. For such a case, the following prompt returns a list in JSON format containing the name of the person and the corresponding page number: 
+In this example, the source document is a PDF with multiple pages containing a timesheet summary document with multiple entries. The goal is to classify the content by identifying the name of the person in each page. For such a case, the following prompt returns a list in JSON format containing the name of the person and the corresponding page number.
 
+* Example document
++
+image::timesheet-examples.png[50%, 50%, "An example of a timesheet record."]
+
+* Example Prompt
++
 [source]
 ----
 Classify each page of the following timesheet summary as a unique document type and also identify whether the page continues from the previous document type or it is a new one. 
@@ -49,51 +89,77 @@ Summarize all the employee's names in the timesheet summary document and the pag
 Structure the output as a JSON where the employee name is the key and the page number is the value.
 ----
 
-== Extract Form Data as Key/Value Pairs 
-
-The following example prompt analyzes a form and extracts all data as key value pairs in JSON format: 
-
-[source]
+* Output
++
 ----
-Extract important information in the text delimited by *********
-The data in the text is a medical form and has key/value pairs. 
-Extract and present the key value pairs in a JSON formatted response.
-
-Do not create new information, interpret only the information in the provided document.
-
-An example output JSON is:
-    
-    "patient_name: {
-        "value" : "Max the Mule",
-    }
+{
+    "Jane Almeida": 1, 
+    "Charles Montes": 2, 
+    "Albert Vignoli": 3, 
+    "Max the Mule": 4
+}
 ----
 
 == Extract Form Data as Key/Value Pairs Including Handwritten Values
 
-The following example is a prompt that analyzes a medical certificate to extract key/value pairs, assigns a confidence score to each value, and considers handwriting during the extraction: 
+The following example is a prompt that analyzes a medical certificate to extract key/value pairs and considers handwriting during the extraction.
 
+* Example document
++
+image::medical-license-handwriting-example.png[50%, 50%, "An example medical license that includes key-value pairs, checkboxes, and handwriting."]
+
+* Example Prompt
++
 [source]
 ----
-Extract important information from the document.
-Present the key value pairs in a JSON formatted response.
+Analyze this form for a medical leave and extract its values. Don't extract document's title.
+Present the data as key-value pairs in a JSON formatted response.
 
-If you find a date, then format it in yyyy/mm/dd format.
-If you find an age, simply return the number and drop the "years old".
-If you see a checkmark on a checkbox, extract that value as "Yes"; otherwise, mark that option as "No". 
+If you find a date, format it as YYYY/MM/DD.
+If you find a list of handwritten symptoms, return them as an array and label them "Reason for Absence".
 
 Do not create any facts of information, interpret only the information in the document.
-For each key, value that you find, try to associate a confidence score.
-
-To generate a confidence score:
-If you are confident about the information in the text, show a confidence score between 80% to 90%
-If you are not confident, return a low confidence score.
 
 An example output JSON is:
     
-    "full_name: {
-        "value" : "Max the Mule",
-        "confidence_score" : 99%
+    "Patient_Name": {
+        "value": "Paul Grant"
     }
+
+----
+
+* Output 
+----
+{
+    "Patient_Name": {
+      "value": "Paul Grant"
+    },
+    "Date_of_Birth": {
+      "value": "1988/11/02"
+    },
+    "Case_Number": {
+      "value": "12345678"
+    },
+    "1st_Diagnosed_Date": {
+      "value": "2021/04/12"
+    },
+    "Last_Office_Visit": {
+      "value": "2024/09/01"
+    },
+    "1st_Exam_Date_for_this_Condition": {
+      "value": "2021/01/23"
+    },
+    "Next_Office_Visit": {
+      "value": "2024/10/23"
+    },
+    "Reason_for_Absence": {
+      "value": [
+        "Unable to complete the TPS reports on Saturday",
+        "Hyperventilation during the session"
+      ]
+    }
+}
+
 
 ----
 
