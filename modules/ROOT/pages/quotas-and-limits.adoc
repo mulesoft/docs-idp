@@ -28,7 +28,7 @@ a|
 | 128 characters
 | Languages 
 a| 
-Full English Support +
+Full English, Spanish, and German Support +
 Additional languages are not fully supported. 
 | Polling Limits 
 a| 
