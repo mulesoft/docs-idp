@@ -83,9 +83,20 @@ Prompts don't support special characters.
 ** *Required*: select this option to send the document to review if the question can't be answered. 
 ** *Confidence Threshold*: the minimum accepted value to prevent the document from getting queued for review. 
 . Click *Add*.
-+
-When you click *Add and Run*, IDP saves the question, processes the document, and shows the results along with a confidence score for the specified question. 
-. Click *Save*.
+. Click *Run* to analyze the document again and see the results of the prompts.
+. Click *Save*. 
+
+=== Using Einstein's Response
+
+After you configure prompts and run a document analysis:
+
+* Locate the results in the *Outputs* panel. 
+* Click the dropdown button (image:prompt-dropdown.png[4%, 4%, "The prompt dropdown icon."]), next to a prompt's result.
+* Select the option labeled *By Einstein*.
+
+Use Einstein to answer complex questions about the document, such as asking the total of an invoice after deducting taxes and other concepts, or asking in which language the document is written. 
+
+See xref:example-einstein-prompts.adoc[] for additional details. 
 
 == See Also 
 
