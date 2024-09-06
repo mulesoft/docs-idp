@@ -78,7 +78,7 @@ Add Prompts to refine the results of the extraction by asking questions about th
 ** *Instruction*: a question or request in English, using natural language.
 +
 [WARNING]
-Prompts don't support special characters, ensure you use alphanumeric characters when writing your prompts. This limitation doesn't apply to documents, which can contain any type of characters or symbols. 
+Prompts don't support special characters. Ensure you use alphanumeric characters when writing your prompts. This limitation doesn't apply to documents, which can contain any type of characters or symbols. 
 +
 ** *Required*: select this option to send the document to review if the question can't be answered. 
 ** *Confidence Threshold*: the minimum accepted value to prevent the document from getting queued for review. 
