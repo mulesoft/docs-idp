@@ -23,13 +23,16 @@ a|
 * 10 MB per file
 !===
 | Prompt Limits 
-| 30 per document action
+a| 
+* 30 per document action
+* English prompts +
+Prompts in other languages are not fully supported. 
 | Prompt Response Limits 
 | 128 characters
-| Languages 
+| Document Languages 
 a| 
-Full English, Spanish, and German Support +
-Additional languages are not fully supported. 
+Full English, Spanish, and German document support +
+Analyzing documents in other languages is not fully supported. 
 | Polling Limits 
 a| 
 10-second interval for retrieving results +
