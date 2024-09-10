@@ -34,7 +34,7 @@ Before using its operations, configure the connector by providing the following 
 
 * *host*: Anypoint endpoint URL
 +
-For example: `https://idp-rt.{region}.anypoint.mulesoft.com`
+For example: `idp-rt.{region}.anypoint.mulesoft.com`
 * *port*: HTTP port for the connection
 +
 For example: `443`
