@@ -1,0 +1,56 @@
+= IDP Glossary 
+
+== C
+
+Callback URL:: 
+URL specified for IDP to call when the document processing finishes.
+
+Confidence score::
+The probability that IDP has properly extracted a value from a document. Documents with low confidence scores are sent for human review. 
+
+Connected app:: 
+Framework that enables external applications to call the IDP API.
+
+== D 
+
+Document action:: 
+Configurable schema definitions containing instructions to process documents. You can create them using preconfigured templates or customized fields. 
+
+== E 
+
+Execution ID:: 
+Identifier required to execute and retrieve results of document actions in MuleSoft RPA.
+
+== F 
+
+Field extraction:: 
+Process of identifying and retrieving specific data fields from documents as defined in a document action.
+
+== H 
+
+HITL (Human-in-the-loop):: 
+Process where human reviewers verify the accuracy of the extracted values from documents when the confidence score is lower than the defined threshold. This ensures that the extracted data is accurate and reliable.
+
+== N
+
+NLP (Natural Language Processing)::
+Branch of artificial intelligence that focuses on processing human language, including syntactic, semantic, and pragmatic analysis, to facilitate human-computer interaction.
+
+== P 
+
+Prompts:: 
+Instructions in natural language added to refine the extraction results.
+
+== R 
+
+Reviewers:: 
+Individuals or teams that verify the accuracy of extracted values when the confidence score is low.
+
+== S 
+Schema Configuration:: 
+Process of selecting and configuring extracted field names, visibility, threshold, and required fields for document actions.
+
+== U
+
+Unstructured data:: 
+Information that does not have a predefined data model or is not organized.

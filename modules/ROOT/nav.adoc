@@ -14,3 +14,4 @@
 * xref:ms-automation-credits-usage-types.adoc[]
 ** xref:ms-automation-credits-2.adoc[]
 ** xref:ms-automation-credits.adoc[]
+* xref:glossary.adoc[Glossary]
