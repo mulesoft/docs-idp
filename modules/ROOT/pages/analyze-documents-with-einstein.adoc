@@ -1,6 +1,6 @@
 = Analyze Generic Documents With Einstein
 
-By default, IDP uses Natural Language Processing (NLP) to extract data from documents. You can enable Einstein for your organization and use Einstein AI to analyze semi-structure or unstructured documents with complex data and extract values.
+By default, IDP uses Natural Language Processing (NLP) to extract document data. You can enable Einstein for your organization and use Einstein AI to analyze semi-structured or unstructured documents with complex data and extract values.
 
 To analyze documents with Einstein: 
 
