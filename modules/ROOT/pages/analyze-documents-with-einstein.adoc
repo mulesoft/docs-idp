@@ -1,0 +1,49 @@
+= Analyze Generic Documents With Einstein
+
+By default, IDP uses Natural Language Processing (NLP) to extract data from documents. You can enable Einstein for your organization and use Einstein AI to analyze semi-structure or unstructured documents with complex data and extract values.
+
+To analyze documents with Einstein: 
+
+. <<create-new-document-action>>
+. <<upload-files>>
+. <<add-prompts>>
+
+== Before You Begin 
+
+* Ensure Einstein is enabled for your organization. 
+* Ensure you have any of the following Anypoint permissions:
++
+--
+include::partial$permissions.adoc[tag=permissionManage]
++
+include::partial$permissions.adoc[tag=permissionBuild]
+--
+
+[[create-new-document-action]]
+== Create a New Document Action 
+
+To start extracting data from documents, create a new document action: 
+
+//starting steps
+include::partial$create-document-actions.adoc[tags=initialSteps;!selectType]
+
+Next, upload samples files to test the extraction. 
+
+//upload sample file
+[[upload-files]]
+include::partial$create-document-actions.adoc[tag=uploadSampleFileStep]
+
+[[add-prompts]]
+== Add Prompts to Extract Values
+
+Create prompts to configure the schema for extracting fields or tables from your document:
+
+. Select an example prompt or click *Start from Scratch* to create custom prompts. 
+. Provide a name for the field or table column to extract.
+. Write an instruction using natural language to extract the field or table column.
+. Set a confidence score threshold for this field or table column. 
+. Click *Save*.
+
+== See Also 
+
+* xref:example-einstein-prompts.adoc[]

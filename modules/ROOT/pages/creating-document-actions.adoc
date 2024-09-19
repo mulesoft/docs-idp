@@ -4,7 +4,7 @@ include::partial$document-action.adoc[tag=definition]
 
 Create a document action using a predefined type as a template, and then specify which fields are mandatory, which fields to exclude from the JSON response, and the minimum confidence score expected for each field. 
 
-You can also extract specific data from a document using questions in natural language, for example:
+You can extract additional data from a document using questions in natural language, for example:
 
 * What is the subtotal amount?
 * What is the grand total?
@@ -15,8 +15,9 @@ After you create a new document action, you can add reviewers and publish it to 
 
 When you create a document action, ensure that the configured schema works for each uploaded document. If you can't customize the schema to work with all sample documents, consider creating multiple document actions. For example, purchase orders from multiple vendors might be different enough to require a separate document action for each vendor.
 
-Creating a document action requires the following tasks:
+Creating and customizing a document action requires the following tasks:
 
+. <<create-new-document-action>>
 . <<upload-files>>
 . <<configure-schema>>
 . <<add-prompts>>
@@ -29,24 +30,19 @@ include::partial$permissions.adoc[tag=permissionManage]
 
 include::partial$permissions.adoc[tag=permissionBuild]
 
-[[upload-files]]
-== Upload Sample Files and Preview the Results
+[[create-new-document-action]]
+== Create a New Document Action 
 
-To start creating a new document action, upload sample files to test the extraction process: 
+To start extracting data from documents, create a new document action: 
 
 //starting steps
-include::partial$create-document-actions.adoc[tag=initialSteps]
+include::partial$create-document-actions.adoc[tags=initialSteps;!selectGenericType]
 
-. Click *Select files* and upload sample files to analyze. 
-+
-You can upload up to 10 files with a size limit of 8 MB per file. 
-. Click *Run* to analyze the files and get a preview of the results. 
+Next, upload samples files to test the extraction. 
 
-The document action editor shows a preview of the analyzed document that you can zoom in and out for better visibility. Navigate the different pages of the document using the *Previous* (*<*) and *Next* (*>*) buttons. Switching pages updates the extracted values shown in the *Outputs* section. 
-
-include::partial$create-document-actions.adoc[tag=highlightedValues]
-
-After uploading the sample files, configure the schema. 
+//upload sample file
+[[upload-files]]
+include::partial$create-document-actions.adoc[tag=uploadSampleFileStep]
 
 [[configure-schema]]
 == Configure the Schema for the Extraction
@@ -56,13 +52,17 @@ Configure the schema by selecting fields to hide from the response, fields that 
 . In the *Outputs* section, click *Fields* and select any of the extracted field names to configure the following settings: 
 +
 --
-** *Visibility*: defines if this field shows in the output JSON result. Click *Visibility* (image:visibility-icon.png[2%, 2%, "The Visibility icon"]) to hide this field. 
-** *Threshold*: the minimum required confidence score accepted for this field. If the returned *Confidence* value is below the threshold, the document is queued for human review. 
+** *Visibility*: defines if this field shows in the output JSON result. 
++ 
+Click *Visibility* (image:visibility-icon.png[2%, 2%, "The Visibility icon"]) to hide this field. 
+** *Threshold*: the minimum required confidence score accepted for this field. 
++
+If the returned *Confidence* value is below the threshold, the document is queued for human review. 
 ** *Required*: select this option to send the document to review if the field is missing or can't be extracted. 
 
 You can click *Focus* (image:focus-icon.png[2%, 2%, "The Focus icon"]) to center the preview in the corresponding field.
 --
-. If your document contains tables, click *Tables* to configure the extraction settings for the table columns. 
+. If your document contains tables, click *Tables* to configure *Visibility*, *Threshold*, and *Required* settings for each of the table columns. 
 
 After configuring the schema, add Prompts to your document action.
 
@@ -86,6 +86,7 @@ Prompts don't support special characters.
 . Click *Run* to analyze the document again and see the results of the prompts.
 . Click *Save*. 
 
+////
 === Using Einstein's Response
 
 After you configure prompts and run a document analysis:
@@ -97,6 +98,7 @@ After you configure prompts and run a document analysis:
 Use Einstein to answer complex questions about the document, such as asking the total of an invoice after deducting taxes and other concepts, or asking in which language the document is written. 
 
 See xref:example-einstein-prompts.adoc[] for additional details. 
+////
 
 == See Also 
 

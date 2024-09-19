@@ -7,9 +7,36 @@ adding-reviewers.adoc
 // tag::initialSteps[]
 . In the sidebar, click *Document Actions*.
 . Click *Create New*.
-. Select the type of document to use as a template, specify a name for your document action, and click *Create*. 
+
+// tag::selectType[]
+. Select the type of document to use as a template and specify a name for your document action.
+// end::selectType[]
+// tag::selectGenericType[]
+. Select the Generic document type and specify a name for your document action.
+// end::selectGenericType[]
+
+. Click *Create*. 
 // end::initialSteps[]
 
 // tag::highlightedValues[]
 IDP highlights fields in yellow when the extracted values have a confidence score below the configured threshold. 
 // end::highlightedValues[]
+
+// tag::uploadSampleFileStep[]
+== Upload Sample Files and Preview the Results
+
+After creating a new document action, upload sample files to test the extraction process: 
+
+. Click *Select files* and upload sample files to analyze. 
++
+You can upload up to 10 files with a size limit of 8 MB per file. 
+. Click *Run* to analyze the files and get a preview of the results. 
++
+The document action editor shows a preview of the analyzed document that you can zoom in and out for better visibility. Navigate the different pages of the document using the *Previous* (*<*) and *Next* (*>*) buttons. Switching pages updates the extracted values shown in the *Outputs* section. 
++
+To preview the JSON response containing the results, click *Show JSON* after running the test extraction. 
++
+include::partial$create-document-actions.adoc[tag=highlightedValues]
+
+After uploading the sample files, configure the schema. 
+// end::uploadSampleFileStep[]
