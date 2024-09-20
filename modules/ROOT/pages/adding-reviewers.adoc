@@ -16,7 +16,7 @@ include::partial$permissions.adoc[tag=permissionBuild]
 
 To create a new document action and add reviewers:
 
-include::partial$create-document-actions.adoc[tag=initialSteps]
+include::partial$create-document-actions.adoc[tags=initialSteps;!selectGenericType]
 
 include::partial$add-reviewers.adoc[tag=commonSteps]
 
