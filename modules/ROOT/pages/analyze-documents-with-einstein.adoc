@@ -36,7 +36,7 @@ include::partial$create-document-actions.adoc[tag=uploadSampleFileStep]
 [[add-prompts]]
 == Add Prompts to Extract Values
 
-Create prompts to configure the schema for extracting fields or tables from your document:
+Create prompts using natural language to configure the schema for extracting fields or tables from your document:
 
 . Select an example prompt or click *Start from Scratch* to create custom prompts. 
 . Provide a name for the field or table column to extract.
