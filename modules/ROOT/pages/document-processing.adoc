@@ -2,15 +2,23 @@
 
 Before you analyze documents with IDP, you must create and publish document actions, the configurable schema definitions containing the necessary instructions to process your documents. 
 
-After you publish a document action to Anypoint Exchange, you can programatically call the IDP API to execute the document action and extract data from a document. As a result, the document action analyzes the provided document and returns a response in JSON format with all the extracted fields. You can query the IDP API to check the status of an execution at any time.
+After you publish a document action to Anypoint Exchange, you can programmatically call the IDP API to execute the document action and extract data from a document. As a result, the document action analyzes the provided document and returns a response in JSON format with all the extracted fields. You can query the IDP API to check the status of an execution at any time.
 
 == Document Actions 
 
 include::partial$document-action.adoc[tag=definition]
 
-IDP provides preconfigured *Invoice* and *Purchase Order* templates for creating custom document actions. Each template provides a set of expected fields to extract from the document into a structured response. When creating a new document action, choose the type that aligns best with the document to process. For example, the *Invoice* type can process invoices, receipts, and similar documents. If none of these types align with your documents, use the *Generic* type to fully customize the fields to extract by asking questions in natural language. 
+IDP provides the preconfigured Invoice and Purchase Order templates for creating custom document actions. Each template offers a set of expected fields to extract from the document into a structured response. When creating a new document action, choose the type that aligns best with the document to process. For example, the Invoice type can process invoices, receipts, and similar documents. If none of these types align with your documents, use the Generic type to fully customize the fields to extract by asking questions in natural language.
 
 After you create a document action, publish it to Anypoint Exchange to make it available for consumption from RPA and through the IDP API.
+
+=== Enhance Data Extraction With Einstein
+
+When you create a Generic type document action, you can select whether to use Einstein to analyze and extract data from your document. Einstein can answer complex questions that require further analysis of the document instead of just searching and extracting a field. For example, you can ask Einstein what's the total amount due in an invoice after deducting taxes and other values from the document. 
+
+Use Einstein to analyze unstructured and semi-structured documents that don't use a standard format or are difficult to read without performing a complex analysis of the extracted data. 
+
+For configuration and usage instructions, see: xref:analyze-documents-with-einstein.adoc[]. 
 
 == Reviews
 
