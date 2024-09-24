@@ -75,7 +75,7 @@ Add Prompts to refine the results of the extraction by asking questions about th
 . Click *Add New*.
 . Configure the required details: 
 ** *Name*: a unique name for the query.
-** *Instruction*: a question or request in English, using natural language.
+** *Instruction*: a unique question or request in English, using natural language.
 +
 [WARNING]
 Prompts don't support special characters. Ensure you use alphanumeric characters when writing your prompts. This limitation doesn't apply to documents, which can contain any type of characters or symbols. 
