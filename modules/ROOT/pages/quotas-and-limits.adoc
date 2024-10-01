@@ -6,7 +6,8 @@ The following table shows the quotas and limitations of the IDP service:
 |===
 | Limit | Description
 | Accepted File Formats 
-| PDF, PNG, JPG (150 DPI or more recommended)
+a| PDF, PNG, JPG, TIFF (150 DPI or more recommended) +
+The document action builder does not support previewing TIFF files. However, you can extract data and review results from these files.
 | File Size Limits 
 a| 
 [%header%autowidth.spread,cols="a,a"]
