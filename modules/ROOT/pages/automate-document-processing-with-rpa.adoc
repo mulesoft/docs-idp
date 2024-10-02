@@ -11,7 +11,7 @@ Ensure you have the following Anypoint permissions:
 
 include::partial$permissions.adoc[tag=permissionExecute]
 
-include::partial$permissions.adoc[tag=permissionConfigure]
+//include::partial$permissions.adoc[tag=permissionConfigure]
 
 // Connected App section
 include::partial$connected-app-config.adoc[tag=createConnectedApp]
