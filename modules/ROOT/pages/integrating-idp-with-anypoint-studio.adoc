@@ -19,7 +19,7 @@ Ensure you have the following Anypoint permissions:
 
 include::partial$permissions.adoc[tag=permissionExecute]
 
-include::partial$permissions.adoc[tag=permissionConfigure]
+//include::partial$permissions.adoc[tag=permissionConfigure]
 
 If you already have a connected app configured for IDP, you don't need the *Configure Connected Apps* permission and you can use your existing connected app instead of creating a new one.
 
