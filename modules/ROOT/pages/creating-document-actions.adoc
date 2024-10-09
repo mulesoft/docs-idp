@@ -86,13 +86,18 @@ Prompts don't support special characters.
 . Click *Run* to analyze the document again and see the results of the prompts.
 . Click *Save*. 
 
-=== Using Einstein's Response
+== Analyze Documents With Einstein
 
-After you configure prompts and run a document analysis:
+By default, IDP uses its natural language processing model (IDP NLP) to extract data based on the configured prompts. When you create a document action, you can specify in each prompt the model that analyzes the document and extracts the data.
 
-* Locate the results in the *Outputs* panel. 
-* Click the dropdown button (image:prompt-dropdown.png[4%, 4%, "The prompt dropdown icon."]), next to a prompt's result.
-* Select the option labeled *By Einstein*.
+To analyze the document with Einstein: 
+
+. <<add-prompts, Add a new prompt and run a document analysis>>.
+. Locate the results in the *Outputs* panel. 
+. Click the dropdown button (image:prompt-dropdown.png[4%, 4%, "The prompt dropdown icon."]), next to a prompt's result.
+. Select the response labeled *Einstein*.
+
+When you query a published document action, IDP uses the model selected in each prompt to extract the data for the corresponding field.
 
 Use Einstein to answer complex questions about the document, such as asking the total of an invoice after deducting taxes and other concepts, or asking in which language the document is written. 
 
