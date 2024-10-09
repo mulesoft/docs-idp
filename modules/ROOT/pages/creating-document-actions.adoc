@@ -88,7 +88,7 @@ Prompts don't support special characters.
 
 == Analyze Documents With Einstein
 
-By default, IDP uses its natural language processing model (IDP NLP) to extract data based on the configured prompts. When you create a document action, you can specify in each prompt the model that analyzes the document and produces a response.
+By default, IDP uses its natural language processing model (IDP NLP) to extract data based on the configured prompts. When you create a document action, you can specify in each prompt the model that analyzes the document and extracts the data.
 
 To analyze the document with Einstein: 
 
