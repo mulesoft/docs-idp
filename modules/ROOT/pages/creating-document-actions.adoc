@@ -97,7 +97,7 @@ To analyze the document with Einstein:
 . Click the dropdown button (image:prompt-dropdown.png[4%, 4%, "The prompt dropdown icon."]), next to a prompt's result.
 . Select the response labeled *Einstein*.
 
-When you query a published a document action, IDP returns one response per prompt based on the model selected when creating the document action. 
+When you query a published document action, IDP uses the model selected in each prompt to extract the data for the corresponding field.
 
 Use Einstein to answer complex questions about the document, such as asking the total of an invoice after deducting taxes and other concepts, or asking in which language the document is written. 
 
