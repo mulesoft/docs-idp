@@ -5,15 +5,43 @@ The following table shows the quotas and limitations of the IDP service:
 [%header%autowidth.spread,cols=".^a,.^a]
 |===
 | Limit | Description
-| Accepted File Formats | PDF, PNG, JPG (150 DPI or more recommended).
+| Accepted File Formats 
+a| PDF, PNG, JPG, TIFF (150 DPI or more recommended) +
+The document action builder does not support previewing TIFF files. However, you can extract data and review results from these files.
 | File Size Limits 
 a| 
-* Upload via UI: 8 MB per file and 10 files max per upload. 
-* Upload via API: 10 MB per file, no limit on the number of files per upload.
-| Prompt Limits | 30 per document action.
-| Prompt Response Limits | 128 characters. 
-| Languages | Full English Support. Additional languages are not fully supported. 
-| Polling Limits | 10-second interval for retrieving results. Applications must avoid polling for results more often than every 10 seconds. 
+[%header%autowidth.spread,cols="a,a"]
+!===
+! Upload via UI 
+! Upload via API
+! 
+* 10 files per upload
+* 50 pages per file
+* 8 MB per file
+! 
+* No limit on the number of files per upload
+* 50 pages per file
+* 10 MB per file
+!===
+| Prompt Limits 
+a| 
+* 30 per document action
+* English prompts +
+Prompts in other languages are not fully supported. 
+* Unique prompts
++
+Duplicate prompt names or instructions are not allowed.
+| Prompt Response Limits 
+a| 
+* 128 characters for IDP NLP prompts.
+| Document Languages 
+a| 
+Full English, Spanish, and German document support +
+Analyzing documents in other languages is not fully supported. 
+| Polling Limits 
+a| 
+10-second interval for retrieving results +
+Applications must avoid polling for results more often than every 10 seconds. 
 |===
 
 == Document Retention Policy
