@@ -31,9 +31,13 @@ Prompts in other languages are not fully supported.
 * Unique prompts
 +
 Duplicate prompt names or instructions are not allowed.
+* 20000 characters for Einstein prompts. 
 | Prompt Response Limits 
 a| 
 * 128 characters for IDP NLP prompts.
+* 4096 output tokens for Einstein prompts. 
++
+An output token is a text fragment, such as a word or part of a word.
 | Document Languages 
 a| 
 Full English, Spanish, and German document support +
