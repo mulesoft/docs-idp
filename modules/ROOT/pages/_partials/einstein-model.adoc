@@ -1,0 +1,1 @@
+Einstein uses the `llmgateway__OpenAIGPT4Omni_05_13` LLM Gateway model. See https://git.soma.salesforce.com/pages/tech-enablement/einstein/docs/gateway/models-and-providers/[Models and Providers] for additional information. 
