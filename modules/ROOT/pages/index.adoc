@@ -16,6 +16,8 @@ When you add prompts to your document actions, you can select wether to use the 
 
 Use Einstein to analyze documents that don't use a standard format or are difficult to read without performing a complex analysis of the extracted data. 
 
+include::partial$einstein-model.adoc[]
+
 == See Also 
 
 * xref:document-processing.adoc[]
