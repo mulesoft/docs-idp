@@ -87,14 +87,24 @@ Prompts don't support special characters.
 . Click *Save*. 
 
 [[einstein]]
-== Analyze Documents With Einstein
+== Analyze Documents with Einstein
 
 By default, IDP uses its natural language processing model (IDP NLP) to extract data based on the configured prompts. When you create a document action, you can specify in each prompt the model that analyzes the document and extracts the data.
 
+=== Before You Begin Using Einstein
+
+Ensure you completed these configuration steps:
+
+. https://help.salesforce.com/s/articleView?id=platform.external_services_setup_mulesoft_connect_to_anypoint_exchange.htm&type=5[Connect Salesforce to MuleSoft Anypoint Exchange from Setup]
+. xref:access-management::enabling-einstein.adoc[]
+
+=== Select the Response from Einstein
+
 To analyze the document with Einstein: 
 
-. <<add-prompts, Add a new prompt and run a document analysis>>.
-. Locate the results in the *Outputs* panel. 
+. <<upload-files, Create a new document action>> or edit an existing one. 
+. <<add-prompts, Add a new prompt to the document action and run a document analysis>>.
+. Find the results in the *Outputs* panel. 
 . Click the dropdown button (image:prompt-dropdown.png[4%, 4%, "The prompt dropdown icon."]), next to a prompt's result.
 . Select the response labeled *Einstein*.
 
