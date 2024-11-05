@@ -31,6 +31,8 @@ curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizati
 --form 'file=@"{pathToFile}"'
 ----
 
+include::partial$document-action.adoc[tag=modelUsage]
+
 [[callback-url]]
 === Define a Callback URL
 

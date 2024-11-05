@@ -89,7 +89,11 @@ Prompts don't support special characters.
 [[einstein]]
 == Analyze Documents with Einstein
 
-By default, IDP uses its natural language processing model (IDP NLP) to extract data based on the configured prompts. When you create a document action, you can specify in each prompt the model that analyzes the document and extracts the data.
+By default, IDP uses its natural language processing model (IDP NLP) to extract data based on the configured prompts. When you create a document action, you can select Einstein to analyze the document and extract the data. 
+
+Use Einstein to answer complex questions about the document, such as asking the total of an invoice after deducting taxes and other concepts, or asking in which language the document is written.
+
+include::partial$einstein-model.adoc[]
 
 === Before You Begin Using Einstein
 
@@ -108,11 +112,7 @@ To analyze the document with Einstein:
 . Click the dropdown button (image:prompt-dropdown.png[4%, 4%, "The prompt dropdown icon."]), next to a prompt's result.
 . Select the response labeled *Einstein*.
 
-When you query a published document action, IDP uses the model selected in each prompt to extract the data for the corresponding field.
-
-Use Einstein to answer complex questions about the document, such as asking the total of an invoice after deducting taxes and other concepts, or asking in which language the document is written. 
-
-include::partial$einstein-model.adoc[]
+include::partial$document-action.adoc[tag=modelUsage]
 
 For examples, see xref:example-einstein-prompts.adoc[].
 
