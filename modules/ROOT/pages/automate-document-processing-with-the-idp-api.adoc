@@ -48,6 +48,14 @@ curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizati
 --form 'callback="{\"noAuthUrl\":\"{callbackURL}\"}"'
 ----
 
+=== Use a Different Salesforce Org to Execute Your Document Actions
+
+If you have multiple Salesforce Orgs connected with your Anypoint Platform organization, you can specify the Org to use when executing your document actions.
+
+To specify a Salesforce Org, add the following header to the API call: 
+
+* `x-sfdc-core-tenant-id=<18-char-sfdc-org-id>`
+
 == Retrieve the Results of the Execution
 
 After a document action successfully processes a document, or after a reviewer verifies and submits a document queued for review, the results are available for consumption. 
