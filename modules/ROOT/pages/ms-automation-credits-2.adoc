@@ -6,6 +6,8 @@ include::rpa-home::partial$automation-credits-2.adoc[tag=conversionRates]
 
 include::rpa-home::partial$automation-credits-2.adoc[tag=detailsAndSubscriptionPlans]
 
+Analyzing documents with Einstein consumes Automation Credits and Einstein Requests. For more details about Einstein Requests usage and consumption, see the https://www.salesforce.com/content/dam/web/en_us/www/documents/einstein-for-generative-ai-rate-card.pdf[Einstein Rate Card].
+
 == See Also 
 
 * xref:ms-automation-credits-usage-types.adoc[]
