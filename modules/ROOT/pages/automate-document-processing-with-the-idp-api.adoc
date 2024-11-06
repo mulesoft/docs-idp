@@ -48,9 +48,9 @@ curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizati
 --form 'callback="{\"noAuthUrl\":\"{callbackURL}\"}"'
 ----
 
-=== Use a Different Salesforce Org to Call the API
+=== Use a Different Salesforce Org to Execute your Document Actions
 
-If you have multiple Salesforce Orgs connected with your Anypoint Platform organization, you can specify the Org to use when making the API call to IDP.
+If you have multiple Salesforce Orgs connected with your Anypoint Platform organization, you can specify the Org to use when executing your document actions.
 
 To specify a Salesforce Org, add the following header to the API call: 
 
