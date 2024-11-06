@@ -48,7 +48,7 @@ curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizati
 --form 'callback="{\"noAuthUrl\":\"{callbackURL}\"}"'
 ----
 
-=== Use a Different Salesforce Org to Execute your Document Actions
+=== Use a Different Salesforce Org to Execute Your Document Actions
 
 If you have multiple Salesforce Orgs connected with your Anypoint Platform organization, you can specify the Org to use when executing your document actions.
 
