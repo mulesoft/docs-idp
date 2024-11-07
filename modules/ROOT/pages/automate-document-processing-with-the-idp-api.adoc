@@ -55,6 +55,8 @@ If you have multiple Salesforce Orgs connected with your Anypoint Platform organ
 To specify a Salesforce Org, add the following header to the API call: 
 
 * `x-sfdc-core-tenant-id=<18-char-sfdc-org-id>`
++
+Replace `<18-char-sfdc-org-id>` with your Salesforce Org ID.
 
 == Retrieve the Results of the Execution
 
