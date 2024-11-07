@@ -22,7 +22,8 @@ Execute Published Actions:: Enables a user to execute a published document actio
 // end::permissionExecute[]
 
 // tag::permissionConfigure[]
-Configure Connected Apps:: Enables a user to configure a connected app to communicate with IDP.
+// Unused permission
+// Configure Connected Apps:: Enables a user to configure a connected app to communicate with IDP.
 // end::permissionConfigure[]
 
 // end::permissionsList[]

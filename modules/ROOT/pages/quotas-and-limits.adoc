@@ -48,6 +48,8 @@ a|
 Applications must avoid polling for results more often than every 10 seconds. 
 |===
 
+
+
 == Document Retention Policy
 
 IDP retains the document files and extracts data as needed to process the document extractions. IDP uses the following features to enhance data retention:
