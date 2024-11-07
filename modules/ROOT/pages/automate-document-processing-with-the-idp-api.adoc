@@ -31,6 +31,8 @@ curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizati
 --form 'file=@"{pathToFile}"'
 ----
 
+include::partial$document-action.adoc[tag=modelUsage]
+
 [[callback-url]]
 === Define a Callback URL
 
@@ -45,6 +47,16 @@ curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizati
 --form 'file=@"{pathToFile}"' \
 --form 'callback="{\"noAuthUrl\":\"{callbackURL}\"}"'
 ----
+
+=== Use a Different Salesforce Org to Execute Your Document Actions
+
+If you have multiple Salesforce Orgs connected with your Anypoint Platform organization, you can specify the Org to use when executing your document actions.
+
+To specify a Salesforce Org, add the following header to the API call: 
+
+* `x-sfdc-core-tenant-id=<18-char-sfdc-org-id>`
++
+Replace `<18-char-sfdc-org-id>` with your Salesforce Org ID.
 
 == Retrieve the Results of the Execution
 

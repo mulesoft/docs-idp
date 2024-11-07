@@ -3,6 +3,7 @@
 * xref:release-notes.adoc[Release Notes]
 * xref:document-processing.adoc[]
 * xref:creating-document-actions.adoc[]
+** xref:example-einstein-prompts.adoc[]
 * xref:adding-reviewers.adoc[]
 * xref:publishing-document-actions.adoc[]
 * xref:reviewing-processed-documents.adoc[]

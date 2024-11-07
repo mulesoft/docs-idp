@@ -83,9 +83,38 @@ Prompts don't support special characters. Ensure you use alphanumeric characters
 ** *Required*: select this option to send the document to review if the question can't be answered. 
 ** *Confidence Threshold*: the minimum accepted value to prevent the document from getting queued for review. 
 . Click *Add*.
-+
-When you click *Add and Run*, IDP saves the question, processes the document, and shows the results along with a confidence score for the specified question. 
-. Click *Save*.
+. Click *Run* to analyze the document again and see the results of the prompts.
+. Click *Save*. 
+
+[[einstein]]
+== Analyze Documents with Einstein
+
+By default, IDP uses its natural language processing model (IDP NLP) to extract data based on the configured prompts. When you create a document action, you can select Einstein to analyze the document and extract the data. 
+
+Use Einstein to answer complex questions about the document, such as asking the total of an invoice after deducting taxes and other concepts, or to extract data from non-standard documents such as a driver's license or a medical record that contains handwriting. 
+
+include::partial$einstein-model.adoc[]
+
+=== Before You Begin Using Einstein
+
+Ensure you completed these configuration steps:
+
+. https://help.salesforce.com/s/articleView?id=platform.external_services_setup_mulesoft_connect_to_anypoint_exchange.htm&type=5[Connect Salesforce to MuleSoft Anypoint Exchange from Setup]
+. xref:access-management::enabling-einstein.adoc[]
+
+=== Select the Response from Einstein
+
+To analyze the document with Einstein: 
+
+. <<upload-files, Create a new document action>> or edit an existing one. 
+. <<add-prompts, Add a new prompt to the document action and run a document analysis>>.
+. Find the results in the *Outputs* panel. 
+. Click the dropdown button (image:prompt-dropdown.png[4%, 4%, "The prompt dropdown icon."]), next to a prompt's result.
+. Select the response labeled *Einstein*.
+
+include::partial$document-action.adoc[tag=modelUsage]
+
+For examples, see xref:example-einstein-prompts.adoc[].
 
 == See Also 
 
