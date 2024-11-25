@@ -40,7 +40,7 @@ a|
 An output token is a text fragment, such as a word or part of a word.
 | Document Languages 
 a| 
-Full English, Spanish, and German document support +
+Full English, Spanish, German, French, Italian, and Portuguese document support +
 Analyzing documents in other languages is not fully supported. 
 | Polling Limits 
 a| 
