@@ -6,7 +6,7 @@ To communicate with the IDP API, create a connected app with the following detai
 * Type: `App acts on its own behalf (client credentials)`
 * Scopes: `Execute Published Actions`
 
-After you create the connected app, copy its *ID* and *Secret* for further use when you obtain the access token. 
+After you create the connected app, copy its *ID* and *Secret* for further use. 
 
 For more information, see xref:access-management::connected-apps-overview.adoc[].
 

@@ -16,9 +16,6 @@ include::partial$permissions.adoc[tag=permissionExecute]
 // Connected App section
 include::partial$connected-app-config.adoc[tag=createConnectedApp]
 
-// Access Token section
-include::partial$connected-app-config.adoc[tag=obtainAccessToken]
-
 == Execute the Published Document Actions  
 
 To execute the published document actions, use the Submit Document to MuleSoft IDP action step in RPA. This action step enables you to browse through your published document actions and execute them by providing an Execution ID and the path to the file to process. Use the Execution ID when configuring the Retrieve Results from MuleSoft IDP action step to pull the results from the execution. 
