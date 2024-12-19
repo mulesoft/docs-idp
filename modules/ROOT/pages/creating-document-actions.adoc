@@ -99,8 +99,8 @@ include::partial$einstein-model.adoc[]
 
 Ensure you completed these configuration steps:
 
-. https://help.salesforce.com/s/articleView?id=platform.external_services_setup_mulesoft_connect_to_anypoint_exchange.htm&type=5[Connect Salesforce to MuleSoft Anypoint Exchange from Setup]
-. xref:access-management::enabling-einstein.adoc[]
+. https://help.salesforce.com/s/articleView?id=platform.external_services_manage_your_mulesoft_anypoint_platform_connection.htm&type=5[Manage Your MuleSoft Anypoint Platform Connections from Setup]
+. xref:access-management::enabling-einstein.adoc[Enable Einstein for Anypoint Platform]
 
 === Select the Response from Einstein
 
