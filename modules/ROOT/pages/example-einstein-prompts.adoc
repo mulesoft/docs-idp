@@ -166,3 +166,4 @@ An example output JSON is:
 == See Also 
 
 * xref:creating-document-actions.adoc[]
+* xref:enhancing-data-extraction-with-einstein.adoc[]

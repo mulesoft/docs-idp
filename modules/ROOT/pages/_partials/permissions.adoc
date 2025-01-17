@@ -14,7 +14,7 @@ Manage Actions:: Gives a user complete access to IDP and assigns reviewer permis
 // end::permissionManage[]
 
 // tag::permissionBuild[]
-Build Actions:: Enables a user to create, edit, and publish document actions and assign reviewers to the actions.
+Build Actions:: Enables a user to create, edit, publish, and execute document actions and assign reviewers to the actions.
 // end::permissionBuild[]
 
 // tag::permissionExecute[]
