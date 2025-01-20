@@ -2,7 +2,7 @@
 
 Use the Generic document action with Einstein to fully customize the fields and tables extracted from your documents.  
 
-include::partial$einstein-model.adoc[]
+include::partial$einstein-model.adoc[tag=einsteinGeneric]
 
 include::partial$document-action.adoc[tag=definition] 
 
