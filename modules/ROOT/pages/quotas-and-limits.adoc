@@ -35,7 +35,8 @@ Duplicate prompt names or instructions are not allowed.
 | Prompt Response Limits 
 a| 
 * 128 characters for IDP NLP prompts.
-* 4096 output words for Einstein prompts.
+* 4096 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-05-13)`.
+* 16382 output words for Einstein prompts using `GPT-4o	(gpt-4o-2024-08-06)` or `GPT-4o Mini (gpt-4o-mini-2024-07-18)`.
 | Document Languages 
 a| 
 Full English, Spanish, German, French, Italian, and Portuguese document support +
