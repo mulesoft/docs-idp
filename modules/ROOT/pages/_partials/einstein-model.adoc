@@ -5,7 +5,7 @@ For Invoice, Purchase Order, and legacy Generic document actions, Einstein uses 
 // tag::einsteinGeneric[]
 Einstein supports the following predictive models: 
 
-* OpenAI's `GPT-4o	(gpt-4o-2024-08-06)` LLM Gateway
+* OpenAI's `GPT-4o (gpt-4o-2024-08-06)` LLM Gateway
 * OpenAI's `GPT-4o Mini (gpt-4o-mini-2024-07-18)` LLM Gateway
 
 Einstein accesses these models through the Salesforce Einstein Trust layer, which is part of the Salesforce Einstein platform.
