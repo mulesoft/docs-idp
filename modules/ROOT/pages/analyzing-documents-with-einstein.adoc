@@ -73,7 +73,7 @@ When you create a Generic document action with Einstein, you can configure the f
 Select among the supported predictive models which one to use when you analyze documents with this document action.
 * *Enable PII Masking*
 +
-Mask any personally identifiable information from your documents before sending it to the predictive model. Your Salesforce Organization Preference override this setting. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
+Mask any personally identifiable information from your documents before sending it to the predictive model. Your Salesforce Organization Preferences override this setting. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
 
 
 == See Also 
