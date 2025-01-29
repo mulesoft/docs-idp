@@ -64,6 +64,18 @@ Skip this step if the example file is already loaded.
 
 After you finish configuring the output schema for your documents, add reviewers and publish your document action. 
 
+== Configure Document Action Settings
+
+When you create a Generic document action with Einstein, you can configure the following settings: 
+
+* *Model*
++
+Select among the supported predictive models which one to use when you analyze documents with this document action.
+* *Enable PII Masking*
++
+Mask any personally identifiable information from your documents before sending it to the predictive model. Your Salesforce Organization Preference override this setting. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
+
+
 == See Also 
 
 * xref:adding-reviewers.adoc[]
