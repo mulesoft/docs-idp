@@ -19,7 +19,7 @@ a|
 * 50 pages per file
 * 8 MB per file
 ! 
-* No limit on the number of files per upload
+* 1 file per API request
 * 50 pages per file
 * 10 MB per file
 !===
@@ -46,8 +46,6 @@ a|
 10-second interval for retrieving results +
 Applications must avoid polling for results more often than every 10 seconds. 
 |===
-
-
 
 == Document Retention Policy
 
