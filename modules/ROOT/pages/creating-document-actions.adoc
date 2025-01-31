@@ -6,7 +6,7 @@ include::partial$document-action.adoc[tag=definition]
 
 include::partial$document-action.adoc[tag=details] 
 
-Create a document action using a predefined type as a template, and then specify which fields are mandatory, which fields to exclude from the JSON response, and the minimum confidence score expected for each field. 
+Create a document action using a predefined type as a template, and then specify the fields that are mandatory, the fields that must be excluded from the JSON response, and the minimum confidence score expected for each field. 
 
 After you create a new document action, you can add reviewers and publish it to Anypoint Exchange, which enables RPA to execute the document action and also creates an API that you can call from any external system. 
 
@@ -17,7 +17,7 @@ Creating a document action with a pre-built schema requires the following tasks:
 . <<upload-files>>
 . <<configure-schema>> 
 +
-Unless you select the Generic document action, which does not use a schema.
+Unless you select the Generic document action, which doesn't use a schema.
 . <<add-prompts>>
 
 == Before You Begin Creating Document Actions

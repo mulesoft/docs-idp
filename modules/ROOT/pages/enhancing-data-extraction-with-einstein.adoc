@@ -8,7 +8,7 @@ To analyze a non-standard document with Einstein and fully customize the output 
 
 == Before You Being Using Einstein
 
-. Ensure you have any of the following Anypoint permissions:
+. Ensure you have any of these Anypoint permissions:
 +
 include::partial$permissions.adoc[tag=permissionManage]
 +
@@ -20,7 +20,7 @@ include::partial$einstein.adoc[tags=einsteinRequisites;!shortIntro]
 
 To configure Einstein to analyze and extract data for a given prompt: 
 
-. In the document action builder, xref:creating-document-actions.adoc#add-prompts[Add a new prompt] to a document action or edit an existing one.
+. In the document action builder, xref:creating-document-actions.adoc#add-prompts[add a new prompt] to a document action or edit an existing one.
 . Run a document analysis to generate results in the *Outputs* panel. 
 . Click the dropdown button (image:prompt-dropdown.png[4%, 4%, "The prompt dropdown icon."]), next to a prompt's result.
 . Select the response labeled *Einstein*.
