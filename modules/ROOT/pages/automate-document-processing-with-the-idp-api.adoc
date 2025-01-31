@@ -49,7 +49,7 @@ curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizati
 ----
 
 [[upload-base64-file]]
-=== Upload a Base64-encoded File 
+=== Upload a Base64-Encoded File 
 
 You can upload a Base64-encoded file when you call the IDP API to execute your versioned document actions. For example: 
 
