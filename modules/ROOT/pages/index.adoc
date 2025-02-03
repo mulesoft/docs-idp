@@ -21,7 +21,7 @@ For an introduction to IDP, see our Trailhead badge, https://trailhead.salesforc
 
 == Analyze Generic Documents and Define the Output With Einstein
 
-Analyze non-standard documents and fully customize the output structure by using the Generic document action with Einstein. You can define fields and tables in the output structure and configure prompts for Einstein to analyze the document and extract the data.  
+Analyze any type of document and fully customize the output structure by using the Generic document action with Einstein. You can define fields and tables in the output structure and configure instructions for Einstein to analyze the document and extract the data for each field.  
 
 include::partial$einstein-model.adoc[tag=einsteinGeneric]
 
