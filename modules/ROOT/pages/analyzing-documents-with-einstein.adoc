@@ -1,6 +1,6 @@
 = Analyzing Documents and Customizing the Output With Einstein
 
-Use the Generic document action with Einstein to fully customize the fields and tables extracted from your documents.  
+Analyze any type of document and fully customize the output structure by using the Generic document action with Einstein. You can define fiel, table, and column names and configure instructions for Einstein to analyze the document and extract the data.   
 
 include::partial$einstein-model.adoc[tag=einsteinGeneric]
 
