@@ -33,7 +33,7 @@ Prompts in other languages are not fully supported.
 Duplicate prompt names or instructions are not allowed.
 * 20,000 characters for Einstein prompts. 
 +
-For the Generic document action with Einstein, the total input limit is 20000 characters, considering all field, table, column names, and their corresponding intructions. 
+For the Generic document action with Einstein, the total input limit is 20,000 characters, considering all field, table, column names, and their corresponding intructions. 
 | Prompt Response Limits 
 a| 
 * 128 characters for IDP NLP prompts.
