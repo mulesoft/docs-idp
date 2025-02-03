@@ -19,7 +19,7 @@ a|
 * 50 pages per file
 * 8 MB per file
 ! 
-* No limit on the number of files per upload
+* 1 file per API request
 * 50 pages per file
 * 10 MB per file
 !===
@@ -31,13 +31,14 @@ Prompts in other languages are not fully supported.
 * Unique prompts
 +
 Duplicate prompt names or instructions are not allowed.
-* 20000 characters for Einstein prompts. 
+* 20,000 characters for Einstein prompts. 
++
+For the Generic document action with Einstein, the total input limit is 20,000 characters, considering all field, table, column names, and their corresponding intructions. 
 | Prompt Response Limits 
 a| 
 * 128 characters for IDP NLP prompts.
-* 4096 output tokens for Einstein prompts. 
-+
-An output token is a text fragment, such as a word or part of a word.
+* Approximately 3,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-05-13)`.
+* Approximately 12,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-08-06)` or `GPT-4o Mini (gpt-4o-mini-2024-07-18)`.
 | Document Languages 
 a| 
 Full English, Spanish, German, French, Italian, and Portuguese document support +
@@ -47,8 +48,6 @@ a|
 10-second interval for retrieving results +
 Applications must avoid polling for results more often than every 10 seconds. 
 |===
-
-
 
 == Document Retention Policy
 

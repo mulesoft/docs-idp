@@ -2,7 +2,7 @@
 
 Use the Generic document action with Einstein to fully customize the fields and tables extracted from your documents.  
 
-include::partial$einstein-model.adoc[]
+include::partial$einstein-model.adoc[tag=einsteinGeneric]
 
 include::partial$document-action.adoc[tag=definition] 
 
@@ -63,6 +63,18 @@ Skip this step if the example file is already loaded.
 . Click *Save*.
 
 After you finish configuring the output schema for your documents, add reviewers and publish your document action. 
+
+== Configure Document Action Settings
+
+When you create a Generic document action with Einstein, you can configure these settings: 
+
+* *Model*
++
+Select the predictive model to use when executing this document action. 
+* *Enable PII Masking*
++
+Mask any personally identifiable information from your documents before sending it to the predictive model. Your Salesforce Organization Preferences override this setting. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
+
 
 == See Also 
 

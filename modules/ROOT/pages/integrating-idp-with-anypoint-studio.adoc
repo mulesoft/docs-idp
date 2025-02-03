@@ -71,7 +71,7 @@ output multipart/form-data
        file : {
            headers : {
                "Content-Disposition" : {
-                   "name": "{fileName}",
+                   "name": "file",
                    "filename": "{myFile.jpg}",
                    "subtype": "form-data"
                    },

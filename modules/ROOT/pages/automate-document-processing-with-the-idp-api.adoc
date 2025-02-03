@@ -48,6 +48,22 @@ curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizati
 --form 'callback="{\"noAuthUrl\":\"{callbackURL}\"}"'
 ----
 
+[[upload-base64-file]]
+=== Upload a Base64-Encoded File 
+
+You can upload a Base64-encoded file when you call the IDP API to execute your versioned document actions. For example: 
+
+[source,bash,linenums]
+----
+curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer {token}' \
+--data '{
+    "file": {yourBase64string},
+    "fileName": {testFileName.pdf}
+    }'
+----
+
 === Use a Different Salesforce Org to Execute Your Document Actions
 
 If you have multiple Salesforce Orgs connected with your Anypoint Platform organization, you can specify the Org to use when executing your document actions.

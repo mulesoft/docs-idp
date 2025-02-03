@@ -19,15 +19,19 @@ Each processed document shows a confidence score for each extracted field. When 
 
 For an introduction to IDP, see our Trailhead badge, https://trailhead.salesforce.com/content/learn/modules/mulesoft-idp-basics[MuleSoft IDP Basics] (login required). Sign up if you don't have a Trailhead account.
 
-== Enhance Data Extraction With Einstein
+== Analyze Generic Documents and Define the Output With Einstein
 
-When you add prompts to your Invoice or Purchase Order document actions, you can select wether to use the default natural language processing model (IDP NLP) or Einstein to generate an answer for each of your prompts. Einstein can answer complex questions that require further analysis of the document instead of just searching and extracting a field. For example, you can ask Einstein what's the total amount due in an invoice after deducting taxes and other values from the document. 
+Analyze any type of document and fully customize the output structure by using the Generic document action with Einstein. You can define fields and tables in the output structure and configure instructions for Einstein to analyze the document and extract the data for each field.  
 
-If you need to fully customize the output of a document, use the Generic action with Einstein, which enables you to add fields and tables to the output document and configure prompts for Einstein to analyze the document and extract the data from your documents.  
+include::partial$einstein-model.adoc[tag=einsteinGeneric]
 
 Use Einstein to analyze documents that don't use a standard format or are difficult to read without performing a complex analysis of the extracted data, such as a driver's license or a certificate of medical leave. 
 
-include::partial$einstein-model.adoc[]
+== Enhance Invoice and Purchase Order Extraction With Einstein
+
+When you add prompts to your Invoice or Purchase Order document actions, you can select whether to use the default natural language processing model (IDP NLP) or Einstein to generate an answer for each of your prompts. Einstein can answer complex questions that require further analysis of the document instead of just searching and extracting a field. For example, you can ask Einstein what's the total amount due in an invoice after deducting taxes and other values from the document. 
+
+include::partial$einstein-model.adoc[tag=legacy]
 
 [NOTE]
 Einstein doesn't use customer data to train any models for document analysis in IDP.
