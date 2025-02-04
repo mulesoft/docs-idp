@@ -74,22 +74,6 @@ After you finish configuring the output schema for your documents, add reviewers
 
 include::partial$document-action.adoc[tag=settings] 
 
-////
-== Configure Document Action Settings
-
-When you create a new document action, you can configure these settings: 
-
-* *Model*
-+
-Select the predictive model to use when executing this document action. 
-* *Enable PII Masking*
-+
-Mask any personally identifiable information from your documents before sending it to the predictive model. Your Salesforce Organization Preferences override this setting. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
-
-[NOTE]
-These settings are not available for document actions created before February 5th. To enable these settings, create a new document action. 
-////
-
 == See Also 
 
 * xref:adding-reviewers.adoc[]
