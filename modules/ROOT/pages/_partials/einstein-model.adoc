@@ -1,14 +1,20 @@
 // tag::legacy[]
-For Invoice, Purchase Order, and legacy Generic document actions, Einstein uses predictive models such as OpenAI's `GPT-4o (gpt-4o-2024-05-13)` LLM Gateway accessed through the Salesforce Einstein Trust layer, which is part of the Salesforce Einstein platform.
+For Invoice, Purchase Order, and Generic document actions created before February 5th, Einstein uses predictive models such as OpenAI's `GPT-4o (gpt-4o-2024-05-13)` LLM Gateway accessed through the Salesforce Einstein Trust layer, which is part of the Salesforce Einstein platform.
 // end::legacy[]
 
 // tag::einsteinGeneric[]
-Einstein supports the following predictive models: 
+Einstein supports these predictive models: 
 
+* OpenAI's `GPT-4o (gpt-4o-2024-05-13)` LLM Gateway
 * OpenAI's `GPT-4o (gpt-4o-2024-08-06)` LLM Gateway
 * OpenAI's `GPT-4o Mini (gpt-4o-mini-2024-07-18)` LLM Gateway
 
 Einstein accesses these models through the Salesforce Einstein Trust layer, which is part of the Salesforce Einstein platform.
 
-When you create a Generic document action with Einstein, select which of these models to use during document analysis. 
+When you create a document action, select which of these models to use during document analysis. 
+
+[NOTE]
+Document actions created before February 5th support only OpenAI's `GPT-4o (gpt-4o-2024-05-13)`. To enable model selection, create a new document action.  
+
+
 // end::einsteinGeneric[]
