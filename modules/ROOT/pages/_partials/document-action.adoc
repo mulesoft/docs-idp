@@ -11,7 +11,7 @@ When you query a published document action, IDP uses the model selected in each 
 // end::modelUsage[]
 
 // tag::settings[]
-When you create a new document action, you can configure these settings: 
+After you create a document action, click *Settings* to configure the following: 
 
 * *Model*
 +
