@@ -1,6 +1,8 @@
-= Analyzing Documents and Customizing the Output With Einstein
+= Analyzing Documents With Custom User-Defined Schemas
 
-Analyze any type of document and fully customize the output structure by using the Generic document action with Einstein. Define the output fields and tables and configure instructions for Einstein to analyze the document and extract the data.   
+Analyze any type of document and fully customize the output structure by creating a Generic document action and enabling *Customize Schema*. Define the output fields and tables and configure prompt instructions for Einstein to analyze the document and extract the data.
+
+You cannot enable *Customize Schema* for existing document actions, you must create a new Generic document action. 
 
 include::partial$einstein-model.adoc[tag=einsteinGeneric]
 
@@ -8,9 +10,9 @@ include::partial$document-action.adoc[tag=definition]
 
 After you create a document action, add reviewers and publish it to Anypoint Exchange. Publishing the document action enables RPA to execute it and also creates an API that you can call from any external system to analyze your documents. 
 
-For instructions about using Einstein in your document actions that use pre-built schemas, see xref:creating-document-actions.adoc[]
+For instructions about using pre-built schemas, see xref:creating-document-actions.adoc[]
 
-== Before You Begin Using Einstein
+== Before You Begin
 
 . Ensure you have any of the following Anypoint permissions:
 +
@@ -20,14 +22,18 @@ include::partial$permissions.adoc[tag=permissionBuild]
 
 include::partial$einstein.adoc[tags=einsteinRequisites;!shortIntro]
 
-== Create a Generic Document Action and Enable Einstein
+== Create a Generic Document Action and Enable Customize Schema
 
-To analyze documents with Einstein, create a document action of the Generic type and Enable Einstein:
+To analyze documents and fully customize the output structure, create a document action of the Generic type and enable *Customize Schema*:
 
 . In the sidebar, click *Document Actions*.
 . Click *Create New*.
 . Select the *Generic* type. 
-. Enable *Use Einstein*. 
+. Enable *Customize Schema*. 
++
+By enabling *Customize Schema* you can define fields and tables to create a structured output for your analyzed documents. This feature also enables an enhanced preview of the fields and tables in the document action builder.
++
+If *Customize Schema* is disabled, you can still configure Einstein prompts to analyze the document. See xref:enhancing-data-extraction-with-einstein.adoc[] for instructions.
 . Provide a Name and click *Create*.
 
 Next, add the Fields and Tables to extract. 
@@ -66,15 +72,7 @@ After you finish configuring the output schema for your documents, add reviewers
 
 == Configure Document Action Settings
 
-When you create a Generic document action with Einstein, you can configure these settings: 
-
-* *Model*
-+
-Select the predictive model to use when executing this document action. 
-* *Enable PII Masking*
-+
-Mask any personally identifiable information from your documents before sending it to the predictive model. Your Salesforce Organization Preferences override this setting. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
-
+include::partial$document-action.adoc[tag=settings] 
 
 == See Also 
 

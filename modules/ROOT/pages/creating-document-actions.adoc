@@ -1,6 +1,6 @@
 = Analyzing Documents Using Pre-Built Schemas
 
-To analyze a generic document and fully customize the output fields and tables instead of using pre-built schemas, see xref:analyzing-documents-with-einstein.adoc[].
+To analyze any type of document and fully customize the output structure instead of using pre-built schemas, see xref:analyzing-documents-with-einstein.adoc[].
 
 include::partial$document-action.adoc[tag=definition] 
 
@@ -93,6 +93,10 @@ Prompts don't support special characters. Ensure you use alphanumeric characters
 include::partial$einstein.adoc[tags=defaultModelAndEinstein;einsteinModelBenefits]
 
 To improve data extraction using Einstein to answer your prompts, see xref:enhancing-data-extraction-with-einstein.adoc[].
+
+== Configure Document Action Settings
+
+include::partial$document-action.adoc[tag=settings] 
 
 == See Also 
 

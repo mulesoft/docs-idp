@@ -2,9 +2,9 @@
 
 include::partial$einstein.adoc[tags=defaultModelAndEinstein;einsteinModelBenefits]
 
-include::partial$einstein-model.adoc[tag=legacy]
+include::partial$einstein-model.adoc[tag=einsteinGeneric]
 
-To analyze a non-standard document with Einstein and fully customize the output fields and tables, see xref::enhancing-data-extraction-with-einstein.adoc[].
+To analyze any type of document with Einstein and fully customize the output structure, see xref::analyzing-documents-with-einstein.adoc[].
 
 == Before You Being Using Einstein
 
