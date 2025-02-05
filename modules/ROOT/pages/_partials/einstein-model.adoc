@@ -1,1 +1,15 @@
-For document analysis in IDP, Einstein uses predictive models as well as OpenAI's `GPT4Omni_05_13` LLM Gateway model accessed through the Salesforce Einstein Trust layer, which is part of the Salesforce Einstein platform.
+
+// tag::einsteinGeneric[]
+Einstein supports these predictive models: 
+
+* OpenAI's `GPT-4o (gpt-4o-2024-08-06)` LLM
+* OpenAI's `GPT-4o Mini (gpt-4o-mini-2024-07-18)` LLM
+
+Einstein accesses these models through the Salesforce Einstein Trust layer, which is part of the Salesforce Einstein platform.
+
+Select the model to use during document analysis by configuring *Settings* in the document action editor.  
+
+[NOTE]
+Document actions created before February 5th support only OpenAI's `GPT-4o (gpt-4o-2024-05-13)`. To enable model selection, create a new document action.  
+
+// end::einsteinGeneric[]

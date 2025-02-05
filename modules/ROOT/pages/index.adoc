@@ -6,19 +6,30 @@ With the simple IDP interface, you can create and publish document actions as AP
 
 include::partial$document-action.adoc[tag=definition]
 
+Configure prompts to extract specific data from a document using questions in natural language, for example:
+
+* What is the subtotal amount?
+* What is the grand total?
+* When is the due date?
+* What is the highest price?
+
 The confidence score represents the probability that IDP has properly extracted the value from a document. For example, a confidence score of 100% means that IDP extracted the value with total accuracy. However, a confidence score of 75% means that there's a 25% chance that the extracted value is not correct.
 
 Each processed document shows a confidence score for each extracted field. When this value is lower than the defined threshold, IDP sends the document for review by a human to verify the accuracy of the extracted values. You can add single reviewers or teams to each document action. 
 
 For an introduction to IDP, see our Trailhead badge, https://trailhead.salesforce.com/content/learn/modules/mulesoft-idp-basics[MuleSoft IDP Basics] (login required). Sign up if you don't have a Trailhead account.
 
+== Analyze Documents With Custom User-Defined Schemas
+
+Analyze any type of document and fully customize the output structure by creating a Generic document action and enabling *Customize Schema*. You can define fields and tables in the output structure and configure instructions for Einstein to analyze the document and extract the data for each field.  
+
+include::partial$einstein-model.adoc[tag=einsteinGeneric]
+
 == Enhance Data Extraction With Einstein
 
-When you add prompts to your document actions, you can select wether to use the default or Einstein's response. Einstein can answer complex questions that require further analysis of the document instead of just searching and extracting a field. For example, you can ask Einstein what's the total amount due in an invoice after deducting taxes and other values from the document. 
+When you add prompts to your Invoice or Purchase Order document actions, you can select whether to use the default natural language processing model (IDP NLP) or Einstein to generate an answer for each of your prompts. Einstein can answer complex questions that require further analysis of the document instead of just searching and extracting a field. For example, you can ask Einstein what's the total amount due in an invoice after deducting taxes and other values from the document. 
 
 Use Einstein to analyze documents that don't use a standard format or are difficult to read without performing a complex analysis of the extracted data, such as a driver's license or a certificate of medical leave. 
-
-include::partial$einstein-model.adoc[]
 
 [NOTE]
 Einstein doesn't use customer data to train any models for document analysis in IDP.
@@ -26,6 +37,7 @@ Einstein doesn't use customer data to train any models for document analysis in 
 == See Also 
 
 * xref:document-processing.adoc[]
+* xref:analyzing-documents-with-einstein.adoc[]
 * xref:creating-document-actions.adoc[]
 * xref:publishing-document-actions.adoc[]
 * xref:rpa-home::index.adoc[]

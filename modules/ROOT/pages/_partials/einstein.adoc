@@ -1,0 +1,23 @@
+// tag::einsteinRequisitesTitle[]
+== Before You Begin Using Einstein
+// end::einsteinRequisitesTitle[]
+
+// tag::einsteinRequisites[]
+
+// tag::shortIntro[]
+Ensure you completed these configuration steps:
+// end::shortIntro[]
+
+. https://help.salesforce.com/s/articleView?id=platform.external_services_manage_your_mulesoft_anypoint_platform_connection.htm&type=5[Enable MuleSoft Anypoint Platform to publish MuleSoft assets to Salesforce].
+. xref:access-management::enabling-einstein.adoc[Enable Einstein for Anypoint Platform].
+
+// end::einsteinRequisites[]
+
+// tag::defaultModelAndEinstein[]
+By default, IDP uses its natural language processing model (IDP NLP) to extract data based on the configured prompts. When you create a document action, you can select Einstein to analyze the document and extract the data. 
+// end::defaultModelAndEinstein[]
+
+// tag::einsteinModelBenefits[]
+
+Use Einstein to answer complex questions about the document, such as asking the total of an invoice after deducting taxes and other concepts, or to extract data from non-standard documents such as a driver's license or a medical record that contains handwriting. 
+// end::einsteinModelBenefits[]

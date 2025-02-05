@@ -1,7 +1,26 @@
 // tag::definition[]
-A _document action_ is a multi-step process that uses multiple AI engines to scan a document, filter out fields, and return a structured response as a JSON object. Each document action defines the types of documents it expects as input, the fields to extract, and the fields to filter out from the response. You can hide fields, mark fields as required, configure the minimum confidence score accepted for each field to extract, and configure Prompts to enhance and refine the data-extraction process by asking questions using natural language. 
+A _document action_ is a multi-step process that uses multiple AI engines to scan a document, filter out fields, and return a structured response as a JSON object. Each document action defines the types of documents it expects as input, the fields to extract, and the fields to filter out from the response. 
 // end::definition[]
+
+// tag::details[]
+You can hide fields, mark fields as required, configure the minimum confidence score accepted for each field to extract, and configure Prompts to enhance and refine the data-extraction process by asking questions using natural language. 
+// end::details[]
 
 // tag::modelUsage[]
 When you query a published document action, IDP uses the model selected in each prompt to extract the data for the corresponding field.
-// tag::modelUsage[]
+// end::modelUsage[]
+
+// tag::settings[]
+After you create a document action, click *Settings* to configure the following: 
+
+* *Model*
++
+Select the predictive model to use when executing this document action. 
+* *Enable PII Masking*
++
+Mask any personally identifiable information from your documents before sending it to the predictive model. Your Salesforce Organization Preferences override this setting. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
+
+[NOTE]
+These settings are not available for document actions created before February 5th. To enable these settings, create a new document action. 
+
+// end::settings[]

@@ -1,0 +1,82 @@
+= Analyzing Documents With Custom User-Defined Schemas
+
+Analyze any type of document and fully customize the output structure by creating a Generic document action and enabling *Customize Schema*. Define the output fields and tables and configure prompt instructions for Einstein to analyze the document and extract the data.
+
+You cannot enable *Customize Schema* for existing document actions, you must create a new Generic document action. 
+
+include::partial$einstein-model.adoc[tag=einsteinGeneric]
+
+include::partial$document-action.adoc[tag=definition] 
+
+After you create a document action, add reviewers and publish it to Anypoint Exchange. Publishing the document action enables RPA to execute it and also creates an API that you can call from any external system to analyze your documents. 
+
+For instructions about using pre-built schemas, see xref:creating-document-actions.adoc[]
+
+== Before You Begin
+
+. Ensure you have any of the following Anypoint permissions:
++
+include::partial$permissions.adoc[tag=permissionManage]
++
+include::partial$permissions.adoc[tag=permissionBuild]
+
+include::partial$einstein.adoc[tags=einsteinRequisites;!shortIntro]
+
+== Create a Generic Document Action and Enable Customize Schema
+
+To analyze documents and fully customize the output structure, create a document action of the Generic type and enable *Customize Schema*:
+
+. In the sidebar, click *Document Actions*.
+. Click *Create New*.
+. Select the *Generic* type. 
+. Enable *Customize Schema*. 
++
+By enabling *Customize Schema* you can define fields and tables to create a structured output for your analyzed documents. This feature also enables an enhanced preview of the fields and tables in the document action builder.
++
+If *Customize Schema* is disabled, you can still configure Einstein prompts to analyze the document. See xref:enhancing-data-extraction-with-einstein.adoc[] for instructions.
+. Provide a Name and click *Create*.
+
+Next, add the Fields and Tables to extract. 
+
+== Add the Fields to Extract
+
+To configure the fields to extract and define the structure of the output document:
+
+. In the document action builder, click *Select Files* and select the files to use as an example or model for the extraction. 
+. In the *Outputs* panel, select the *Fields* tab. 
+. Click *Start from Scratch* to add the first field. 
+. Provide a name for the field and a prompt.
++
+If you don't configure a prompt, Einstein scans the document and automatically extracts the data that better suits the field. However, make sure you test the output to confirm the extracted field matches the expected result. Otherwise, configure a prompt to provide Einstein with specific instructions about how to populate that field. 
+. Click *Add New* to continue adding fields.
+. Click *Run* and verify the results of the extraction. 
+. Click *Save*.
+
+== Add the Tables to Extract
+
+To configure data extraction from tables:
+
+. In the document action builder, click *Select Files* and select the files to use as an example or model for the extraction.
++
+Skip this step if the example file is already loaded. 
+. In the *Outputs* panel, select the *Tables* tab. 
+. Click *Start from Scratch* to add the first table. 
+. Provide a name for the table and a prompt if necessary to configure the data to extract.
+. Click *Add New Column* and provide a name and prompt for the column. 
+** Continue adding columns until the table is complete. 
+. If there are more tables to configure, click *Add New* and repeat the steps to add the table columns.
+. Click *Run* and verify the results of the extraction. 
+. Click *Save*.
+
+After you finish configuring the output schema for your documents, add reviewers and publish your document action. 
+
+== Configure Document Action Settings
+
+include::partial$document-action.adoc[tag=settings] 
+
+== See Also 
+
+* xref:adding-reviewers.adoc[]
+* xref:publishing-document-actions.adoc[]
+* xref:creating-document-actions.adoc[]
+* xref:rpa-home::index.adoc[]
