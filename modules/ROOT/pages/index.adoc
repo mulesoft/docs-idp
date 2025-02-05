@@ -31,8 +31,6 @@ When you add prompts to your Invoice or Purchase Order document actions, you can
 
 Use Einstein to analyze documents that don't use a standard format or are difficult to read without performing a complex analysis of the extracted data, such as a driver's license or a certificate of medical leave. 
 
-//include::partial$einstein-model.adoc[tag=legacy]
-
 [NOTE]
 Einstein doesn't use customer data to train any models for document analysis in IDP.
 
