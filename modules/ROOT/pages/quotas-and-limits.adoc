@@ -40,7 +40,7 @@ For the Generic document action with *Customize Schema* enabled, the total input
 a| 
 * 128 characters for IDP NLP prompts.
 * Approximately 3,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-05-13)`.
-* Approximately 12,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-08-06)` or `GPT-4o Mini (gpt-4o-mini-2024-07-18)`.
+* Approximately 4,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-08-06)` or `GPT-4o Mini (gpt-4o-mini-2024-07-18)`.
 | Document Languages 
 a| 
 Full English, Spanish, German, French, Italian, and Portuguese document support +
