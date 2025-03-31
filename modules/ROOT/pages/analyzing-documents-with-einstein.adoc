@@ -2,6 +2,8 @@
 
 Analyze any type of document and fully customize the output structure by creating a Generic document action and enabling *Customize Schema*. Define the output fields and tables and configure prompt instructions for Einstein to analyze the document and extract the data.
 
+Enabling *Customize Schema* also reduces requests and Einstein credit consumption because IDP queries the entire document in one prompt, rather than making one request per prompt to Einstein as in a Generic document action without *Customize Schema* enabled. 
+
 You cannot enable *Customize Schema* for existing document actions, you must create a new Generic document action. 
 
 include::partial$einstein-model.adoc[tag=einsteinGeneric]
@@ -34,6 +36,10 @@ To analyze documents and fully customize the output structure, create a document
 By enabling *Customize Schema* you can define fields and tables to create a structured output for your analyzed documents. This feature also enables an enhanced preview of the fields and tables in the document action builder.
 +
 If *Customize Schema* is disabled, you can still configure Einstein prompts to analyze the document. See xref:enhancing-data-extraction-with-einstein.adoc[] for instructions.
++
+[WARNING]
+If *Customize Schema* is disabled, Einstein credit consumption might increase as every prompt counts as one API call to the LLM.
+
 . Provide a Name and click *Create*.
 
 Next, add the Fields and Tables to extract. 
