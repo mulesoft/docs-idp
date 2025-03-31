@@ -38,7 +38,7 @@ By enabling *Customize Schema* you can define fields and tables to create a stru
 If *Customize Schema* is disabled, you can still configure Einstein prompts to analyze the document. See xref:enhancing-data-extraction-with-einstein.adoc[] for instructions.
 +
 [WARNING]
-If *Customize Schema* is disabled, Einstein credit consumption might increase as every prompt counts as one API call to the LLM.
+When you create a document action without enabling *Customize Schema*, Einstein credit consumption is not optimized and every prompt counts as one API call to the LLM.
 
 . Provide a Name and click *Create*.
 
