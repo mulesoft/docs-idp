@@ -41,6 +41,11 @@ a|
 * 128 characters for IDP NLP prompts.
 * Approximately 3,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-05-13)`.
 * Approximately 4,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-08-06)` or `GPT-4o Mini (gpt-4o-mini-2024-07-18)`.
+| Request Limits
+a| 
+* When using Einstein and *Customize Schema* is enabled: 300 requests per minute. 
+* When using Einstein and *Customize Schema* is disabled: (300 / number Einstein of prompts in document action) requests per minute.
+* 100 concurrent jobs per minute.
 | Document Languages 
 a| 
 Full English, Spanish, German, French, Italian, and Portuguese document support +
