@@ -45,7 +45,7 @@ a|
 a| 
 * When using Einstein and *Customize Schema* is enabled: 300 requests per minute. 
 * When using Einstein and *Customize Schema* is disabled: (300 / number of Einstein prompts in document action) requests per minute.
-* 100 concurrent IDP executions per minute.
+* 100 concurrent IDP executions.
 | Document Languages 
 a| 
 Full English, Spanish, German, French, Italian, and Portuguese document support +
