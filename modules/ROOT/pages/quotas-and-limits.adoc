@@ -34,28 +34,28 @@ Prompts in other languages are not fully supported.
 Duplicate prompt names or instructions are not allowed.
 +
 The Generic document action supports duplicate prompt names or instructions if *Customize Schema* is enabled.
-* 512,000 characters per request for Einstein prompts. 
+* 512,000 characters per request for Einstein prompts
 +
 --
-** 120,000 characters per request for Einstein prompts when PII masking is enabled. 
+** 120,000 characters per request for Einstein prompts when PII masking is enabled
 --
 +
 The total number of characters in a request includes: 
 +
 ** The text contained in the source document to analyze
-** The sum of all field, table, column names with their corresponding intructions and the schema built through *Customize Schema*.
-** Approximately 4,000 characters that IDP uses to process the request. 
+** The sum of all field, table, column names with their corresponding intructions and the schema built through *Customize Schema*
+** Approximately 4,000 characters that IDP uses to process the request
 | Prompt Response Limits 
 a| 
-* 128 characters for IDP NLP prompts.
-* Approximately 3,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-05-13)`.
-* Approximately 4,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-08-06)` or `GPT-4o Mini (gpt-4o-mini-2024-07-18)`.
+* 128 characters for IDP NLP prompts
+* Approximately 3,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-05-13)`
+* Approximately 4,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-08-06)` or `GPT-4o Mini (gpt-4o-mini-2024-07-18)`
 | Request Limits
 a| 
-* IDP fails the execution when the number of requests exceeds the Einstein rate limit for the Salesforce Org:
-** When using Einstein and *Customize Schema* is enabled: 300 requests per minute. 
-** When using Einstein and *Customize Schema* is disabled: (300 / number Einstein of prompts in document action) requests per minute.
-* 100 concurrent jobs per minute.
+* IDP fails the execution when the number of requests exceeds the Einstein rate limit for the Salesforce Org
+** When using Einstein and *Customize Schema* is enabled: 300 requests per minute
+** When using Einstein and *Customize Schema* is disabled: (300 / number Einstein of prompts in document action) requests per minute
+* 100 concurrent jobs per minute
 | Document Languages 
 a| 
 Full English, Spanish, German, French, Italian, and Portuguese document support +
