@@ -19,6 +19,9 @@ Select the predictive model to use when executing this document action.
 * *Enable PII Masking*
 +
 Mask any personally identifiable information from your documents before sending it to the predictive model. Your Salesforce Organization Preferences override this setting. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
++
+[IMPORTANT]
+Enabling PII Masking reduces the limit of characters allowed per request to 120,000. See xref:quotas-and-limits#prompt-limits[Prompt Limits] for additional details. 
 
 [NOTE]
 These settings are not available for document actions created before February 5th. To enable these settings, create a new document action. 

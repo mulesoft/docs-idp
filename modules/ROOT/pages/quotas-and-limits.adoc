@@ -23,6 +23,7 @@ a|
 * 50 pages per file
 * 10 MB per file
 !===
+[prompt-limits]
 | Prompt Limits 
 a| 
 * 30 per document action
@@ -33,15 +34,17 @@ Prompts in other languages are not fully supported.
 Duplicate prompt names or instructions are not allowed.
 +
 The Generic document action supports duplicate prompt names or instructions if *Customize Schema* is enabled.
-* 120,000 characters per request for Einstein prompts. 
+* 512,000 characters per request for Einstein prompts. 
++
+--
+** 120,000 characters per request for Einstein prompts when PII masking is enabled. 
+--
 +
 The total number of characters in a request includes: 
 +
 ** The text contained in the source document to analyze
 ** The sum of all field, table, column names with their corresponding intructions and the schema built through *Customize Schema*.
-** //TBC
-+  
-For the Generic document action with *Customize Schema* enabled, the total input limit is 20,000 characters, considering all field, table, column names, and their corresponding intructions. 
+** Approximately 4,000 characters that IDP uses to process the request. 
 | Prompt Response Limits 
 a| 
 * 128 characters for IDP NLP prompts.
