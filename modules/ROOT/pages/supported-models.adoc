@@ -29,7 +29,7 @@ a| * When extracting sensitive information like SSNs, the model might return a `
     * For the Einstein generic document action with customized schema, errors such as `LLM Generation was not a valid JSON` might occur. In such cases, create a new generic document action without a customized schema to obtain results.
 |===
 
-== Common Model Errors 
+== Model Errors 
 
 In some scenarios, the LLMs stop generating a response and provide an error code to understand the reason that caused this behavior. These are some of the most common errors codes and their suggested workaround:
 
