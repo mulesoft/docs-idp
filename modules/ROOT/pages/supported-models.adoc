@@ -28,7 +28,7 @@ IDP supports different Large Language Models (LLMs) including PII masking, and i
 
 == Model Errors 
 
-In some scenarios, the LLMs stop generating a response and provide an error code to understand the reason that caused this behavior. For a complete list of error codes, refer to each of the model provider's documentation: 
+In some scenarios, the models stop generating a response and provide an error code to understand the reason that caused this behavior. For a list of error codes, refer to each of the model provider's documentation: 
 
 * OpenAI models: https://platform.openai.com/docs/api-reference/completions/object#completions/object-choices[The completion object]
 +
