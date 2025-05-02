@@ -1,0 +1,42 @@
+= Supported Models
+
+IDP supports different Large Language Models (LLMs) including PII masking, and image recognition features. When creating a document action, you can select the model and the settings that best fit your needs. Each model performs differently under various conditions, so choose the one that aligns with your specific requirements.
+
+[%header%autowidth.spread,cols=".^a,.^a]
+|===
+| Model Name | Description | Stability | Image recognition performance | Notes 
+| Einstein OpenAI GPT-4o 0806 
+ | Stable and suitable for most tasks, performing well on documents in non-Latin languages. Can compare font sizes and identify certain font styles.
+ |High
+ a|* Standard performance and credit consumption
+ a|* Ask the model to not make up information as it might hallucinate.
+| Einstein OpenAI GPT-4o Mini 0718 
+ | High credit consumption when analyzing images and tends to exhibit lazy reasoning. 
+ |High
+ a|* High credit consumption
+ a|* Ask the model to not make up information as it might hallucinate. 
+   * GPT-4o 0806 generally outperforms GPT-4o Mini 0718 in accuracy and reasoning.
+| Einstein GEMINI-20 Flash 001 
+ | Best for analyzing images given its lower credit consumption and increased accuracy in this type of documents. 
+ a| Standard 
+ a| * Low credit consumption
+    * High accuracy on reading checkboxes in forms
+ a| * When extracting sensitive information like SSNs, the model might return a `Got finish_reason SPII from Einstein` error. To avoid this scenario, delete the field or use GPT models to abstract the information.
+    * Currently, the GEMINI model does not show an accurate confidence score and is set to 80% by default.
+    * For the Einstein generic document action with customized schema, errors such as `LLM Generation was not a valid JSON` might occur. In such cases, create a new generic document action without a customized schema to obtain results.
+|===
+
+== Model Errors 
+
+In some scenarios, the LLMs stop generating a response and provide an error code to understand the reason that caused this behavior. For a complete list of error codes, refer to each of the model provider's documentation: 
+
+* OpenAI models: https://platform.openai.com/docs/api-reference/completions/object#completions/object-choices[The completion object]
++
+Click *Show properties* under *choices* to see the details.
+* Google models: https://cloud.google.com/vertex-ai/generative-ai/docs/reference/python/latest/services?utm_source=chatgpt.com#class-vertexaigenerativemodelsfinishreasonvalue[Finish Reason] 
+
+If you receive frequent errors due to exceeding the request limit for GPT models, see https://platform.openai.com/docs/guides/text?api-mode=chat#gpt-4-1-prompting-best-practices[Using long context] in OpenAI's documentation. 
+
+== See Also 
+
+* https://platform.openai.com/docs/guides/text#prompt-engineering[OpenAI's Prompt Engineering Guide]
