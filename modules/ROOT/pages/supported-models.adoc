@@ -31,7 +31,9 @@ a| * When extracting sensitive information like SSNs, the model might return a `
 
 == Model Errors 
 
-In some scenarios, the LLMs stop generating a response and provide an error code to understand the reason that caused this behavior. These are some of the most common errors codes and their suggested workaround:
+In some scenarios, the LLMs stop generating a response and provide an error code to understand the reason that caused this behavior. If the error occurs during the execution of a versioned document action, IDP provides this error in the `statusMessage` attribute of the response object.
+
+These are some of the most common errors codes and their suggested workaround:
 
 [%header%autowidth.spread,cols=".^a,.^a"]
 |===
