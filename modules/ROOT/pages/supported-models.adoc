@@ -4,29 +4,32 @@ IDP supports different Large Language Models (LLMs) including PII masking, and i
 
 [%header%autowidth.spread,cols=".^a,.^a,.^a,.^a,.^a,.^a"]
 |===
-| Model Name | Description | Stability | Image recognition performance | Prompt Output Limits | Notes 
+| Model Name | Description | Stability | Image Recognition | Prompt Output Limits | Notes 
 | Einstein OpenAI GPT-4o 0806 
- | Stable and suitable for most tasks, performing well on documents in non-Latin languages. Can compare font sizes and identify certain font styles.
+ | Suitable for most tasks, performing well on documents in non-Latin languages. Can compare font sizes and identify certain font styles.
  |High
-a|* Standard performance and credit consumption
+a|* Standard performance
+  * Standard credit consumption
  | ~4,000 words
 a|* Ask the model to not make up information as it might hallucinate.
+  * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models. 
 | Einstein OpenAI GPT-4o Mini 0718 
- | High credit consumption when analyzing images and tends to exhibit lazy reasoning. 
+ | Fast and useful for focused tasks. Tends to exhibit lazy reasoning. 
  |High
-a|* High credit consumption
+a|* Standard performance 
+  * High credit consumption
  | ~4,000 words
 a|* Ask the model to not make up information as it might hallucinate. 
-   * GPT-4o 0806 generally outperforms GPT-4o Mini 0718 in accuracy and reasoning.
+  * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models.
 | Einstein GEMINI-20 Flash 001 
  | Best for analyzing images given its lower credit consumption and increased accuracy in this type of documents. 
 a| Standard 
 a| * Low credit consumption
-    * High accuracy on reading checkboxes in forms
+   * High accuracy on reading checkboxes in forms
  | ~6,000 words
-a| * When extracting sensitive information like SSNs, the model might return a `Got finish_reason SPII from Einstein` error. To avoid this scenario, delete the field or use GPT models to abstract the information.
-    * Currently, the GEMINI model does not show an accurate confidence score and is set to 80% by default.
+a|  * Currently, the GEMINI model does not show an accurate confidence score and is set to 80% by default.
     * For the Einstein generic document action with customized schema, errors such as `LLM Generation was not a valid JSON` might occur. In such cases, create a new generic document action without a customized schema to obtain results.
+    * List of https://ai.google.dev/gemini-api/docs/models#supported-languages[languages supported] by Gemini models. 
 |===
 
 == Model Errors 
@@ -35,11 +38,13 @@ In some scenarios, the LLMs stop generating a response and provide an error code
 
 These are some of the most common errors codes and their suggested workaround:
 
-[%header%autowidth.spread,cols=".^a,.^a"]
+[%header%autowidth.spread,cols=".^a,.^a,.^a"]
 |===
-| Error | Suggested Fix
-| `finish_reason: length` | See https://platform.openai.com/docs/guides/text?api-mode=chat#gpt-4-1-prompting-best-practices[Using long context] under GPT-4.1 prompting best practices to understand how to refine your prompts. 
-| `LLM Generation finished with reason: MAX_TOKENS` | Split the document or select an OpenAI model for this extraction. 
+| Error Code| Error Description | Suggested Fix
+| `length` | The request exceeded the maximum input token limit. | See https://platform.openai.com/docs/guides/text?api-mode=chat#gpt-4-1-prompting-best-practices[Using long context] under GPT-4.1 prompting best practices to understand how to refine your prompts. 
+| `MAX_TOKENS` | The response exceeded the maximum output token limit. | Split the document or select an OpenAI model for this extraction. 
+| `SPII` | The document potentially contains Sensitive Personally Identifiable Information (SPII).| Delete the conflicting field, or use GPT models to abstract the information.
+
 |===
 
 For a complete list of error codes, refer to each of the model provider's documentation: 

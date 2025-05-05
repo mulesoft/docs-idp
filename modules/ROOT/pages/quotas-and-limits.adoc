@@ -18,10 +18,16 @@ a|
 * 10 files per upload
 * 50 pages per file
 * 8 MB per file
+** 3 MB per file when using image recognition.
++
+Uploading image files larger than 3 MB might cause errors.  
 ! 
 * 1 file per API request
 * 50 pages per file
 * 10 MB per file
+** 3 MB per file when using image recognition.
++
+Uploading image files larger than 3 MB might cause errors.  
 !===
 [prompt-limits]
 | Prompt Limits 
