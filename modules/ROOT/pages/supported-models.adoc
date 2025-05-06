@@ -1,6 +1,6 @@
 = Supported Models
 
-Einstein supports these predictive models: 
+Einstein supports these predictive multimodal models: 
 
 include::partial$einstein-model.adoc[tag=einsteinSupportedModels]
 
@@ -14,6 +14,7 @@ When creating a document action, you can select the model and extraction setting
  |High
 a|* Standard performance
   * Standard credit consumption
+  * Low accuracy on reading checkboxes in forms
  | ~4,000 words
 a|* Ask the model to not make up information as it might hallucinate.
   * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models. 
@@ -22,10 +23,11 @@ a|* Ask the model to not make up information as it might hallucinate.
  |High
 a|* Standard performance 
   * High credit consumption
+  * Low accuracy on reading checkboxes in forms
  | ~4,000 words
 a|* Ask the model to not make up information as it might hallucinate. 
   * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models.
-| Einstein GEMINI-20 Flash 001 
+| Einstein GEMINI-2.0 Flash 001 
  | Best for analyzing images given its lower credit consumption and increased accuracy in this type of documents. 
 a| Standard 
 a| * Low credit consumption

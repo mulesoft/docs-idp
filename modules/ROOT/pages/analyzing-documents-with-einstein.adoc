@@ -76,6 +76,7 @@ Skip this step if the example file is already loaded.
 
 After you finish configuring the output schema for your documents, add reviewers and publish your document action. 
 
+[[settings]]
 == Configure Document Action Settings
 
 include::partial$document-action.adoc[tag=settings] 

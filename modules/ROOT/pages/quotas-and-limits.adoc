@@ -18,20 +18,10 @@ a|
 * 10 files per upload
 * 50 pages per file
 * 8 MB per file
-+
-When using image recognition:
-+
-** 7.5 MB per file
-** 3 MB for PDF files
 ! 
 * 1 file per API request
 * 50 pages per file
 * 10 MB per file
-+
-When using image recognition:
-+
-** 7.5 MB per file
-** 3 MB for PDF files 
 !===
 [prompt-limits]
 | Prompt Limits 
@@ -44,23 +34,24 @@ Prompts in other languages are not fully supported.
 Duplicate prompt names or instructions are not allowed.
 +
 The Generic document action supports duplicate prompt names or instructions if *Customize Schema* is enabled.
-* 512,000 characters per request for Einstein prompts
+* 128,000 <<tokens, tokens>> per request for Einstein prompts
 +
 --
-** 120,000 characters per request for Einstein prompts when PII masking is enabled
+** 30,000 tokens per request for Einstein prompts when PII masking is enabled
 --
 +
-The total number of characters in a request includes: 
+The total number of tokens in a request includes: 
 +
 ** The text contained in the source document to analyze
+** The image to analyze with image recognition capabilities
 ** The sum of all field, table, column names with their corresponding intructions and the schema built through *Customize Schema*
-** Approximately 4,000 characters that IDP uses to process the request
+** Approximately 1,000 tokens that IDP uses to process the request
 | Prompt Response Limits 
 a| 
 * 128 characters for IDP NLP prompts
 * Approximately 3,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-05-13)`
 * Approximately 4,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-08-06)` or `GPT-4o Mini (gpt-4o-mini-2024-07-18)`
-* Approximately 6,000 output words for Einstein prompts using `Einstein GEMINI-20 Flash 001`
+* Approximately 6,000 output words for Einstein prompts using `Einstein GEMINI-2.0 Flash 001`
 | Request Limits
 a| 
 * IDP fails the execution when the number of requests exceeds the Einstein rate limit for the Salesforce Org
@@ -69,17 +60,31 @@ a|
 * 100 concurrent jobs per minute
 | Document Languages 
 a| 
-Full English, Spanish, German, French, Italian, and Portuguese document support +
-Analyzing documents in other languages is not fully supported. 
+Language support varies depending on the selected Large Language Model (LLM) in document actions. 
+For a list of supported languages by provider, see: 
+
+* https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[OpenAI's supported languages]
+* https://ai.google.dev/gemini-api/docs/models#supported-languages[Gemini's supported languages]
 | Polling Limits 
 a| 
 10-second interval for retrieving results +
 Applications must avoid polling for results more often than every 10 seconds. 
-| Document Processing Limitations
-a| * Checkboxes
-+
-Reading checkboxes in documents is not supported. IDP doesn't guarantee the accuracy of any results related to interpreting checkbox values.
 |===
+
+[[tokens]] 
+== Token Usage and Estimation
+
+A token is a unit of text that a large language model (LLM) processes. Tokens are essential for breaking down input data into manageable pieces that can be analyzed and generated. These are some estimated conversions that might help understand token lengths: 
+
+* 1 token ~= 4 characters
+* 1 token ~= ¾ words
+* 1-2 sentences ~= 30 tokens
+* 1,500 words ~= 2048 tokens
+
+When analyzing images, each model uses a different tokenization strategy that affects how they calculate tokens. Refer to each provider's documentation for additional guidance: 
+
+* https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/image-understanding#image-requirements[Gemini: token usage estimation for images]
+* https://platform.openai.com/docs/guides/images-vision?api-mode=chat[OpenAI: token usage estimation for images]
 
 == Document Retention Policy
 

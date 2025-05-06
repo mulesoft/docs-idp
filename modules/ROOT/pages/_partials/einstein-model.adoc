@@ -17,6 +17,6 @@ Document actions created before February 5th support only OpenAI's `GPT-4o (gpt-
 
 * OpenAI's `GPT-4o (gpt-4o-2024-08-06)` LLM
 * OpenAI's `GPT-4o Mini (gpt-4o-mini-2024-07-18)` LLM
-* Google's `GEMINI-20 Flash 001` LLM
+* Google's `GEMINI-2.0 Flash 001` LLM
 
 // end::einsteinSupportedModels[]

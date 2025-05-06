@@ -15,19 +15,23 @@ After you create a document action, click *Settings* to configure the following:
 
 * *Model*
 +
-Select the predictive model to use when executing this document action. 
+Select the predictive Large Language Model (LLM) to use when executing this document action. 
 * *Enable PII Masking*
 +
 Mask any personally identifiable information from your documents before sending it to the predictive model. Your Salesforce Organization Preferences override this setting. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
 +
+You can't enable PII masking and image recognition at the same time as they are mutually exclusive. 
++
 [IMPORTANT]
-Enabling PII Masking reduces the limit of characters allowed per request to 120,000. See xref:quotas-and-limits#prompt-limits[Prompt Limits] for additional details. 
+Enabling PII masking reduces the limit of characters allowed per request to 120,000. See xref:quotas-and-limits#prompt-limits[Prompt Limits] for additional details. 
 * *Enable Image Recognition* 
 +
 Enables the model to read and interpret images. 
 +
+You can't enable PII masking and image recognition at the same time as they are mutually exclusive. 
++
 [WARNING]
-Using Image Recognition might increase the number of Einstein credits consumed.
+Using Image Recognition might increase the number of Einstein credits consumed depending on the selected model. To better understand credit usage and consumption, contact your account executive. 
 
 These settings are not available for document actions created before February 5th, 2025. To enable these settings, create a new document action. 
 

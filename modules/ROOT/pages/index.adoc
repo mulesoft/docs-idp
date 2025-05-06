@@ -34,10 +34,17 @@ Use Einstein to analyze documents that don't use a standard format or are diffic
 [NOTE]
 Einstein doesn't use customer data to train any models for document analysis in IDP.
 
+== Multimodal Model Support
+
+IDP supports multimodal large language models (LLMs), which can interpret text and images. Currently, IDP supports these models:
+
+include::partial$einstein-model.adoc[tag=einsteinSupportedModels]
+
 == See Also 
 
 * xref:document-processing.adoc[]
 * xref:analyzing-documents-with-einstein.adoc[]
 * xref:creating-document-actions.adoc[]
 * xref:publishing-document-actions.adoc[]
+* xref:supported-modeles.adoc[]
 * xref:rpa-home::index.adoc[]
