@@ -2,8 +2,7 @@
 // tag::einsteinGeneric[]
 Einstein supports these predictive models: 
 
-* OpenAI's `GPT-4o (gpt-4o-2024-08-06)` LLM
-* OpenAI's `GPT-4o Mini (gpt-4o-mini-2024-07-18)` LLM
+include::partial$einstein-model.adoc[tag=einsteinSupportedModels]
 
 Einstein accesses these models through the Salesforce Einstein Trust layer, which is part of the Salesforce Einstein platform.
 
@@ -13,3 +12,11 @@ Select the model to use during document analysis by configuring *Settings* in th
 Document actions created before February 5th support only OpenAI's `GPT-4o (gpt-4o-2024-05-13)`. To enable model selection, create a new document action.  
 
 // end::einsteinGeneric[]
+
+// tag::einsteinSupportedModels[]
+
+* OpenAI's `GPT-4o (gpt-4o-2024-08-06)` LLM
+* OpenAI's `GPT-4o Mini (gpt-4o-mini-2024-07-18)` LLM
+* Google's `GEMINI-20 Flash 001` LLM
+
+// end::einsteinSupportedModels[]

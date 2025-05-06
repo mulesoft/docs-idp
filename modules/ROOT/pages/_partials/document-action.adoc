@@ -26,10 +26,9 @@ Enabling PII Masking reduces the limit of characters allowed per request to 120,
 +
 Enables the model to read and interpret images. 
 +
-[IMPORTANT]
+[WARNING]
 Using Image Recognition might increase the number of Einstein credits consumed.
 
-[NOTE]
-These settings are not available for document actions created before February 5th. To enable these settings, create a new document action. 
+These settings are not available for document actions created before February 5th, 2025. To enable these settings, create a new document action. 
 
 // end::settings[]

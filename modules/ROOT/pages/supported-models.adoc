@@ -1,6 +1,10 @@
 = Supported Models
 
-IDP supports different Large Language Models (LLMs) including PII masking, and image recognition features. When creating a document action, you can select the model and the settings that best fit your needs. Each model performs differently under various conditions, so choose the one that aligns with your specific requirements.
+Einstein supports these predictive models: 
+
+include::partial$einstein-model.adoc[tag=einsteinSupportedModels]
+
+When creating a document action, you can select the model and extraction settings such as PII masking or image recognition. Each model performs differently under various conditions, so select the one that aligns with your specific requirements.
 
 [%header%autowidth.spread,cols=".^a,.^a,.^a,.^a,.^a,.^a"]
 |===
@@ -34,7 +38,7 @@ a|  * Currently, the GEMINI model does not show an accurate confidence score and
 
 == Model Errors 
 
-In some scenarios, the LLMs stop generating a response and provide an error code to understand the reason that caused this behavior. If the error occurs during the execution of a versioned document action, IDP provides this error in the `statusMessage` attribute of the response object.
+In some scenarios, the LLMs stop generating a response and provide an error code to understand the reason that caused this behavior. If the error occurs during the execution of a document action, IDP provides this error in the `statusMessage` attribute of the response object.
 
 These are some of the most common errors codes and their suggested workaround:
 
@@ -57,3 +61,4 @@ Click *Show properties* under *choices* to see the details.
 == See Also 
 
 * https://platform.openai.com/docs/guides/text#prompt-engineering[OpenAI's Prompt Engineering Guide]
+* xref:analyzing-documents-with-einstein.adoc[]
