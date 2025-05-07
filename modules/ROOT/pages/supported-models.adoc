@@ -16,7 +16,7 @@ a|* Standard performance
   * Standard credit consumption
   * Low accuracy on reading checkboxes in forms
  | ~4,000 words
-a|* Ask the model to not make up information as it might hallucinate.
+a|* Ask the model to not make up information to prevent hallucinations.
   * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models. 
 | Einstein OpenAI GPT-4o Mini 0718 
  | Fast and useful for focused tasks. Tends to exhibit lazy reasoning. 
@@ -25,7 +25,7 @@ a|* Standard performance
   * High credit consumption
   * Low accuracy on reading checkboxes in forms
  | ~4,000 words
-a|* Ask the model to not make up information as it might hallucinate. 
+a|* Ask the model to not make up information to prevent hallucinations.
   * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models.
 | Einstein GEMINI-2.0 Flash 001 
  | Best for analyzing images given its lower credit consumption and increased accuracy in this type of documents. 
@@ -33,8 +33,8 @@ a| Standard
 a| * Low credit consumption
    * High accuracy on reading checkboxes in forms
  | ~6,000 words
-a|  * Currently, the GEMINI model does not show an accurate confidence score and is set to 80% by default.
-    * For the Einstein generic document action with customized schema, errors such as `LLM Generation was not a valid JSON` might occur. In such cases, create a new generic document action without a customized schema to obtain results.
+a|  * Currently, the Gemini model doesn't show an accurate confidence score and is set to 80% by default.
+    * For the Einstein generic document action with customized schema, errors such as `LLM Generation wasn't a valid JSON` might occur. In such cases, create a new generic document action without a customized schema to obtain results.
     * List of https://ai.google.dev/gemini-api/docs/models#supported-languages[languages supported] by Gemini models. 
 |===
 
@@ -42,7 +42,7 @@ a|  * Currently, the GEMINI model does not show an accurate confidence score and
 
 In some scenarios, the LLMs stop generating a response and provide an error code to understand the reason that caused this behavior. If the error occurs during the execution of a document action, IDP provides this error in the `statusMessage` attribute of the response object.
 
-These are some of the most common errors codes and their suggested workaround:
+These are some of the most common error codes and their suggested fixes:
 
 [%header%autowidth.spread,cols=".^a,.^a,.^a"]
 |===
@@ -57,7 +57,7 @@ For a complete list of error codes, refer to each of the model provider's docume
 
 * OpenAI models: https://platform.openai.com/docs/api-reference/completions/object#completions/object-choices[The completion object]
 +
-Click *Show properties* under *choices* to see the details.
+Select *Show properties* under *choices* to see the details.
 * Google models: https://cloud.google.com/vertex-ai/generative-ai/docs/reference/python/latest/services?utm_source=chatgpt.com#class-vertexaigenerativemodelsfinishreasonvalue[Finish Reason] 
 
 == See Also 
