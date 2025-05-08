@@ -15,7 +15,7 @@ After you create a document action, click *Settings* to configure the following:
 
 * *Model*
 +
-Select the predictive Large Language Model (LLM) to use when executing this document action. 
+Select the predictive large language model (LLM) to use when executing this document action. 
 * *Enable PII Masking*
 +
 Mask any personally identifiable information from your documents before sending it to the predictive model. Your Salesforce Organization Preferences override this setting. For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
