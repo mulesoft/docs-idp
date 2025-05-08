@@ -60,7 +60,7 @@ a|
 * 100 concurrent jobs per minute
 | Document Languages 
 a| 
-Language support varies depending on the selected Large Language Model (LLM) in document actions. 
+Language support varies depending on the selected large language model (LLM) in document actions. 
 For a list of supported languages by provider, see: 
 
 * https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[OpenAI's supported languages]
