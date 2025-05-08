@@ -1,6 +1,6 @@
 = IDP Overview
 
-MuleSoft Intelligent Document Processing (IDP) enables you to read invoices, purchase orders, and other unstructured or semi-structured documents and then analyze and refine the extracted content using AI capabilities to create a structured response.
+MuleSoft Intelligent Document Processing (IDP) enables you to read invoices, purchase orders, and other unstructured or semi-structured documents and then analyze and refine the extracted content using AI capabilities to create a structured response. IDP supports multimodal large language models (LLMs), which can interpret text and images. 
 
 With the simple IDP interface, you can create and publish document actions as APIs to use for further integration with RPA, Mule applications, and other systems, without subscribing to external services.
 
@@ -40,4 +40,5 @@ Einstein doesn't use customer data to train any models for document analysis in 
 * xref:analyzing-documents-with-einstein.adoc[]
 * xref:creating-document-actions.adoc[]
 * xref:publishing-document-actions.adoc[]
+* xref:supported-models.adoc[]
 * xref:rpa-home::index.adoc[]
