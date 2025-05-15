@@ -9,7 +9,7 @@ Einstein accesses these models through the Salesforce Einstein Trust layer, whic
 Select the model to use during document analysis by clicking *Settings* in the document action editor.  
 
 [NOTE]
-Document actions created before February 5th support only OpenAI's `GPT-4o (gpt-4o-2024-05-13)`. To enable model selection and the new models, create a new document action. See xref:analyzing-documents-with-einstein#settings[Configure Document Action Settings] for details about feature availability adn configuration. 
+Document actions created before February 5th support only OpenAI's `GPT-4o (gpt-4o-2024-05-13)`. To enable model selection and the new models, create a new document action. See xref:analyzing-documents-with-einstein#settings[Configure Document Action Settings] for details about feature availability and configuration. 
 
 // end::einsteinGeneric[]
 
