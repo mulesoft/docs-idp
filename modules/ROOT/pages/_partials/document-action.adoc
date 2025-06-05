@@ -43,6 +43,9 @@ a|
 +
 Contact your account executive for details on credit usage and consumption.
 * Cannot be used simultaneously with PII Masking.
+* Accuracy of checkbox processing varies by model depending on form complexity. 
++
+See xref:supported-models.adoc[] for more information about how each model performs when processing checkboxes. 
 |===
 
 [NOTE]
