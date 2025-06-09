@@ -31,7 +31,7 @@ a|* Ask the model to not make up information to prevent hallucinations.
  | Best for analyzing images given its lower credit consumption and increased accuracy in this type of documents. 
 a| Standard 
 a| * Low credit consumption
-   * High accuracy on reading checkboxes in forms when processing one page at a time
+   * Medium accuracy on reading checkboxes in forms when processing one page at a time
  | ~6,000 words
 a|  * Currently, the Gemini model doesn't show an accurate confidence score and is set to 80% by default.
     * For the Einstein generic document action with customized schema, errors such as `LLM Generation wasn't a valid JSON` might occur. In such cases, create a new generic document action without a customized schema to obtain results.
