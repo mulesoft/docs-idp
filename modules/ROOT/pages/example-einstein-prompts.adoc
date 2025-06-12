@@ -106,7 +106,7 @@ The following example is a prompt that analyzes a medical certificate to extract
 
 * Example document
 +
-image::medical-license-handwriting-example.png[50%, 50%, "An example medical license that includes key-value pairs, checkboxes, and handwriting."]
+image::medical-license-handwriting-example.png[50%, 50%, "An example medical license that includes key-value pairs and handwriting."]
 
 * Example Prompt
 +
