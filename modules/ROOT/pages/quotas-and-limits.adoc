@@ -27,13 +27,15 @@ a|
 | Prompt Limits 
 a| 
 * 30 per document action
++
+If *Customize Schema* is disabled. 
 * English prompts +
 Prompts in other languages are not fully supported. 
 * Unique prompts
 +
 Duplicate prompt names or instructions are not allowed.
 +
-The Generic document action supports duplicate prompt names or instructions if *Customize Schema* is enabled.
+The Generic document action supports duplicate instructions if *Customize Schema* is enabled.
 * 128,000 <<tokens, tokens>> per request for Einstein prompts
 +
 --
