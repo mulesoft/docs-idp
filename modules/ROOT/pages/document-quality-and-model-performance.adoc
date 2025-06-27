@@ -1,0 +1,63 @@
+= Document Quality and Model Performance
+
+The accuracy of data extraction in MuleSoft IDP depends significantly on the quality and type of documents you process. Understanding these factors helps you set realistic expectations and achieve optimal results. Document types and their characteristics have a significant impact on extraction accuracy.
+
+== Native Digital Documents
+
+Native digital documents contain embedded text that is directly accessible within the document's internal structure. When processing these documents:
+
+* LLMs can extract text without requiring OCR (Optical Character Recognition) processing
+* Extraction typically yields high accuracy results with confidence scores of 90% or higher
+* These documents are recommended for achieving the best extraction performance
+
+== Scanned Documents and Images
+
+Scanned documents and images require OCR processing to convert visual elements into machine-readable text. When processing these documents:
+
+* Model accuracy depends heavily on the performance of the underlying OCR technology
+* Results vary based on image quality and document complexity
+* These documents may require human review more frequently than native digital documents
+
+== Factors Affecting Data Extraction
+
+The following factors impact the accuracy of data extraction from scanned documents and images:
+
+* *Image Quality* 
++
+Higher resolution images provide better results. Clear, sharp images with good contrast improve extraction accuracy. Background artifacts, shadows, or blurring reduce accuracy.
+
+* *Document Layout* 
++
+Documents with multiple columns, overlapping elements, or irregular layouts are more challenging to process. Inconsistent spacing, unusual fonts, or mixed formatting styles can affect results. Skewed or rotated documents may require preprocessing.
+
+* *Text Characteristics* 
++
+Standard fonts are easier to process than decorative or unusual fonts. Very small or very large text may be difficult to extract accurately. Most models struggle with handwritten content.
+
+== Improving Extraction Results
+
+When you encounter inaccurate extraction results, consider these aspects:
+
+* *Document Quality Improvements*
+
+** Use higher quality source documents when possible. 
+** Improve scanning resolution and quality. 
+** Standardize document formats across your organization.
+
+* *Prompt Optimization*
+
+** Be specific about field locations and expected formats. 
+** Include examples in prompts for complex fields. 
+** Test prompts with various document qualities. 
+** Iterate and refine based on results.
+
+* *Model Selection*
+
+** Test different models with your specific document types.
+
+== See Also
+
+* xref:document-processing.adoc[]
+* xref:creating-document-actions.adoc[]
+* xref:supported-models.adoc[]
+* xref:analyzing-documents-with-einstein.adoc[] 

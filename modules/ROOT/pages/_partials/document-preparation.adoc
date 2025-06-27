@@ -1,0 +1,11 @@
+// tag::documentPreparation[]
+== Document Preparation and Testing
+
+Before creating document actions, ensure your sample documents represent the quality and variety of documents to process in production. The accuracy of your document actions depend significantly on the quality and diversity of your sample documents.
+
+Include both high-quality and challenging examples in your test set. Test with various document layouts and formats. Use documents with different font styles and sizes. Include examples with tables, forms, and complex layouts.
+
+Start with high-quality native digital PDFs to establish baseline accuracy. Gradually test with more challenging documents such as scanned PDFs or images. Monitor confidence scores across different document types. Adjust prompts and thresholds based on results.
+
+For additional details, see xref:document-quality-and-model-performance.adoc[]
+// end::documentPreparation[]
