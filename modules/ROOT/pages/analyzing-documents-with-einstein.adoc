@@ -24,6 +24,9 @@ include::partial$permissions.adoc[tag=permissionBuild]
 
 include::partial$einstein.adoc[tags=einsteinRequisites;!shortIntro]
 
+//Document Preparation and Testing
+include::partial$document-preparation.adoc[tag=documentPreparation]
+
 == Create a Generic Document Action and Enable Customize Schema
 
 To analyze documents and fully customize the output structure, create a document action of the Generic type and enable *Customize Schema*:

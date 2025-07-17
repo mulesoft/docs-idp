@@ -30,4 +30,5 @@ include::partial$document-action.adoc[tag=modelUsage]
 == See Also 
 
 * xref:example-einstein-prompts.adoc[]
+* xref:document-quality-and-model-performance.adoc[]
 * xref:creating-document-actions.adoc[]
