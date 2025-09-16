@@ -41,6 +41,7 @@ For configuration and usage instructions, see: xref:automate-document-processing
 
 == See Also
 
+* xref:document-quality-and-model-performance.adoc[]
 * xref:creating-document-actions.adoc[]
 * xref:publishing-document-actions.adoc[]
 * xref:reviewing-processed-documents.adoc[]

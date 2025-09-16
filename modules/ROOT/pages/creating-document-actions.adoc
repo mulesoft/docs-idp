@@ -28,6 +28,9 @@ include::partial$permissions.adoc[tag=permissionManage]
 
 include::partial$permissions.adoc[tag=permissionBuild]
 
+//Document Preparation and Testing
+include::partial$document-preparation.adoc[tag=documentPreparation]
+
 [[upload-files]]
 == Upload Sample Files and Preview the Results
 

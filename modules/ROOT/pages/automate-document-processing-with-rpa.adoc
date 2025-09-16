@@ -24,7 +24,7 @@ include::partial$document-action.adoc[tag=modelUsage]
 
 The Submit Document to MuleSoft IDP action step executes document actions by impersonating a user in your organization. Therefore, you must use authentication credentials of a user that has the Execute Published Actions permission in Anypoint Platform.  
 
-See xref:rpa-builder::toolbox-mulesoft-idp-submit-document-to-mulesoft-idp.adoc[] for configuration details. 
+See xref:rpa-builder::toolbox-mulesoft-idp-submit-document-to-mulesoft-idp.adoc[MuleSoft RPA: Submit Document to MuleSoft IDP] for configuration details. 
 
 == Retrieve the Results of the Execution
 
@@ -32,9 +32,10 @@ To retrieve the results of a document action execution, use the Retrieve Results
 
 include::partial$document-action.adoc[tag=modelUsage]
 
-See xref:rpa-builder::toolbox-mulesoft-idp-retrieve-results-from-mulesoft-idp.adoc[] for configuration details. 
+See xref:rpa-builder::toolbox-mulesoft-idp-retrieve-results-from-mulesoft-idp.adoc[MuleSoft RPA: Retrieve Results from MuleSoft IDP] for configuration details. 
 
 == See Also 
 
+* xref:document-quality-and-model-performance.adoc[]
 * xref:creating-document-actions.adoc[]
 * xref:publishing-document-actions.adoc[]

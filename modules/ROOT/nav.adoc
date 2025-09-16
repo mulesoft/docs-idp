@@ -2,6 +2,7 @@
 * xref:index.adoc[IDP Overview]
 * xref:release-notes.adoc[Release Notes]
 * xref:document-processing.adoc[]
+* xref:document-quality-and-model-performance.adoc[]
 * xref:analyzing-documents-with-einstein.adoc[]
 * xref:creating-document-actions.adoc[]
 ** xref:enhancing-data-extraction-with-einstein.adoc[]

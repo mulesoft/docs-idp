@@ -37,6 +37,7 @@ Einstein doesn't use customer data to train any models for document analysis in 
 == See Also 
 
 * xref:document-processing.adoc[]
+* xref:document-quality-and-model-performance.adoc[]
 * xref:analyzing-documents-with-einstein.adoc[]
 * xref:creating-document-actions.adoc[]
 * xref:publishing-document-actions.adoc[]

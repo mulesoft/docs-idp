@@ -106,7 +106,8 @@ To confirm the endpoints to call to trigger document action executions and retri
 
 == See Also 
 
-* xref:rpa-builder::toolbox-mulesoft-idp-submit-document-to-mulesoft-idp.adoc[]
-* xref:rpa-builder::toolbox-mulesoft-idp-retrieve-results-from-mulesoft-idp.adoc[]
+* xref:document-quality-and-model-performance.adoc[]
+* xref:rpa-builder::toolbox-mulesoft-idp-submit-document-to-mulesoft-idp.adoc[MuleSoft RPA: Submit Document to MuleSoft IDP]
+* xref:rpa-builder::toolbox-mulesoft-idp-retrieve-results-from-mulesoft-idp.adoc[MuleSoft RPA: Retrieve Results from MuleSoft IDP]
 * xref:creating-document-actions.adoc[]
 * xref:publishing-document-actions.adoc[]

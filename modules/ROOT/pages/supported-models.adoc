@@ -62,5 +62,6 @@ Select *Show properties* under *choices* to see the details.
 
 == See Also 
 
+* xref:document-quality-and-model-performance.adoc[]
 * https://platform.openai.com/docs/guides/text#prompt-engineering[OpenAI's Prompt Engineering Guide]
 * xref:analyzing-documents-with-einstein.adoc[]
