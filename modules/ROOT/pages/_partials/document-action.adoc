@@ -31,7 +31,7 @@ a|
 * Salesforce Organization Preferences override this setting.
 * Reduces character limit to 120,000 per request.
 +
-See xref:quotas-and-limits#prompt-limits[Prompt Limits] for additional details. 
+See xref:quotas-and-limits.adoc#prompt-limits[Prompt Limits] for additional details. 
 * Cannot be used simultaneously with Image Recognition.
 * For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
 
