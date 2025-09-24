@@ -11,6 +11,8 @@ Select the model to use during document analysis by clicking *Settings* in the d
 [NOTE]
 Document actions created before February 5th support only OpenAI's `GPT-4o (gpt-4o-2024-05-13)`. To enable model selection and the new models, create a new document action. See xref:idp::analyzing-documents-with-einstein.adoc#settings[Configure Document Action Settings] for details about feature availability and configuration. 
 
+[NOTE]
+Einstein doesn't use customer data to train any models for document analysis in IDP.
 // end::einsteinGeneric[]
 
 // tag::einsteinSupportedModels[]
