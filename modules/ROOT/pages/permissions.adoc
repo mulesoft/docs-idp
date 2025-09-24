@@ -3,7 +3,13 @@ include::partial$permissions.adoc[tag=pageTitle]
 
 include::partial$permissions.adoc[tag=permissionsIntro]
 
-include::partial$permissions.adoc[tag=permissionsList]
+include::partial$permissions.adoc[tag=permissionManage]
+
+include::partial$permissions.adoc[tag=permissionBuild]
+
+include::partial$permissions.adoc[tag=permissionExecute]
+
+include::partial$permissions.adoc[tag=permissionConfigure]
 
 == See Also
 
