@@ -4,9 +4,6 @@ include::rpa-home::partial$automation-credits-1.adoc[tag=intro]
 
 include::rpa-home::partial$automation-credits-1.adoc[tag=conversionRates]
 
-[IMPORTANT]
-Beginning October 24, 2025, the multiplier for IDP Document Page will change to `30 Automation Credits`.
-
 include::rpa-home::partial$automation-credits-1.adoc[tag=detailsAndSubscriptionPlans]
 
 == See Also 
