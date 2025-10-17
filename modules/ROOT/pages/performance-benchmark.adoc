@@ -94,6 +94,7 @@ Complete: 11s
 The benchmark results provide key insights into IDP response times and system reliability characteristics under various load conditions.
 
 === Response Times
+
 * IDP acknowledges document submissions in under 1.5 seconds, even during heavy load
 * End-to-end document processing completes in 7-11 seconds on average
 * Response times remain consistent across different load scenarios
