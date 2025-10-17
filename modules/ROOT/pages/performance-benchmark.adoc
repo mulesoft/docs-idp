@@ -100,6 +100,7 @@ The benchmark results provide key insights into IDP response times and system re
 * Response times remain consistent across different load scenarios
 
 === Scaling and Reliability
+
 * System auto-scales under pressure to sustain throughput up to ~2,000 requests per minute per tenant
 * No processing errors or performance degradation observed up to 30 concurrent threads
 * Workloads can be confidently planned within these ranges for stable, high-volume document processing
