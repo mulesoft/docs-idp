@@ -144,6 +144,7 @@ The following considerations provide guidance for planning IDP implementations a
 * Monitor queue depth and scaling behavior during production deployments
 
 === Performance Variables
+
 * Document size and complexity can impact processing times
 * Network conditions may affect response times
 * Concurrent load levels influence overall system performance
