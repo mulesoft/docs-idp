@@ -137,6 +137,7 @@ The following specifications define system limits and infrastructure capabilitie
 The following considerations provide guidance for planning IDP implementations and understanding factors that influence performance in production environments.
 
 === Planning Recommendations
+
 * Use these benchmarks as design guidance rather than hard performance limits
 * Plan capacity using P95 latency values for SLA establishment
 * Maintain workloads within moderate ranges for predictable performance
