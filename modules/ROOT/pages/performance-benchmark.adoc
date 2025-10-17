@@ -39,7 +39,7 @@ When submitting documents to IDP, two timing measurements are critical for under
 |===
 |Latency Type |Description
 
-|Initial Response Latency |Time from submission (POST) to acknowledgment that processing has started
+|Initial Response Latency |Time from submission (POST) to acknowledgment that processing started
 |Complete Operation Latency |End-to-end time from submission until processed data is available via GET or callback
 |===
 
