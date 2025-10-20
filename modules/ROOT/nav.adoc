@@ -15,6 +15,7 @@
 * xref:permissions.adoc[]
 * xref:quotas-and-limits.adoc[]
 * xref:supported-models.adoc[]
+* xref:performance-benchmark.adoc[]
 * xref:ms-automation-credits-usage-types.adoc[]
 ** xref:ms-automation-credits-2.adoc[]
 ** xref:ms-automation-credits.adoc[]

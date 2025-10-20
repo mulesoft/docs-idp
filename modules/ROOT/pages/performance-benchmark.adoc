@@ -1,0 +1,151 @@
+= Performance Benchmarks
+
+MuleSoft Intelligent Document Processing (IDP) performance benchmarks provide a clear view of how IDP performs under real-world workloads. The benchmarks highlight document processing speed, system scaling behavior, and expected response times under normal and peak load conditions.
+
+These insights help you plan capacity, establish SLAs, and build scalable and stable IDP implementations. The metrics serve as design guidance rather than hard limits for understanding expected performance envelopes and optimizing IDP deployments.
+
+== Understanding Benchmark Metrics
+
+The benchmark data serves as planning and design guidance for IDP implementations. These results support:
+
+* Capacity planning: P95 latency values provide baselines for SLA planning
+* Workload design: Typical loads near "moderate" ranges deliver predictable performance
+* Load management: Peak throughput is supported, though brief queuing may occur
+* Expectation setting: Performance can vary by document size, complexity, or network conditions
+
+Use P95 latency as the baseline for SLA and capacity planning while keeping typical loads within moderate ranges for optimal performance stability.
+
+== Test Configuration
+
+The benchmarks were conducted using controlled test scenarios to measure IDP performance across multiple workload conditions.
+
+[cols="1,3"]
+|===
+|Component |Details
+
+|Environment |STGX
+|Document Type |4.5MB single-page document
+|Pods |12-15 (autoscaling enabled)
+|Concurrency |30 concurrent threads
+|Testing Tool |JMeter
+|Test Duration |15 minutes per scenario
+|===
+
+== Latency Types
+
+When submitting documents to IDP, two timing measurements are critical for understanding system performance.
+
+[cols="2,4"]
+|===
+|Latency Type |Description
+
+|Initial Response Latency |Time from submission (POST) to acknowledgment that processing started
+|Complete Operation Latency |End-to-end time from submission until processed data is available via GET or callback
+|===
+
+== Performance Benchmarks
+
+The following performance metrics demonstrate IDP behavior under controlled load conditions with 4.5MB single-page documents.
+
+=== Key Metrics Summary
+
+[cols="2,1,1,1"]
+|===
+|Metric |P50 (Typical) |P95 (High Load) |P99 (Extreme Peak)
+
+|Initial Response Latency |0.59s |1.32s |2.57s
+|Complete Operation Latency |7.61s |11s |13.38s
+|===
+
+=== Throughput and Scaling
+
+* **Throughput:** ~2,000 requests per minute per tenant at peak load
+* **Autoscaling:** Automatically scaled from 12 to 15 nodes under load
+* **Queue Management:** Pending queue depth remained below 1,000 messages
+* **Reliability:** 0% error rate with no 4xx or 5xx errors observed
+
+== SLA Performance Guidelines
+
+[cols="2,2,3,2,1,3"]
+|===
+|Load Scenario |Requests per Minute |Average Latency |P95 Latency |Error Rate |Configuration
+
+|Moderate Load
+|~600 requests per minute
+|Initial: 0.5s +
+Complete: 8.5s
+|Initial: 0.5s +
+Complete: 8.46s
+|0.49%
+|5 threads for 15 minutes
+
+|Peak Load
+|2,000+ requests per minute
+|Initial: 1.3s +
+Complete: 11s
+|Initial: 1.32s +
+Complete: 11s
+|0%
+|30 threads for 15 minutes
+|===
+
+== Performance Insights
+
+The benchmark results provide key insights into IDP response times and system reliability characteristics under various load conditions.
+
+=== Response Times
+
+* IDP acknowledges document submissions in under 1.5 seconds, even during heavy load
+* End-to-end document processing completes in 7-11 seconds on average
+* Response times remain consistent across different load scenarios
+
+=== Scaling and Reliability
+
+* System auto-scales under pressure to sustain throughput up to ~2,000 requests per minute per tenant
+* No processing errors or performance degradation observed up to 30 concurrent threads
+* Workloads can be confidently planned within these ranges for stable, high-volume document processing
+
+== System Specifications
+
+The following specifications define system limits and infrastructure capabilities for IDP document processing and platform requirements.
+
+=== Document Support
+
+[cols="1,3"]
+|===
+|Specification |Value
+
+|Maximum File Size |10MB
+|Document Complexity Impact |Minimal for single-page documents; multi-page documents may show proportionally longer completion times
+|Supported Formats |Standard document formats supported by IDP
+|===
+
+=== Infrastructure Details
+
+[cols="1,3"]
+|===
+|Component |Details
+
+|Test Region |STGX
+|Autoscaling |Confirmed across all test runs
+|Recovery Requirements |No 404/429/5xx errors; recovery not required during testing
+|Failover Behavior |Not applicable during test scenarios
+|===
+
+== Considerations
+
+The following considerations provide guidance for planning IDP implementations and understanding factors that influence performance in production environments.
+
+=== Planning Recommendations
+
+* Use these benchmarks as design guidance rather than hard performance limits
+* Plan capacity using P95 latency values for SLA establishment
+* Maintain workloads within moderate ranges for predictable performance
+* Monitor queue depth and scaling behavior during production deployments
+
+=== Performance Variables
+
+* Document size and complexity can impact processing times
+* Network conditions may affect response times
+* Concurrent load levels influence overall system performance
+* Autoscaling behavior adapts to sustained load patterns
