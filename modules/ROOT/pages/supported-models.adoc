@@ -33,9 +33,7 @@ a| Standard
 a| * Low credit consumption
    * Medium accuracy on reading checkboxes in forms when processing one page at a time
  | ~6,000 words
-a|  * Currently, the Gemini model doesn't show an accurate confidence score and is set to 80% by default.
-    * For the Einstein generic document action with customized schema, errors such as `LLM Generation wasn't a valid JSON` might occur. In such cases, create a new generic document action without a customized schema to obtain results.
-    * List of https://ai.google.dev/gemini-api/docs/models#supported-languages[languages supported] by Gemini models. 
+a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models. 
 |===
 
 == Model Errors 
