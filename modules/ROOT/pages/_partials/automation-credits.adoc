@@ -1,0 +1,4 @@
+
+// tag::automation-credit-consumption[]
+Processing documents consumes Automation Credits. See xref:ms-automation-credits-usage-types.adoc[] for details.
+// end::automation-credit-consumption[]

@@ -4,6 +4,8 @@ Before you analyze documents with IDP, you must create and publish document acti
 
 After you publish a document action to Anypoint Exchange, you can programatically call the IDP API to execute the document action and extract data from a document. As a result, the document action analyzes the provided document and returns a response in JSON format with all the extracted fields. You can query the IDP API to check the status of an execution at any time.
 
+include::partial$automation-credits.adoc[tag=automation-credit-consumption]
+
 == Document Actions 
 
 include::partial$document-action.adoc[tag=definition]

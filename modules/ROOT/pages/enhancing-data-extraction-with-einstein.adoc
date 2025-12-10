@@ -4,7 +4,9 @@ include::partial$einstein.adoc[tags=defaultModelAndEinstein;einsteinModelBenefit
 
 include::partial$einstein-model.adoc[tag=einsteinGeneric]
 
-To analyze any type of document with Einstein, fully customize the output structure, and optimize Einstein credit consumption, see xref::analyzing-documents-with-einstein.adoc[].
+To analyze any type of document with Einstein and fully customize the output structure, see xref::analyzing-documents-with-einstein.adoc[].
+
+include::partial$automation-credits.adoc[tag=automation-credit-consumption]
 
 == Before You Begin Using Einstein
 
