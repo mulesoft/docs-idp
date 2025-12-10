@@ -19,6 +19,8 @@ Each processed document shows a confidence score for each extracted field. When 
 
 For an introduction to IDP, see our Trailhead badge, https://trailhead.salesforce.com/content/learn/modules/mulesoft-idp-basics[MuleSoft IDP Basics] (login required). Sign up if you don't have a Trailhead account.
 
+include::partial$automation-credits.adoc[tag=automation-credit-consumption]
+
 == Analyze Documents With Custom User-Defined Schemas
 
 Analyze any type of document and fully customize the output structure by creating a Generic document action and enabling *Customize Schema*. You can define fields and tables in the output structure and configure instructions for Einstein to analyze the document and extract the data for each field.  

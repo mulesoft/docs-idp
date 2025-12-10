@@ -20,6 +20,8 @@ Creating a document action with a pre-built schema requires the following tasks:
 Unless you select the Generic document action, which doesn't use a schema.
 . <<add-prompts>>
 
+include::partial$automation-credits.adoc[tag=automation-credit-consumption]
+
 == Before You Begin Creating Document Actions
 
 Ensure you have any of the following Anypoint permissions:
