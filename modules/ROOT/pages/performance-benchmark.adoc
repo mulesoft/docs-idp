@@ -1,8 +1,6 @@
 = Performance Benchmarks
 
-MuleSoft Intelligent Document Processing (IDP) performance benchmarks provide a clear view of how IDP performs under real-world workloads. The benchmarks highlight document processing speed, system scaling behavior, and expected response times under normal and peak load conditions.
-
-These insights help you plan capacity, establish SLAs, and build scalable and stable IDP implementations. The metrics serve as design guidance rather than hard limits for understanding expected performance envelopes and optimizing IDP deployments.
+MuleSoft Intelligent Document Processing (IDP) performance benchmarks demonstrate how IDP performs under controlled test scenarios, including document processing speed, system scaling behavior, and response times under normal and peak load conditions. Use these metrics for capacity planning, SLA establishment, and workload design.
 
 == Understanding Benchmark Metrics
 

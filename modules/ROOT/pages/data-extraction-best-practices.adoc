@@ -1,0 +1,113 @@
+= Data Extraction Best Practices
+
+MuleSoft Intelligent Document Processing (IDP) uses multimodal AI models to extract, structure, and normalize data from diverse document types. Follow these best practices to design effective prompts and improve extraction accuracy.
+
+== Prompt Engineering with Multimodal Models
+
+MuleSoft IDP uses multimodal models to deliver high accuracy by processing visual and textual information together. These models understand layouts, tables, and handwritten content more effectively than traditional OCR engines.
+
+Effective prompt design is essential for consistent extraction. When designing prompts:
+
+* Define what needs to be extracted
+* Provide examples so the model learns the pattern
+* Specify the response structure for consistency
+
+=== Use Specific Instructions About the Fields to Read
+
+Detailed, context-aware prompts help the model anchor to the correct visual region.
+
+[%header,cols="1,1"]
+|===
+|Incomplete Prompt | Detailed Prompt
+
+a|[source]
+----
+Extract the origin area code.
+----
+a|[source]
+----
+Extract the Origin Area Code from the address section of the shipping document. 
+Examples: 'Origin Area Code: J02', 'Origin: JA15'. 
+Return only the code (such as J02 or JA15) without additional text.
+----
+|===
+
+=== Add Logic for Filtering
+
+Define what to include and exclude to avoid misinterpretations.
+
+The following example shows how to filter specific email fields and specify a JSON response format:
+
+[source]
+----
+Extract the primary email address labeled 'From' or 'Sender.' 
+Do not extract 'Reply-To' or 'CC' addresses. 
+Return result as JSON: { 'PrimaryEmail': 'example@email.com' }. 
+If none exists, return null.
+----
+
+=== Focus on Table Context
+
+For complex tables or merged cells, instruct the model to ignore nearby data and focus on headers.
+
+The following example shows how to target a specific table column and handle merged cells:
+
+[source]
+----
+In the table labeled 'Vehicle Details,' extract only the New/Used Status from the 'Status' column. 
+Ignore dimension information. 
+If the value is in a merged cell, interpret the topmost label as the column header.
+----
+
+== Data Quality and Troubleshooting
+
+If your prompts are well-structured but the results are still inconsistent, the issue may relate to data quality rather than the model itself. Multimodal models process documents visually, so visual clarity is vital for accuracy.
+
+=== Common Data Quality Issues
+
+[%header,cols="1,2"]
+|===
+|Issue |Description
+
+|Resolution and Clarity
+|Low-resolution scans or blurred text can confuse the model's vision layer.
+
+|Complex Layouts
+|Merged table columns or dense formatting can make it difficult for the model to distinguish between data fields.
+
+|Alignment Shifts
+|If headers are misaligned, the model might reference the wrong data column. For example, a scanned PDF where the header "Second Month of the Quarter" is shifted may lead to incorrect extractions.
+|===
+
+=== Troubleshooting Strategy
+
+Use tools such as Google Gemini as a testing environment to visualize what the model sees. After you understand how the model interprets a specific column or label, adjust your prompt to better target the layout.
+
+== Checkbox Detection Best Practices
+
+Multimodal models excel at recognizing checkboxes that are often unsupported by text-only engines. To maximize accuracy for selection-based fields:
+
+* Enable Image Recognition
++
+Set the document action to use Image Recognition mode in settings.
+* Use Gemini 2.5
++
+This model is the current recommended standard for high-fidelity checkbox detection.
+* Convert PDF to Image
++
+If your source file is a PDF, convert it to an image format such as JPG or PNG to ensure the model captures the visual "checked" state correctly.
+* Validate thoroughly
++
+Test your document actions against a large, representative set of forms before moving to production to account for different checkbox styles.
+
+[NOTE]
+Future models from Gemini and OpenAI are expected to improve checkbox detection accuracy. As new models are onboarded, they are tested and observations are shared on the xref:supported-models.adoc[supported models] page.
+
+== See Also
+
+* xref:security-best-practices.adoc[]
+* xref:creating-document-actions.adoc[]
+* xref:enhancing-data-extraction-with-einstein.adoc[]
+* xref:example-einstein-prompts.adoc[]
+* xref:supported-models.adoc[]
+* xref:permissions.adoc[]
