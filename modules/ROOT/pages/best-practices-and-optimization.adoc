@@ -2,7 +2,7 @@
 
 As you design and build your IDP implementation, follow these best practices to optimize extraction accuracy, secure your IDP workflow, and plan capacity for production workloads:
 
-* xref:document-processing-best-practices.adoc[]
+* xref:data-extraction-best-practices.adoc[]
 +
 Design effective prompts, address data quality issues, and configure checkbox detection for consistent results. 
 * xref:security-best-practices.adoc[]
