@@ -91,6 +91,6 @@ Apply IP allow-listing policies to your downstream Process APIs (PAPIs) to ensur
 
 == See Also
 
-* xref:document-processing-best-practices.adoc[]
+* xref:data-extraction-best-practices.adoc[]
 * xref:permissions.adoc[]
 * xref:creating-document-actions.adoc[]
