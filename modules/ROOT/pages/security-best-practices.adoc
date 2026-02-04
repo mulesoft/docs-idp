@@ -1,6 +1,6 @@
 = Security Best Practices
 
-Securing your IDP implementation requires an intermediary API layer to enforce granular access control, along with governance practices for reviewer access. These measures help align with enterprise security standards for Non-Human Accounts (SFSS-053), Separation of Duties (SFSS-042), and Change Management (SFSS-009). Native IDP access is controlled at the Anypoint Platform Business Group level, which means any connected app within that organizational unit can invoke any document action or version.
+Securing your IDP implementation requires an intermediary API layer to enforce granular access control, along with governance practices for reviewer access. These measures help align with enterprise security standards for Non-Human Accounts, Separation of Duties, and Change Management. Native IDP access is controlled at the Anypoint Platform Business Group level, which means any connected app within that organizational unit can invoke any document action or version.
 
 To enforce granular access control, implement two intermediary APIs in each Business Group: an Anypoint IDP System API (SAPI) for authorization and an Anypoint IDP Call-Back Experience API (XAPI) for callback authentication.
 
