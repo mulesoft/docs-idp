@@ -46,7 +46,7 @@ These are some of the most common error codes and their suggested fixes:
 [%header%autowidth.spread,cols=".^a,.^a,.^a"]
 |===
 | Error Code| Error Description | Suggested Fix
-| `length` | The request exceeded the maximum input token limit. | See https://platform.openai.com/docs/guides/text?api-mode=chat#gpt-4-1-prompting-best-practices[Using long context] under GPT-4.1 prompting best practices to understand how to refine your prompts. 
+| `length` | The request exceeded the maximum input token limit. | See https://developers.openai.com/api/docs/guides/text[Using long context] under GPT-4.1 prompting best practices to understand how to refine your prompts. 
 | `MAX_TOKENS` | The response exceeded the maximum output token limit. | Split the document or select an OpenAI model for this extraction. 
 | `SPII` | The document potentially contains Sensitive Personally Identifiable Information (SPII).| Delete the conflicting field, or use GPT models to abstract the information.
 
@@ -54,12 +54,12 @@ These are some of the most common error codes and their suggested fixes:
 
 For a complete list of error codes, refer to each of the model provider's documentation: 
 
-* OpenAI models: https://platform.openai.com/docs/api-reference/completions/object#completions/object-choices[The completion object]
+* OpenAI models: https://developers.openai.com/api/reference/resources/completions[The completion object]
 +
 Select *Show properties* under *choices* to see the details.
-* Google models: https://cloud.google.com/vertex-ai/generative-ai/docs/reference/python/latest/services?utm_source=chatgpt.com#class-vertexaigenerativemodelsfinishreasonvalue[Finish Reason] 
+* Google models: https://docs.cloud.google.com/python/docs/reference/vertexai/latest?utm_source=chatgpt.com[Finish Reason] 
 
 == See Also 
 
-* https://platform.openai.com/docs/guides/text#prompt-engineering[OpenAI's Prompt Engineering Guide]
+* https://developers.openai.com/api/docs/guides/text[OpenAI's Prompt Engineering Guide]
 * xref:analyzing-documents-with-einstein.adoc[]
