@@ -87,8 +87,8 @@ A token is a unit of text that a large language model (LLM) processes. Tokens ar
 
 When analyzing images, each model uses a different tokenization strategy that affects how they calculate tokens. Refer to each provider's documentation for additional guidance: 
 
-* https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/image-understanding#image-requirements[Gemini: token usage estimation for images]
-* https://platform.openai.com/docs/guides/images-vision?api-mode=chat[OpenAI: token usage estimation for images]
+* https://docs.cloud.google.com/vertex-ai/generative-ai/docs/multimodal/image-understanding[Gemini: token usage estimation for images]
+* https://developers.openai.com/api/docs/guides/images-vision[OpenAI: token usage estimation for images]
 
 == Document Retention Policy
 
