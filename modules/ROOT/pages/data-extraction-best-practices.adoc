@@ -90,7 +90,7 @@ Multimodal models excel at recognizing checkboxes that are often unsupported by 
 * Enable Image Recognition
 +
 Set the document action to use Image Recognition mode in settings.
-* Use Gemini 3
+* Use Gemini 2.5
 +
 This model is the current recommended standard for high-fidelity checkbox detection.
 * Convert PDF to Image

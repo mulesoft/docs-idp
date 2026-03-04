@@ -19,6 +19,24 @@ After you create a document action, click *Settings* to configure it. The availa
 |===
 |Setting |Description |Available From |Considerations
 
+|*Location callouts*
+| Show a bounding box around the analyzed value in the document preview. 
+| March 6th, 2026
+a|
+* Available for Generic document actions with customized schemas.
+* Requires Multimodal enabled in the document action.
+* When enabled, confidence score for the field reflects extraction and label geometry.
+* Location callouts support a maximum of 40 fields. Enable this feature only if your document action contains 40 or fewer fields.
+* For the best experience with location callouts, treat every field and table item as a single entity that returns a single value, rather than multiple values or JSON.
+|*Multimodal* 
+|Enables the model to read and interpret images within documents.
+|May 8th, 2025
+a|
+* Cannot be used simultaneously with PII masking.
+* Accuracy of checkbox processing varies by model depending on form complexity. 
++
+See xref:supported-models.adoc[] for more information about how each model performs when processing checkboxes. 
+
 |*Model* 
 |Select the predictive large language model (LLM) to use when executing this document action.
 |February 5th, 2025
@@ -34,16 +52,6 @@ a|
 See xref:quotas-and-limits.adoc#prompt-limits[Prompt Limits] for additional details. 
 * Cannot be used simultaneously with Image Recognition.
 * For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
-
-|*Image Recognition* 
-|Enables the model to read and interpret images within documents.
-|May 8th, 2025
-a|
-* Cannot be used simultaneously with PII Masking.
-* Accuracy of checkbox processing varies by model depending on form complexity. 
-+
-See xref:supported-models.adoc[] for more information about how each model performs when processing checkboxes. 
-|===
 
 [NOTE]
 To access all new features, create a new document action.
