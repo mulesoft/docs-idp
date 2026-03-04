@@ -18,6 +18,8 @@ include::partial$einstein-model.adoc[tag=einsteinSupportedModels]
 
 After you create a document action, publish it to Anypoint Exchange to make it available for consumption from RPA and through the IDP API.
 
+include::partial$document-action.adoc[tag=delete-action-warning]
+
 == Reviews
 
 Document actions return a JSON response that contains the extracted fields and their detected values. Each of these values has a confidence score that determines the accuracy of the value during the extraction.
