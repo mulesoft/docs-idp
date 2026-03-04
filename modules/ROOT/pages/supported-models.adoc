@@ -8,7 +8,7 @@ When creating a document action, you can select the model and extraction setting
 
 [%header%autowidth.spread,cols=".^a,.^a,.^a,.^a,.^a,.^a"]
 |===
-| Model Name | Description | Stability | Image Recognition | Bounding Boxes | Notes 
+| Model Name | Description | Stability | Image Recognition | Location Callouts | Notes 
 | Einstein OpenAI GPT-4o 0806 
  | Suitable for most tasks, performing well on documents in non-Latin languages. Can compare font sizes and identify certain font styles.
  |High
