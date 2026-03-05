@@ -24,7 +24,7 @@ After you create a document action, click *Settings* to configure it. The availa
 | March 6th, 2026
 a|
 * Available for Generic document actions with customized schemas.
-* Requires Multimodal enabled in the document action.
+* Supported only for Gemini models with Multimodal enabled in the document action.
 * When enabled, confidence score for the field reflects extraction and label geometry.
 * Location callouts support a maximum of 40 fields. Enable this feature only if your document action contains 40 or fewer fields.
 * For the best experience with location callouts, treat every field and table item as a single entity that returns a single value, rather than multiple values or JSON.
