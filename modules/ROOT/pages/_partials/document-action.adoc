@@ -52,6 +52,7 @@ a|
 See xref:quotas-and-limits.adoc#prompt-limits[Prompt Limits] for additional details. 
 * Cannot be used simultaneously with Image Recognition.
 * For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
+|===
 
 [NOTE]
 To access all new features, create a new document action.

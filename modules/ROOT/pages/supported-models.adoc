@@ -45,6 +45,7 @@ a| High
 a| * High accuracy on reading checkboxes in forms when processing one page at a time
 | Supported
 a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models.  
+* This model is in beta and may be deprecated or removed. It can cause extraction failures and occasionally cause the application to stop responding.
 * To use this model, go to the Einstein Setup in your Salesforce org and enable beta generative AI models. See https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein_models_beta.htm&release=258&type=5[Turn On Beta Generative AI Models] for more details.
 |===
 
