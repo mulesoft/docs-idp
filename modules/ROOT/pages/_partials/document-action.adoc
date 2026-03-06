@@ -23,7 +23,7 @@ After you create a document action, click *Settings* to configure it. The availa
 |Enables the model to read and interpret images within documents.
 |May 8th, 2025
 a|
-* Cannot be used simultaneously with PII Masking.
+* Cannot be used simultaneously with PII masking.
 * Accuracy of checkbox processing varies by model depending on form complexity. 
 +
 See xref:supported-models.adoc[] for more information about how each model performs when processing checkboxes. 
