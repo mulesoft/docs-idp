@@ -19,6 +19,15 @@ After you create a document action, click *Settings* to configure it. The availa
 |===
 |Setting |Description |Available From |Considerations
 
+|*Multimodal* 
+|Enables the model to read and interpret images within documents.
+|May 8th, 2025
+a|
+* Cannot be used simultaneously with PII masking.
+* Accuracy of checkbox processing varies by model depending on form complexity. 
++
+See xref:supported-models.adoc[] for more information about how each model performs when processing checkboxes. 
+
 |*Model* 
 |Select the predictive large language model (LLM) to use when executing this document action.
 |February 5th, 2025
@@ -35,17 +44,16 @@ See xref:quotas-and-limits.adoc#prompt-limits[Prompt Limits] for additional deta
 * Cannot be used simultaneously with Image Recognition.
 * For more information, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_trust_layer.htm&type=5[Einstein Trust Layer].
 
-|*Image Recognition* 
-|Enables the model to read and interpret images within documents.
-|May 8th, 2025
-a|
-* Cannot be used simultaneously with PII Masking.
-* Accuracy of checkbox processing varies by model depending on form complexity. 
-+
-See xref:supported-models.adoc[] for more information about how each model performs when processing checkboxes. 
 |===
 
 [NOTE]
 To access all new features, create a new document action.
 
 // end::settings[]
+
+// tag::delete-action-warning[]
+
+[WARNING]
+Do not delete document action assets from Anypoint Exchange. Because the asset is discoverable, existing integrations might be using it. Deleting the asset from Exchange breaks those integrations and leaves an orphan document action in the IDP UI that is no longer tied to any Exchange asset. To retire a document action, see xref:publishing-document-actions.adoc#retire-document-action[Retire a Document Action].
+
+// end::delete-action-warning[]
