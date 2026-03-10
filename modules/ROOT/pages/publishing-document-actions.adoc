@@ -2,6 +2,8 @@
 
 You can build an automated pipeline for document processing by integrating your published document actions with RPA, Mule applications, and other systems. Publishing a document action makes it discoverable in RPA and available in Anypoint Exchange as an API that you can call.
 
+include::partial$document-action.adoc[tag=delete-action-warning]
+
 == Document Action Versioning
 
 You can use document action versioning to avoid breaking existing integrations when you modify a published document action. IDP follows semantic versioning but only increases the minor version number when you republish a document action. 
@@ -28,6 +30,13 @@ To publish a document action:
 . Click *Publish*.
 . Verify the name and version of the asset and click *Publish*.
 . Wait for the confirmation message and click *Close*.
+
+[[retire-document-action]]
+== Retire a Document Action
+
+After a document action is published to Anypoint Exchange, you cannot delete it from the IDP UI. This behavior is intentional to prevent breaking existing integrations.
+
+To retire a document action that you no longer use, rename it in the IDP UI to indicate that it is deprecated. For example, add *(Deprecated)* or *(Do not use)* to the name. That way your team knows not to use this document action for new integrations, while existing integrations can continue to use the published version.
 
 == See Also
 

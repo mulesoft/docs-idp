@@ -8,7 +8,9 @@ include::partial$document-action.adoc[tag=details]
 
 Create a document action using a predefined type as a template, and then specify the fields that are mandatory, the fields that must be excluded from the JSON response, and the minimum confidence score expected for each field. 
 
-After you create a new document action, you can add reviewers and publish it to Anypoint Exchange, which enables RPA to execute the document action and also creates an API that you can call from any external system. 
+After you create a new document action, you can add reviewers and publish it to Anypoint Exchange, which enables RPA to execute the document action and also creates an API that you can call from any external system.
+
+include::partial$document-action.adoc[tag=delete-action-warning]
 
 When you create a document action, ensure that the configured schema works for each uploaded document. If you can't customize the schema to work with all sample documents, consider creating multiple document actions. For example, purchase orders from multiple vendors might be different enough to require a separate document action for each vendor.
 

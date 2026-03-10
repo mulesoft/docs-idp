@@ -58,3 +58,10 @@ See xref:quotas-and-limits.adoc#prompt-limits[Prompt Limits] for additional deta
 To access all new features, create a new document action.
 
 // end::settings[]
+
+// tag::delete-action-warning[]
+
+[WARNING]
+Do not delete document action assets from Anypoint Exchange. Because the asset is discoverable, existing integrations might be using it. Deleting the asset from Exchange breaks those integrations and leaves an orphan document action in the IDP UI that is no longer tied to any Exchange asset. To retire a document action, see xref:publishing-document-actions.adoc#retire-document-action[Retire a Document Action].
+
+// end::delete-action-warning[]
