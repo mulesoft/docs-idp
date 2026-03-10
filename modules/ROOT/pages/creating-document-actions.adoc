@@ -98,6 +98,7 @@ include::partial$einstein.adoc[tags=defaultModelAndEinstein;einsteinModelBenefit
 
 To improve data extraction using Einstein to answer your prompts, see xref:enhancing-data-extraction-with-einstein.adoc[].
 
+[[document-action-settings]]
 == Configure Document Action Settings
 
 include::partial$document-action.adoc[tag=settings] 

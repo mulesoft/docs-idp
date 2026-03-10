@@ -6,15 +6,16 @@ include::partial$einstein-model.adoc[tag=einsteinSupportedModels]
 
 When creating a document action, you can select the model and extraction settings such as PII masking or image recognition. Each model performs differently under various conditions, so select the one that aligns with your specific requirements.
 
-[%header%autowidth.spread,cols=".^a,.^a,.^a,.^a,.^a"]
+[%header%autowidth.spread,cols=".^a,.^a,.^a,.^a,.^a,.^a"]
 |===
-| Model Name | Description | Stability | Image Recognition | Notes 
+| Model Name | Description | Stability | Image Recognition | Location Callouts | Notes 
 | Einstein OpenAI GPT-4o 0806 
  | Suitable for most tasks, performing well on documents in non-Latin languages. Can compare font sizes and identify certain font styles.
  |High
 a|* Standard performance
   * Standard credit consumption
   * Low accuracy on reading checkboxes in forms
+| Not supported
 a|* Ask the model to not make up information to prevent hallucinations.
   * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models. 
 | Einstein OpenAI GPT-4o Mini 0718 
@@ -23,18 +24,29 @@ a|* Ask the model to not make up information to prevent hallucinations.
 a|* Standard performance 
   * High credit consumption
   * Low accuracy on reading checkboxes in forms
+| Not supported
 a|* Ask the model to not make up information to prevent hallucinations.
   * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models.
 | Einstein GEMINI-2.0 Flash 001 
- | Best for analyzing images due to increased accuracy in this type of documents. 
+ | Good for analyzing images due to increased accuracy in this type of documents. 
 a| Standard 
 a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
+| Supported
 a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models.
 | Einstein GEMINI-2.5 Flash 
- | Best for analyzing images due to increased accuracy in this type of document. Performs quicker and with higher accuracy than Einstein GEMINI-2.0 Flash 001. 
+ | Good for analyzing images due to increased accuracy in this type of document. Performs quicker and with higher accuracy than Einstein GEMINI-2.0 Flash 001. 
 a| Standard 
 a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
+| Supported
 a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models.  
+| Einstein GEMINI-3 Flash (Beta)
+ | Best for analyzing images due to increased accuracy in this type of document. Performs quicker and with higher accuracy than Einstein GEMINI-2.0 Flash 001 and GEMINI-2.5 Flash. 
+a| High 
+a| * High accuracy on reading checkboxes in forms when processing one page at a time
+| Supported
+a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models.  
+* This model is in beta and may be deprecated or removed. It can cause extraction failures and occasionally cause the application to stop responding.
+* To use this model, go to the Einstein Setup in your Salesforce org and enable beta generative AI models. See https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein_models_beta.htm&release=258&type=5[Turn On Beta Generative AI Models] for more details.
 |===
 
 == Model Errors 

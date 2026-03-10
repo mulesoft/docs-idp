@@ -53,7 +53,8 @@ a|
 * 128 characters for IDP NLP prompts
 * Approximately 3,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-05-13)`
 * Approximately 4,000 output words for Einstein prompts using `GPT-4o (gpt-4o-2024-08-06)` or `GPT-4o Mini (gpt-4o-mini-2024-07-18)`
-* Approximately 6,000 output words for Einstein prompts using `Einstein GEMINI-2.0 Flash 001`
+* Approximately 6,000 output words for Einstein prompts using `Einstein GEMINI-2.0`
+* Approximately 48,000 output words for Einstein prompts using `Einstein GEMINI-2.5` or `Einstein GEMINI-3.0 (Beta)`
 | Request Limits
 a| 
 * IDP fails the execution when the number of requests exceeds the Einstein rate limit for the Salesforce Org
