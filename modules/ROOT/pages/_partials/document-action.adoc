@@ -21,7 +21,7 @@ After you create a document action, click *Settings* to configure it. The availa
 
 |*Location callouts*
 | Show a bounding box around the analyzed value in the document preview. 
-| March 6th, 2026
+| March 10th, 2026
 a|
 * Available for Generic document actions with customized schemas.
 * Supported only for Gemini models with Multimodal enabled in the document action.
