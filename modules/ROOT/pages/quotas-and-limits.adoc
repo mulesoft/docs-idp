@@ -110,5 +110,5 @@ IDP uses AWS services such as S3 and RDS to store files and the extracted data. 
 
 == See Also 
 
-* xref:ms-automation-credits-usage-types.adoc[]
+* xref:general::automation-credits-usage-and-rates.adoc[]
 * xref:supported-models.adoc[]
