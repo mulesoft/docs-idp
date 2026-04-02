@@ -16,12 +16,14 @@ Einstein doesn't use customer data to train any models for document analysis in 
 // end::einsteinGeneric[]
 
 // tag::einsteinSupportedModels[]
-
+////
+These models are no longer supported:
 * OpenAI's `GPT-4o (gpt-4o-2024-08-06)` LLM
 * OpenAI's `GPT-4o Mini (gpt-4o-mini-2024-07-18)` LLM
+////
 * Google's `GEMINI-2.0 Flash 001` LLM
 * Google's `GEMINI-2.5 Flash` LLM
-////
+
 Gemini 3 removed from product; restore the following list item (and remove this comment block) when the model returns:
 * Google's `GEMINI-3 Flash` (Beta) LLM
 +
