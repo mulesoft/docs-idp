@@ -9,7 +9,7 @@ When creating a document action, you can select the model and extraction setting
 [%header%autowidth.spread,cols=".^a,.^a,.^a,.^a,.^a,.^a"]
 |===
 | Model Name | Description | Stability | Image Recognition | Location Callouts | Notes 
-| Einstein OpenAI GPT-4o 0806 
+| Einstein OpenAI GPT-4o 
  | Suitable for most tasks, performing well on documents in non-Latin languages. Can compare font sizes and identify certain font styles.
  |High
 a|* Standard performance
@@ -18,7 +18,7 @@ a|* Standard performance
 | Not supported
 a|* Ask the model to not make up information to prevent hallucinations.
   * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models. 
-| Einstein OpenAI GPT-4o Mini 0718 
+| Einstein OpenAI GPT-4o Mini 
  | Fast and useful for focused tasks. Tends to exhibit lazy reasoning. 
  |High
 a|* Standard performance 
