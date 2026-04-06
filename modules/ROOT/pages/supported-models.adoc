@@ -39,6 +39,14 @@ a| Standard
 a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
 | Supported
 a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models.  
+|===
+
+[NOTE]
+====
+* OpenAI's `GPT-4o (gpt-4o-2024-08-06)` LLM retires on September 30, 2026. To prevent service interruption, migrate actions to a supported model by September 30, 2026.
+* OpenAI's `GPT-4o Mini (gpt-4o-mini-2024-07-18)` LLM no longer supports new actions. To prevent service interruption, migrate existing actions to a supported model by September 30, 2026.
+====
+
 ////
 Gemini 3 removed from product; restore this table row (before `|===`) when the model returns:
 | Einstein GEMINI-3 Flash (Beta)
@@ -50,7 +58,6 @@ a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages 
 * This model is in beta and may be deprecated or removed. It can cause extraction failures and occasionally cause the application to stop responding.
 * To use this model, go to the Einstein Setup in your Salesforce org and enable beta generative AI models. See https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein_models_beta.htm&release=258&type=5[Turn On Beta Generative AI Models] for more details.
 ////
-|===
 
 == Model Errors 
 
