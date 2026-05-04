@@ -13,32 +13,50 @@ When creating a document action, you can select the model and extraction setting
  | Suitable for most tasks, performing well on documents in non-Latin languages. Can compare font sizes and identify certain font styles.
  |High
 a|* Standard performance
-  * Standard credit consumption
   * Low accuracy on reading checkboxes in forms
 | Not supported
-a|* Ask the model to not make up information to prevent hallucinations.
-  * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models. 
+a|* Ask the model to not make up information to prevent hallucinations
+  * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models
 | Einstein OpenAI GPT-4o Mini 
- | Fast and useful for focused tasks. Tends to exhibit lazy reasoning. 
+ | Fast and useful for focused tasks. Tends to exhibit lazy reasoning
  |High
-a|* Standard performance 
-  * High credit consumption
+a|* Standard performance
   * Low accuracy on reading checkboxes in forms
 | Not supported
-a|* Ask the model to not make up information to prevent hallucinations.
-  * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models.
+a|* Ask the model to not make up information to prevent hallucinations
+  * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models
+| Einstein OpenAI GPT-5.1
+ | Suitable for most tasks. Improved instruction following and accuracy compared to GPT-4o
+ | High
+ a| * Medium accuracy on reading checkboxes in forms
+ | Not supported
+ a| * Meets EU data residency requirements
+    * Ask the model to not make up information to prevent hallucinations
+    * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models
+
+| Einstein OpenAI GPT-5.2
+ | Suitable for documents with charts, tables, and complex layouts due to improved visual understanding
+ | High
+ a| * Medium accuracy on reading checkboxes in forms
+ | Not supported
+ a| * Does not currently meet EU data residency requirements +
+  For updates on data residency requirements, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_large_language_model_support.htm&type=5[Salesforce’s Large Language Models Support]
+    * Ask the model to not make up information to prevent hallucinations
+    * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models
+
+
 | Einstein GEMINI-2.0 Flash 001 
- | Good for analyzing images due to increased accuracy in this type of documents. 
+ | Good for analyzing images due to increased accuracy in this type of documents
 a| Standard 
 a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
 | Supported
-a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models.
+a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models
 | Einstein GEMINI-2.5 Flash 
- | Good for analyzing images due to increased accuracy in this type of document. Performs quicker and with higher accuracy than Einstein GEMINI-2.0 Flash 001. 
+ | Good for analyzing images due to increased accuracy in this type of document. Performs quicker and with higher accuracy than Einstein GEMINI-2.0 Flash 001 
 a| Standard 
 a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
 | Supported
-a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models. 
+a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models 
 |===
 
 ////

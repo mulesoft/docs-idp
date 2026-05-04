@@ -19,6 +19,8 @@ Einstein doesn't use customer data to train any models for document analysis in 
 
 * OpenAI's `GPT-4o (gpt-4o)` LLM
 * OpenAI's `GPT-4o Mini (gpt-4o-mini)` LLM
+* OpenAI's `GPT-5.1` LLM
+* OpenAI's `GPT-5.2` LLM
 * Google's `GEMINI-2.0 Flash 001` LLM
 * Google's `GEMINI-2.5 Flash` LLM
 ////
