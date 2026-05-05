@@ -6,6 +6,8 @@ include::partial$einstein-model.adoc[tag=einsteinSupportedModels]
 
 When creating a document action, you can select the model and extraction settings such as PII masking or image recognition. Each model performs differently under various conditions, so select the one that aligns with your specific requirements.
 
+For additional details on GPT models' lifecycle and deprecation, see https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirements?view=foundry-classic&tabs=text[Microsoft Foundry Models lifecycle and support policy].
+
 [%header%autowidth.spread,cols=".^a,.^a,.^a,.^a,.^a,.^a"]
 |===
 | Model Name | Description | Stability | Image Recognition | Location Callouts | Notes 
@@ -38,6 +40,7 @@ a|* Ask the model to not make up information to prevent hallucinations
  | Suitable for documents with charts, tables, and complex layouts due to improved visual understanding
  | High
  a| * Medium accuracy on reading checkboxes in forms
+    * Performs slightly better than earlier GPT models when reading checkboxes and tables
  | Not supported
  a| * Does not currently meet EU data residency requirements +
   For updates on data residency requirements, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_large_language_model_support.htm&type=5[Salesforce’s Large Language Models Support]
