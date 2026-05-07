@@ -23,7 +23,7 @@ Einstein doesn't use customer data to train any models for document analysis in 
 * OpenAI's `GPT-5.2` LLM
 * Google's `GEMINI-2.0 Flash 001` LLM
 * Google's `GEMINI-2.5 Flash` LLM
-+
+
 [WARNING]
 ====
 *GPT-4o and GPT-4o Mini retire in September 21, 2026*
