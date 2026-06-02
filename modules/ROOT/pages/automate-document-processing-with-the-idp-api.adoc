@@ -76,9 +76,9 @@ Replace `<18-char-sfdc-org-id>` with your Salesforce Org ID.
 
 == Retrieve the Results of the Execution
 
-After a document action successfully processes a document, or after a reviewer verifies and submits a document queued for review, the results are available for consumption. 
+After a document action successfully processes a document, or after a reviewer verifies and submits a document queued for review, the results are available for consumption.
 
-When you use the IDP API to execute your document actions, retrieve the results by calling the `/executions` endpoint and providing an `executionId`, for example: 
+When you use the IDP API to execute your document actions, retrieve the results by calling the `/executions` endpoint and providing an `executionId`, for example:
 
 [source,bash,linenums]
 ----
@@ -86,6 +86,54 @@ curl --location \
 'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/{executionId}/v2' \
 --header 'Authorization: Bearer {token}'
 ----
+
+[[include-confidence-scores]]
+=== Include Confidence Scores and Metadata in Results
+
+By default, the API returns only the extracted field values. To retrieve additional metadata such as confidence scores, field geometry (position and dimensions), and page numbers, add the `valueOnly=false` query parameter to your GET request:
+
+[source,bash,linenums]
+----
+curl --location \
+'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/{executionId}?valueOnly=false' \
+--header 'Authorization: Bearer {token}'
+----
+
+When you set `valueOnly=false`, the response includes the following additional information for each extracted field:
+
+* `confidenceScore`: The confidence level of the extracted value (0-100)
+* `geometry`: The position and dimensions of the field on the page
+** `width`: Width of the field as a percentage of page width
+** `height`: Height of the field as a percentage of page height
+** `left`: Distance from the left edge as a percentage of page width
+** `top`: Distance from the top edge as a percentage of page height
+* `pageNumber`: The page number where the field was found
+
+.Example response with `valueOnly=false`.
+[source,json]
+----
+{
+  "id": "df3445ca-05c7-4eea-a014-aaf18cd98e8c",
+  "documentName": "invoice.pdf",
+  "status": "MANUAL_VALIDATION_REQUIRED",
+  "fields": {
+    "total": {
+      "value": "37.50",
+      "confidenceScore": 88.95605,
+      "geometry": {
+        "width": 0.034,
+        "height": 0.014,
+        "left": 0.733,
+        "top": 0.474
+      },
+      "pageNumber": 1
+    }
+  }
+}
+----
+
+[NOTE] 
+The `valueOnly` parameter is available when calling the IDP API directly using HTTP requests. This parameter is not supported when using the IDP connector in Anypoint Studio.
 
 [[execution-status-reference]]
 == Execution Results Reference 
