@@ -20,7 +20,7 @@ a|* Standard performance
 a|* Ask the model to not make up information to prevent hallucinations
   * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models
 | Einstein OpenAI GPT-4o Mini 
- | Fast and useful for focused tasks. Tends to exhibit lazy reasoning
+ | Fast and useful for focused tasks. Tends to exhibit lazy reasoning.
  |High
 a|* Standard performance
   * Low accuracy on reading checkboxes in forms
@@ -28,7 +28,7 @@ a|* Standard performance
 a|* Ask the model to not make up information to prevent hallucinations
   * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models
 | Einstein OpenAI GPT-5.1
- | Suitable for most tasks. Improved instruction following and accuracy compared to GPT-4o
+ | Suitable for most tasks. Improved instruction following and accuracy compared to GPT-4o.
  | High
  a| * Medium accuracy on reading checkboxes in forms
  | Not supported
@@ -37,7 +37,7 @@ a|* Ask the model to not make up information to prevent hallucinations
     * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models
 
 | Einstein OpenAI GPT-5.2
- | Suitable for documents with charts, tables, and complex layouts due to improved visual understanding
+ | Suitable for documents with charts, tables, and complex layouts due to improved visual understanding.
  | High
  a| * Medium accuracy on reading checkboxes in forms
     * Performs slightly better than earlier GPT models when reading checkboxes and tables
@@ -49,21 +49,21 @@ a|* Ask the model to not make up information to prevent hallucinations
 
 
 | Einstein GEMINI-2.0 Flash 001 
- | Good for analyzing images due to increased accuracy in this type of documents
+ | Good for analyzing images due to increased accuracy in this type of documents.
 a| Standard 
 a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
 | Supported
 a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models
 | Einstein GEMINI-2.5 Flash 
- | Good for analyzing images due to increased accuracy in this type of document. Performs quicker and with higher accuracy than Einstein GEMINI-2.0 Flash 001 
+ | Good for analyzing images due to increased accuracy in this type of document. Performs quicker and with higher accuracy than Einstein GEMINI-2.0 Flash 001. 
 a| Standard 
 a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
 | Supported
 a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models 
 
 | Einstein Anthropic Claude Sonnet 4.6
- | Good for general document extraction tasks requiring a balance of accuracy and speed
- | Performs well on structured and semi-structured documents with complex or varied layouts
+ | Good for general document extraction tasks requiring a balance of accuracy and speed. Performs well on structured and semi-structured documents with complex or varied layouts.
+ | High
 a| * Performs better than Einstein OpenAI GPT-5.2 on handwritten documents
    * Medium accuracy on reading checkboxes in forms
  | Not supported
