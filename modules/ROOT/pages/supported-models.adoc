@@ -69,7 +69,7 @@ a| * Performs better than Einstein OpenAI GPT-5.2 on handwritten documents
  | Not supported
 a| * Supports up to 16 fields per document action
    * Ask the model to not make up information to prevent hallucinations
-   * List of https://docs.anthropic.com[languages supported] by Anthropic models | 
+   * List of https://platform.claude.com/docs/en/build-with-claude/multilingual-support[languages supported] by Anthropic models | 
 |===
 
 ////
