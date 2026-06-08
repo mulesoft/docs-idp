@@ -60,6 +60,16 @@ a| Standard
 a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
 | Supported
 a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models 
+
+| Einstein Anthropic Claude Sonnet 4.6
+ | Good for general document extraction tasks requiring a balance of accuracy and speed
+ | Performs well on structured and semi-structured documents with complex or varied layouts
+a| * Performs better than Einstein OpenAI GPT-5.2 on handwritten documents
+   * Medium accuracy on reading checkboxes in forms
+ | Not supported
+a| * Supports up to 16 fields per document action
+   * Ask the model to not make up information to prevent hallucinations
+   * List of https://docs.anthropic.com[languages supported] by Anthropic models | 
 |===
 
 ////

@@ -6,11 +6,26 @@ include::partial$document-action.adoc[tag=delete-action-warning]
 
 == Document Action Versioning
 
-You can use document action versioning to avoid breaking existing integrations when you modify a published document action. IDP follows semantic versioning but only increases the minor version number when you republish a document action. 
+You can use document action versioning to avoid breaking existing integrations when you modify a published document action. IDP follows semantic versioning but only increases the minor version number when you republish a document action.
 
 For example, when you publish a document action for the first time, IDP sets the version to `1.0.0`. If you modify this document action later and republish it, IDP sets the version number to `1.1.0`, and so on.
 
-Consider this behavior when publishing document actions and ensure you call the desired version of the published document action in your integrations. 
+Consider this behavior when publishing document actions and ensure you call the desired version of the published document action in your integrations.
+
+[[view-published-versions]]
+=== View Published Document Action Versions
+
+You can view any published version of a document action and review the configuration without making changes, which helps you compare different versions.
+
+To view a published version:
+
+. In the IDP sidebar, click *Document Actions*.
+. Select the document action you want to review.
+. In the version dropdown list, select the version you want to view.
++
+image:document-action-version-selector.png[25%, 25%, "The document action version selection dropdown."]
++
+The document action opens in read-only mode, showing all the configuration details for that version. 
 
 == Before You Begin 
 
