@@ -103,13 +103,14 @@ When you set `valueOnly=false`, the response includes the following additional i
 
 * `confidenceScore`: The confidence level of the extracted value (0-100)
 * `geometry`: The position and dimensions of the field on the page
++
+If *Location callouts* is disabled, `geometry` shows `null`.
++
 ** `width`: Width of the field as a percentage of page width
 ** `height`: Height of the field as a percentage of page height
 ** `left`: Distance from the left edge as a percentage of page width
 ** `top`: Distance from the top edge as a percentage of page height
 * `pageNumber`: The page number where the field was found
-
-If *Location callouts* is disable, the geometry is `null`.
 
 The following example is a fragment of a response that shows the additional information.
 [source,json]
