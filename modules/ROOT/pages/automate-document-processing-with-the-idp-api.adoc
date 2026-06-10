@@ -116,7 +116,7 @@ If *Location callouts* is disabled, `geometry` shows `null`.
 +
 * `pageNumber`: Page number where the field was found
 
-The following example is a fragment of a response that shows the additional information.
+This example is a fragment of a response that shows the additional information.
 [source,json]
 ----
 ...
