@@ -101,7 +101,7 @@ curl --location \
 
 When you set `valueOnly=false`, the response includes the following additional information for each extracted field and table item:
 
-* `confidenceScore`: The confidence level of the extracted value (0-100)
+* `confidenceScore`: Confidence level of the extracted value (0-100)
 * `geometry`: The position and dimensions of the field on the page
 +
 --
