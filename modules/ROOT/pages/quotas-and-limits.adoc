@@ -64,7 +64,6 @@ a|
 * IDP fails the execution when the number of requests exceeds the Einstein rate limit for the Salesforce Org
 ** When using Einstein and *Customize Schema* is enabled: 300 requests per minute
 ** When using Einstein and *Customize Schema* is disabled: (300 / number Einstein of prompts in document action) requests per minute
-* 100 concurrent jobs per minute
 | Document Languages 
 a| 
 Language support varies depending on the selected large language model (LLM) in document actions. 
