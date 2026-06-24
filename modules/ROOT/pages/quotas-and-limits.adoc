@@ -115,7 +115,7 @@ For all successful executions, IDP retains this data for 24 hours. For execution
 
 IDP uses AWS services such as S3 and RDS to store files and the extracted data. IDP currently supports two regions: US East (Virginia) and EU Central (Frankfurt, Germany). IDP stores the data closest to your Anypoint control plane region to ensure GDPR compliance. For example, if your Anypoint control plane runs in the EU region, IDP stores your data in the EU Central (Frankfurt, Germany) data center.
 
-For a list of supported regions and their corresponding API endpoints, see xref:automate-document-processing-with-the-idp-api.adoc#_supported_regions[Supported Regions].
+For a list of supported regions and their corresponding API endpoints, see xref:automate-document-processing-with-the-idp-api.adoc#supported-regions[Supported Regions].
 
 == See Also 
 

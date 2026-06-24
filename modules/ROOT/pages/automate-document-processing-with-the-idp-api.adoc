@@ -22,6 +22,7 @@ include::partial$connected-app-config.adoc[tag=obtainAccessToken]
 
 After you publish document actions, configure a connected app, and obtain the access token, you can call the IDP API to execute your document actions.
 
+[[supported-regions]]
 === Supported Regions
 
 IDP is available in the following regions:
