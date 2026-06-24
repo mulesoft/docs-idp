@@ -80,7 +80,7 @@ Applications must avoid polling for results more often than every 10 seconds.
 | Location Callouts
 a|
 40 fields and table cells combined +
-Location callouts support a maximum of 40 fields, including table cells. Each table cell counts as a field. Enable this feature only if your document action contains 40 or fewer fields and table cells combined.
+Location callouts support a maximum of 40 fields, including table cells. Each table cell counts as a field. Enable this feature if your document action contains 40 or fewer fields and table cells combined.
 |===
 
 [[tokens]] 
