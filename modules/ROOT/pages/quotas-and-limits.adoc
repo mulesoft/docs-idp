@@ -111,9 +111,11 @@ When you use the execution endpoint API, IDP stores the files in an S3 bucket an
 
 For all successful executions, IDP retains this data for 24 hours. For executions that require human review, IDP retains this data for seven days after the user task is completed. IDP retains any incomplete tasks for 30 days. Currently, you cannot configure these retention periods.
 
-== Data Residency Policy:
+== Data Residency Policy
 
-IDP uses AWS services such as S3 and RDS to store files and the extracted data. IDP currently supports 2 regions: US (Virginia) and EU (Frankfurt, Germany). IDP stores the data closest to your Anypoint control plane region to ensure GDPR requirements. For example, if your Anypoint control plane runs in the EU region, IDP stores your data in the Frankfurt data center.
+IDP uses AWS services such as S3 and RDS to store files and the extracted data. IDP currently supports two regions: US East (Virginia) and EU Central (Frankfurt, Germany). IDP stores the data closest to your Anypoint control plane region to ensure GDPR compliance. For example, if your Anypoint control plane runs in the EU region, IDP stores your data in the EU Central (Frankfurt, Germany) data center.
+
+For a list of supported regions and their corresponding API endpoints, see xref:automate-document-processing-with-the-idp-api.adoc#_supported_regions[Supported Regions].
 
 == See Also 
 
