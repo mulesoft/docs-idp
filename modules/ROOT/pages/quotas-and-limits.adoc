@@ -75,8 +75,12 @@ For a list of supported languages by provider, see:
 a| 
 10-second interval for retrieving results +
 Applications must avoid polling for results more often than every 10 seconds. 
-| Checkboxes 
-| Accuracy of checkbox processing varies by model depending on form complexity. Test thoroughly on many representative documents to confirm acceptable performance for your use case. See xref:supported-models.adoc[] for more information about how each model performs when processing checkboxes. 
+| Checkboxes
+| Accuracy of checkbox processing varies by model depending on form complexity. Test thoroughly on many representative documents to confirm acceptable performance for your use case. For more information about model performance when processing checkboxes, see xref:supported-models.adoc[].
+| Location Callouts
+a|
+40 fields and table cells combined +
+Location callouts support a maximum of 40 fields, including table cells. Each table cell counts as a field. Enable this feature if your document action contains 40 or fewer fields and table cells combined.
 |===
 
 [[tokens]] 

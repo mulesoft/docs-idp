@@ -26,7 +26,7 @@ a|
 * Available for Generic document actions with customized schemas.
 * Supported only for Gemini models with Multimodal enabled in the document action.
 * When enabled, confidence score for the field reflects extraction and label geometry.
-* Location callouts support a maximum of 40 fields. Enable this feature only if your document action contains 40 or fewer fields.
+* Location callouts support a maximum of 40 fields, including table cells. Each table cell counts as a field. Enable this feature if your document action contains 40 or fewer fields and table cells combined.
 * For the best experience with location callouts, treat every field and table item as a single entity that returns a single value, rather than multiple values or JSON.
 |*Multimodal* 
 |Enables the model to read and interpret images within documents.
