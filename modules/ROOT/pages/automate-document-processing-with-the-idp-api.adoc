@@ -18,9 +18,27 @@ include::partial$connected-app-config.adoc[tag=createConnectedApp]
 
 include::partial$connected-app-config.adoc[tag=obtainAccessToken]
 
-== Execute the Published Document Actions  
+== Execute the Published Document Actions
 
 After you publish document actions, configure a connected app, and obtain the access token, you can call the IDP API to execute your document actions.
+
+[[supported-regions]]
+=== Supported Regions
+
+IDP is available in these regions:
+
+[%header%autowidth.spread,cols=".^a,.^a"]
+|===
+| Region | Base URL
+
+| US East (Virginia)
+| `\https://idp-rt.us-east-1.anypoint.mulesoft.com`
+
+| EU Central (Frankfurt)
+| `\https://idp-rt.eu-central-1.eu1.anypoint.mulesoft.com`
+|===
+
+Use the appropriate base URL for your region when calling the IDP API.
 
 The following is a sample call that provides guidance about how to construct an API call to execute a document action:
 
@@ -30,6 +48,8 @@ curl --location 'https://idp-rt.{region}.anypoint.mulesoft.com/api/v1/organizati
 --header 'Authorization: Bearer {token}' \
 --form 'file=@"{pathToFile}"'
 ----
+
+Replace `{region}` with either `us-east-1` or `eu-central-1.eu1` depending on your region.
 
 include::partial$document-action.adoc[tag=modelUsage]
 

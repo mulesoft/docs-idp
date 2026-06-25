@@ -34,7 +34,12 @@ Before using its operations, configure the connector by providing the following 
 
 * *host*: Anypoint endpoint URL
 +
-For example: `idp-rt.{region}.anypoint.mulesoft.com`
+Use the appropriate endpoint for your region:
++
+--
+** US East (Virginia): `idp-rt.us-east-1.anypoint.mulesoft.com`
+** EU Central (Frankfurt): `idp-rt.eu-central-1.eu1.anypoint.mulesoft.com`
+--
 * *port*: HTTP port for the connection
 +
 For example: `443`
