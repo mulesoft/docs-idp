@@ -25,7 +25,7 @@ After you publish document actions, configure a connected app, and obtain the ac
 [[supported-regions]]
 === Supported Regions
 
-IDP is available in the following regions:
+IDP is available in these regions:
 
 [%header%autowidth.spread,cols=".^a,.^a"]
 |===
