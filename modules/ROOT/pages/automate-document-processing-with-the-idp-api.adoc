@@ -2,7 +2,7 @@
 
 You can automate the data extraction process by using the IDP API to integrate your document actions with Mule applications and other systems. Integrating with IDP requires creating a connected app, obtaining the access token, and calling the IDP API to execute document actions and retrieve the results.
 
-Use the IDP API to execute your published actions and retrieve the results of the execution. You can also specify a callback URL for IDP to call when the process finishes. 
+Use the IDP API to execute your published actions and retrieve the results of the execution. You can also specify an HTTPS callback URL for IDP to call when the process finishes. 
 
 Instead of calling the IDP API to execute your document actions, you can use the Submit Document to MuleSoft IDP and Retrieve Results from MuleSoft IDP action steps from MuleSoft RPA. For instructions on integrating your document actions with MuleSoft RPA, see xref:automate-document-processing-with-rpa.adoc[].
 
@@ -56,7 +56,7 @@ include::partial$document-action.adoc[tag=modelUsage]
 [[callback-url]]
 === Define a Callback URL
 
-You can define a callback URL when you call IDP to execute your document actions. If defined, IDP calls the callback URL when the document action execution finishes with state `SUCCEEDED`, `FAILED`, or `MANUAL_VALIDATION_REQUIRED`. 
+You can define a callback URL when you call IDP to execute your document actions. If defined, IDP calls the callback URL when the document action execution finishes with state `SUCCEEDED`, `FAILED`, or `MANUAL_VALIDATION_REQUIRED`. The callback URL must use HTTPS.
 
 To specify the callback URL, include the `callback` field in your API call and define a JSON value with the callback URL. The following example adds a callback to the previous `curl` command example:
 
