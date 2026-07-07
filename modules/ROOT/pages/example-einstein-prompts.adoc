@@ -78,7 +78,7 @@ In this example, the source document is a PDF with multiple pages containing a t
 
 * Example document
 +
-image::timesheet-examples.png[50%, 50%, "An example of a timesheet record."]
+image::timesheet-examples.png["Timesheet record showing fields for employee name, project, hours worked per day, total hours, and approval status", 50%, "An example of a timesheet record."]
 
 * Example Prompt
 +
