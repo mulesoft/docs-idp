@@ -65,7 +65,7 @@ Configure the schema by selecting fields to hide from the response, fields that 
 ** *Threshold*: the minimum required confidence score accepted for this field. If the returned *Confidence* value is below the threshold, the document is queued for human review. 
 ** *Required*: select this option to send the document to review if the field is missing or can't be extracted. 
 
-You can click *Focus* (image:focus-icon.png[2%, 2%, "The Focus icon"]) to center the preview in the corresponding field.
+You can click *Focus* (image:focus-icon.png["Small circular icon with a crosshair or target symbol, used to indicate a focus or targeting action in the UI", 2%, "The Focus icon"]) to center the preview in the corresponding field.
 --
 . If your document contains tables, click *Tables* to configure the extraction settings for the table columns. 
 
