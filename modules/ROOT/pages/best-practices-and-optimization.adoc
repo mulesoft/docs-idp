@@ -1,4 +1,5 @@
 = Best Practices and Optimization
+:keywords: best practices, optimization, mulesoft, performance tuning, mule runtime, integration design
 
 As you design and build your IDP implementation, follow these best practices to optimize extraction accuracy, secure your IDP workflow, and plan capacity for production workloads:
 

@@ -1,4 +1,5 @@
 = Example Einstein Prompts 
+:keywords: einstein prompts, document extraction, form data extraction, handwritten values, document classification, key/value pairs, einstein ai
 
 Following are some use cases and example Einstein prompts for each situation. These prompts are based on the sample data used during each test and provide insight about creating prompts to analyze and format your custom documents. 
 
@@ -78,7 +79,7 @@ In this example, the source document is a PDF with multiple pages containing a t
 
 * Example document
 +
-image::timesheet-examples.png["Timesheet record table showing employee name, date, project, task description, hours worked, and status columns with sample data rows", 50%, 50%]
+image::timesheet-examples.png[50%, 50%, "An example of a timesheet record."]
 
 * Example Prompt
 +

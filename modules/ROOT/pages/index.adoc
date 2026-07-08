@@ -1,4 +1,5 @@
 = IDP Overview
+:keywords: idp, intelligent document processing, document analysis, custom schemas, einstein ai, data extraction
 
 MuleSoft Intelligent Document Processing (IDP) enables you to read invoices, purchase orders, and other unstructured or semi-structured documents and then analyze and refine the extracted content using AI capabilities to create a structured response. IDP supports multimodal large language models (LLMs), which can interpret text and images. 
 

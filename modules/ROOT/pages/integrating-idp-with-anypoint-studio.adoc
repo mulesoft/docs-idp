@@ -1,4 +1,5 @@
 = Integrating IDP with Anypoint Studio
+:keywords: intelligent document processing, anypoint studio, idp runtime service api connector, submit document, retrieve execution results, idp integration
 
 Execute a published document action and retrieve the results from Anypoint Studio using that document action's IDP Runtime Service API connector. This connector generates automatically when you publish a document action to Anypoint Exchange. Then, you can download it as a Mule connector from Exchange.
 

@@ -1,3 +1,4 @@
+:keywords: permissions, access control, authorization, mulesoft permissions, user roles, access management
 
 include::partial$permissions.adoc[tag=pageTitle]
 

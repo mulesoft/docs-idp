@@ -1,4 +1,5 @@
 = Enhancing Data Extraction with Einstein
+:keywords: einstein, data extraction, einstein ai, select einstein response, anypoint, ai-powered extraction
 
 include::partial$einstein.adoc[tags=defaultModelAndEinstein;einsteinModelBenefits]
 
@@ -24,7 +25,7 @@ To configure Einstein to analyze and extract data for a given prompt:
 
 . In the document action builder, xref:creating-document-actions.adoc#add-prompts[add a new prompt] to a document action or edit an existing one.
 . Run a document analysis to generate results in the *Outputs* panel. 
-. Click the dropdown button (image:prompt-dropdown.png["Prompt dropdown icon showing a chevron/arrow button used to expand prompt options in the Einstein data extraction interface", 4%, 4%]), next to a prompt's result.
+. Click the dropdown button (image:prompt-dropdown.png[4%, 4%, "The prompt dropdown icon."]), next to a prompt's result.
 . Select the response labeled *Einstein*.
 
 include::partial$document-action.adoc[tag=modelUsage]

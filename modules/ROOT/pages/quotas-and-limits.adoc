@@ -1,4 +1,5 @@
 = Quotas and Limits
+:keywords: quotas and limits, token usage, document retention policy, data residency policy, token estimation
 
 The following table shows the quotas and limitations of the IDP service:  
 
