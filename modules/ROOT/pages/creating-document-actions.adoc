@@ -61,11 +61,11 @@ Configure the schema by selecting fields to hide from the response, fields that 
 . In the *Outputs* section, click *Fields* and select any of the extracted field names to configure the following settings: 
 +
 --
-** *Visibility*: defines if this field shows in the output JSON result. Click *Visibility* (image:visibility-icon.png[2%, 2%, "The Visibility icon"]) to hide this field. 
+** *Visibility*: defines if this field shows in the output JSON result. Click *Visibility* (image:visibility-icon.png["Eye icon with an open eye design, used to represent visibility or show/hide toggle functionality", 2%, 2%]) to hide this field. 
 ** *Threshold*: the minimum required confidence score accepted for this field. If the returned *Confidence* value is below the threshold, the document is queued for human review. 
 ** *Required*: select this option to send the document to review if the field is missing or can't be extracted. 
 
-You can click *Focus* (image:focus-icon.png[2%, 2%, "The Focus icon"]) to center the preview in the corresponding field.
+You can click *Focus* (image:focus-icon.png["Small circular icon with a target/crosshair symbol, used to indicate a focus or targeting action in the UI", 2%, 2%]) to center the preview in the corresponding field.
 --
 . If your document contains tables, click *Tables* to configure the extraction settings for the table columns. 
 
