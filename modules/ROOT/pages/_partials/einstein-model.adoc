@@ -23,7 +23,9 @@ Einstein doesn't use customer data to train any models for document analysis in 
 * OpenAI's `GPT-5.2` LLM
 * Google's `GEMINI-2.0 Flash 001` LLM
 * Google's `GEMINI-2.5 Flash` LLM
+* Google's `GEMINI-3.5 Flash` LLM
 * Anthropic's `Claude Sonnet 4.6` LLM
+* Anthropic's `Claude Opus 4.6` LLM
 
 [WARNING]
 ====
