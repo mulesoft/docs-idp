@@ -72,18 +72,22 @@ a| * Supports up to 16 fields per document action
    * List of https://platform.claude.com/docs/en/build-with-claude/multilingual-support[languages supported] by Anthropic models 
 
 | Einstein GEMINI-3.5 Flash
- |
- |
-a|
- |
-a| * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models
+ | Fast and the strongest all-round performer in current testing. Handles structured documents and invoices, including non-English formats (localized dates, currency, and thousand separators). Leads in checkboxes and handwriting.
+ | Standard
+a| * Best of the tested models at reading checkboxes and handwriting in multimodal mode
+ | Supported
+a| * Ask the model to not make up information to prevent hallucinations
+   * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models
 
 | Einstein Anthropic Claude Opus 4.6
- |
- |
-a|
- |
-a| * List of https://platform.claude.com/docs/en/build-with-claude/multilingual-support[languages supported] by Anthropic models
+ | High-accuracy extraction on structured and semi-structured documents with complex or varied layouts, including invoices. Favors conservative, no-guess answers over made-up values.
+ | Standard
+a| * Performs well on handwritten documents
+   * Medium accuracy on reading checkboxes in forms
+ | Not supported
+a| * Supports up to 16 fields per document action
+   * Ask the model to not make up information to prevent hallucinations
+   * List of https://platform.claude.com/docs/en/build-with-claude/multilingual-support[languages supported] by Anthropic models
 |===
 
 ////
