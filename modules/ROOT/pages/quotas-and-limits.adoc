@@ -8,20 +8,20 @@ The following table shows the quotas and limitations of the IDP service:
 | Accepted File Formats 
 a| PDF, PNG, JPG, TIFF (150 DPI or more recommended) +
 The document action builder does not support previewing TIFF files. However, you can extract data and review results from these files.
-| File Size Limits 
-a| 
+| File Size Limits
+a|
 [%header%autowidth.spread,cols="a,a"]
 !===
-! Upload via UI 
+! Upload via UI
 ! Upload via API
-! 
+!
 * 10 files per upload
 * 50 pages per file
 * 8 MB per file
-! 
+!
 * 1 file per API request
-* 50 pages per file
-* 10 MB per file
+* 150 pages per file
+* 15 MB per file
 !===
 [prompt-limits]
 | Prompt Limits 
@@ -81,6 +81,11 @@ Applications must avoid polling for results more often than every 10 seconds.
 a|
 40 fields and table cells combined +
 Location callouts support a maximum of 40 fields, including table cells. Each table cell counts as a field. Enable this feature if your document action contains 40 or fewer fields and table cells combined.
++
+[IMPORTANT]
+====
+Enabling location callouts on documents larger than 50 pages impacts extraction performance. For optimal performance on large documents, disable location callouts unless specifically required for your use case.
+====
 |===
 
 [[tokens]] 
