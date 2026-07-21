@@ -103,7 +103,7 @@ When you use the IDP API to execute your document actions, retrieve the results 
 [source,bash,linenums]
 ----
 curl --location \
-'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/{executionId}/v2' \
+'https://idp-rt.{{region}}.anypoint.mulesoft.com/api/v1/organizations/{orgId}/actions/{actionId}/versions/{actionVersion}/executions/{executionId}' \
 --header 'Authorization: Bearer {token}'
 ----
 
