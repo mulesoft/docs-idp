@@ -29,9 +29,13 @@ Einstein doesn't use customer data to train any models for document analysis in 
 
 [WARNING]
 ====
-*GPT-4o and GPT-4o Mini retire in September 21, 2026*
+*Einstein GEMINI Flash 2.5 retires October 16, 2026*
 
-To prevent service interruption, migrate actions to a supported model by September 21, 2026.
+To prevent service interruption, migrate actions to a supported model by October 16, 2026.
+
+*Einstein OpenAI GPT-4o and Einstein OpenAI GPT-4o Mini retire January 31, 2027*. 
+
+To prevent service interruption, migrate actions to a supported model by January 31, 2027.
 ====
 
 ////
