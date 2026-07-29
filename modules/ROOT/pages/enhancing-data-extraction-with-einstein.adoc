@@ -1,4 +1,5 @@
 = Enhancing Data Extraction with Einstein
+:keywords: einstein, data extraction, einstein ai, select einstein response, anypoint, ai-powered extraction
 
 include::partial$einstein.adoc[tags=defaultModelAndEinstein;einsteinModelBenefits]
 

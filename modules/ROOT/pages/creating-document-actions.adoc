@@ -1,4 +1,5 @@
 = Analyzing Documents Using Pre-Built Schemas
+:keywords: document actions, pre-built schemas, document analysis, schema configuration, extraction schema, upload sample files, add prompts
 
 To analyze any type of document and fully customize the output structure instead of using pre-built schemas, see xref:analyzing-documents-with-einstein.adoc[].
 

@@ -1,4 +1,5 @@
 = Processing Documents and Retrieving Results With RPA
+:keywords: rpa, document processing, mulesoft rpa, execute document actions, retrieve results, automation, document actions
 
 You can execute your published document actions with MuleSoft RPA by using the Submit Document to MuleSoft IDP and Retrieve Results from MuleSoft IDP action steps in your automation projects. 
 After you publish a document action to Anypoint Exchange, it becomes available for consumption in RPA. You must create a connected app and obtain the access token before you can use the IDP action steps in RPA. 

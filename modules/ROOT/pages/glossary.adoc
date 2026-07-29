@@ -1,4 +1,5 @@
 = IDP Glossary 
+:keywords: idp glossary, intelligent document processing, idp terminology, document processing concepts, idp definitions
 
 == C
 
