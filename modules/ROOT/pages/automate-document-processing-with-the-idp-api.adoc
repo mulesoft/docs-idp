@@ -181,9 +181,14 @@ When you query the results of an execution, the IDP API returns any of the follo
 * `MANUAL_VALIDATION_REQUIRED`: The execution finished but the results need manual validation.
 * `FAILED`: The execution request finished unsuccessfully.
 * `PARTIAL_SUCCESS`: The execution request finished but some sub-tasks failed.
-* `SUCCEEDED`: The execution request finished successfully. 
+* `SUCCEEDED`: The execution request finished successfully.
 
-== IDP API Documentation 
+[IMPORTANT]
+====
+Resubmitting a document after a `FAILED` or `PARTIAL_SUCCESS` execution creates a new execution and consumes Automation Credits in full, in addition to the credits already consumed by the original execution. See xref:quotas-and-limits.adoc#automation-credits[Automation Credit Consumption and Estimation].
+====
+
+== IDP API Documentation
 
 To confirm the endpoints to call to trigger document action executions and retrieve results, refer to the API documentation. The IDP API documentation is part of the specification and shows in the API portal after you publish the document actions to Anypoint Exchange. 
 
