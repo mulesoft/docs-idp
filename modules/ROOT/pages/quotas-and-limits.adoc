@@ -103,6 +103,19 @@ When analyzing images, each model uses a different tokenization strategy that af
 * https://docs.cloud.google.com/vertex-ai/generative-ai/docs/multimodal/image-understanding[Gemini: token usage estimation for images]
 * https://developers.openai.com/api/docs/guides/images-vision[OpenAI: token usage estimation for images]
 
+[[automation-credits]]
+== Automation Credit Consumption and Estimation
+
+IDP consumes Automation Credits per execution, based on the number of pages in the submitted document. Every execution counts toward consumption, including resubmissions of the same document, retries of a failed or partially failed execution, and reprocessing runs. IDP doesn't deduplicate submissions or discount credits for documents that were already processed.
+
+To estimate Automation Credit consumption, use the following formula:
+
+`(number of submissions) x (pages per document) x (credits per page)`
+
+Count every submission, not only unique documents. For example, if you submit 100 invoices with 2 pages each, and 20 of those invoices are resubmitted once due to retries, the total number of submissions is 120, not 100.
+
+For the current credits-per-page rate, see xref:general::automation-credits-usage-and-rates.adoc[].
+
 == Document Retention Policy
 
 IDP retains the document files and extracts data as needed to process the document extractions. IDP uses the following features to enhance data retention:

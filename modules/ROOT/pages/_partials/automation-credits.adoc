@@ -1,4 +1,9 @@
 
 // tag::automation-credit-consumption[]
-Processing documents consumes Automation Credits. See xref:general::automation-credits-usage-and-rates.adoc[] for details.
+Processing documents consumes Automation Credits. IDP charges Automation Credits per execution, based on the number of pages in the submitted document, regardless of whether the document was previously processed. See xref:general::automation-credits-usage-and-rates.adoc[] for details.
+
+[IMPORTANT]
+====
+Resubmitting the same document, retrying a failed or partially failed execution, and reprocessing a document all create a new execution. Each of these executions consumes Automation Credits in full. IDP doesn't deduplicate submissions or discount credits for documents that were already processed.
+====
 // end::automation-credit-consumption[]
