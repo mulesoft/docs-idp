@@ -48,7 +48,8 @@ When you create a document action without enabling *Customize Schema*, requests 
 
 Next, use AI to discover the data to extract from the document or manually add the fields and tables to extract. 
 
-== Discover Data to Extract from the Document with AI
+[[discover-with-ai]]
+== Discover Data to Extract from Your Documents with AI
 
 You can use AI to automatically analyze the selected file and create the output.
 
