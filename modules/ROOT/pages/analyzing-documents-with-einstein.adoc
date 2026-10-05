@@ -78,7 +78,10 @@ Skip this step if the example file is already loaded.
 . Click *Run* and verify the results of the extraction. 
 . Click *Save*.
 
-After you finish configuring the output schema for your documents, add reviewers and publish your document action. 
+After you finish configuring the output schema for your documents, add reviewers and publish your document action.
+
+[NOTE]
+Some models provide self-reported confidence scores, which become less reliable as the document action gets more complex. See xref:supported-models.adoc#confidence-scores[Confidence Scores by Model] for additional information.
 
 [[settings]]
 == Configure Document Action Settings

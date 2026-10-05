@@ -83,6 +83,8 @@ If your prompts are well-structured but the results are still inconsistent, the 
 
 Use tools such as Google Gemini as a testing environment to visualize what the model sees. After you understand how the model interprets a specific column or label, adjust your prompt to better target the layout.
 
+If fields that are correctly returned as not found show a low or 0% confidence score, the selected model might provide self-reported confidence scores. Prompt tuning doesn't reliably fix this behavior. Simplify the document action or select a different model. See xref:supported-models.adoc#confidence-scores[Confidence Scores by Model] for additional information.
+
 == Checkbox Detection Best Practices
 
 Multimodal models excel at recognizing checkboxes that are often unsupported by text-only engines. To maximize accuracy for selection-based fields:
