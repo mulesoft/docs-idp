@@ -46,14 +46,27 @@ When you create a document action without enabling *Customize Schema*, requests 
 
 . Provide a Name and click *Create*.
 
-Next, add the Fields and Tables to extract. 
+Next, use AI to discover the data to extract from the document or manually add the fields and tables to extract. 
 
-== Add the Fields to Extract
+== Discover Data to Extract from the Document with AI
+
+You can use AI to automatically analyze the selected file and create the output.
+
+. In the document action builder, click *Select Files* and select the files to use as an example or model for the extraction. 
+. In the *Outputs* panel, select *Discover with AI* and click *Next*.
+. (Optional) Provide instructions in natural language to specify what information to extract.
+. Click *Discover*.
+. Click *Save*.
+
+== Manually Add the Fields to Extract
 
 To configure the fields to extract and define the structure of the output document:
 
 . In the document action builder, click *Select Files* and select the files to use as an example or model for the extraction. 
-. In the *Outputs* panel, select the *Fields* tab. 
++
+Skip this step if the example file is already loaded. 
+. In the *Outputs* panel, click *Create Manually*. 
+. Select the *Fields* tab. 
 . Click *Start from Scratch* to add the first field. 
 . Provide a name for the field and a prompt.
 +
@@ -62,14 +75,15 @@ If you don't configure a prompt, Einstein scans the document and automatically e
 . Click *Run* and verify the results of the extraction. 
 . Click *Save*.
 
-== Add the Tables to Extract
+== Manually Add the Tables to Extract
 
 To configure data extraction from tables:
 
 . In the document action builder, click *Select Files* and select the files to use as an example or model for the extraction.
 +
 Skip this step if the example file is already loaded. 
-. In the *Outputs* panel, select the *Tables* tab. 
+. In the *Outputs* panel, click *Create Manually*. 
+. Select the *Fields* tab. 
 . Click *Start from Scratch* to add the first table. 
 . Provide a name for the table and a prompt if necessary to configure the data to extract.
 . Click *Add New Column* and provide a name and prompt for the column. 
