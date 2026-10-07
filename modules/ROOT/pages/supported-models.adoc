@@ -86,7 +86,7 @@ a| * Performs well on handwritten documents
    * Medium accuracy on reading checkboxes in forms
  | Not supported
 | Self-reported
-a| * Supports up to 16 fields per document action
+a| * Supports up to 15 fields per document action
    * Ask the model to not make up information to prevent hallucinations
    * List of https://platform.claude.com/docs/en/build-with-claude/multilingual-support[languages supported] by Anthropic models
 
@@ -97,7 +97,7 @@ a| * Performs better than Einstein OpenAI GPT-5.2 on handwritten documents
    * Medium accuracy on reading checkboxes in forms
  | Not supported
 | Self-reported
-a| * Supports up to 16 fields per document action
+a| * Supports up to 15 fields per document action
    * Ask the model to not make up information to prevent hallucinations
    * List of https://platform.claude.com/docs/en/build-with-claude/multilingual-support[languages supported] by Anthropic models 
 
@@ -121,8 +121,8 @@ a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages 
 
 Each model returns a confidence score for every extracted value. Depending on the model, the score is calculated or self-reported. This applies to all document action types.
 
-* *Calculated*: The model provides data about how certain it is of each part of its answer, known as log probabilities. IDP calculates the confidence score from this data, which produces consistent and reliable scores.
-* *Self-reported*: The model doesn't provide log probabilities, so IDP asks the model to rate its own confidence.
+* *Calculated*: IDP derives the confidence score from model probabilities rather than self-reported estimates. This score reflects model certainty and is generally more stable, but it doesn't guarantee that the extracted value is accurate.
+* *Self-reported*: IDP prompts the model to rate its own confidence when model probabilities aren't available. This score reflects the model's self-assessment and is generally less stable than a calculated score, but it provides a baseline estimate.
 
 Self-reported confidence scores become less reliable as the document action gets more complex. Fields that are correctly returned as not found can show a low or 0% confidence score, which sends the document to human review even though the extraction is correct.
 
