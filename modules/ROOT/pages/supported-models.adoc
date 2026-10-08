@@ -8,15 +8,19 @@ When creating a document action, you can select the model and extraction setting
 
 For additional details on GPT models' lifecycle and deprecation, see https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirements?view=foundry-classic&tabs=text[Microsoft Foundry Models lifecycle and support policy].
 
-[%header%autowidth.spread,cols=".^a,.^a,.^a,.^a,.^a,.^a"]
+This table compares the supported models by stability, image recognition performance, location callout support, and how each model provides confidence scores. The *Notes* column includes recommendations and limits for each model, such as supported languages and the maximum number of fields.
+
+[[supported-models-table]]
+[%header%autowidth.spread,cols=".^a,.^a,.^a,.^a,.^a,.^a,.^a"]
 |===
-| Model Name | Description | Stability | Image Recognition | Location Callouts | Notes 
+| Model Name | Description | Stability | Image Recognition | Location Callouts | Confidence Score | Notes 
 | Einstein OpenAI GPT-4o 
  | Suitable for most tasks, performing well on documents in non-Latin languages. Can compare font sizes and identify certain font styles.
  |High
 a|* Standard performance
   * Low accuracy on reading checkboxes in forms
 | Not supported
+| Calculated
 a|* Ask the model to not make up information to prevent hallucinations
   * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models
 | Einstein OpenAI GPT-4o Mini 
@@ -25,6 +29,7 @@ a|* Ask the model to not make up information to prevent hallucinations
 a|* Standard performance
   * Low accuracy on reading checkboxes in forms
 | Not supported
+| Calculated
 a|* Ask the model to not make up information to prevent hallucinations
   * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models
 | Einstein OpenAI GPT-5.1
@@ -32,6 +37,7 @@ a|* Ask the model to not make up information to prevent hallucinations
  | High
  a| * Medium accuracy on reading checkboxes in forms
  | Not supported
+| Calculated
  a| * Meets EU data residency requirements
     * Ask the model to not make up information to prevent hallucinations
     * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models
@@ -42,6 +48,7 @@ a|* Ask the model to not make up information to prevent hallucinations
  a| * Medium accuracy on reading checkboxes in forms
     * Performs slightly better than earlier GPT models when reading checkboxes and tables
  | Not supported
+| Calculated
  a| * Does not currently meet EU data residency requirements +
   For updates on data residency requirements, see https://help.salesforce.com/s/articleView?id=ai.generative_ai_large_language_model_support.htm&type=5[Salesforce’s Large Language Models Support]
     * Ask the model to not make up information to prevent hallucinations
@@ -53,29 +60,22 @@ a|* Ask the model to not make up information to prevent hallucinations
 a| Standard 
 a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
 | Supported
+| Calculated
 a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models
 | Einstein GEMINI-2.5 Flash 
  | Good for analyzing images due to increased accuracy in this type of document. Performs quicker and with higher accuracy than Einstein GEMINI-2.0 Flash 001. 
 a| Standard 
 a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
 | Supported
+| Calculated
 a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models 
-
-| Einstein Anthropic Claude Sonnet 4.6
- | Good for general document extraction tasks requiring a balance of accuracy and speed. Performs well on structured and semi-structured documents with complex or varied layouts.
- | High
-a| * Performs better than Einstein OpenAI GPT-5.2 on handwritten documents
-   * Medium accuracy on reading checkboxes in forms
- | Not supported
-a| * Supports up to 16 fields per document action
-   * Ask the model to not make up information to prevent hallucinations
-   * List of https://platform.claude.com/docs/en/build-with-claude/multilingual-support[languages supported] by Anthropic models 
 
 | Einstein GEMINI-3.5 Flash
  | Fast and the strongest all-round performer in current testing. Handles structured documents and invoices, including non-English formats (localized dates, currency, and thousand separators). Leads in checkboxes and handwriting.
  | Standard
 a| * Best of the tested models at reading checkboxes and handwriting in multimodal mode
  | Supported
+| Self-reported
 a| * Ask the model to not make up information to prevent hallucinations
    * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models
 
@@ -85,9 +85,22 @@ a| * Ask the model to not make up information to prevent hallucinations
 a| * Performs well on handwritten documents
    * Medium accuracy on reading checkboxes in forms
  | Not supported
-a| * Supports up to 16 fields per document action
+| Self-reported
+a| * Supports up to 15 fields per document action
    * Ask the model to not make up information to prevent hallucinations
    * List of https://platform.claude.com/docs/en/build-with-claude/multilingual-support[languages supported] by Anthropic models
+
+| Einstein Anthropic Claude Sonnet 4.6
+ | Good for general document extraction tasks requiring a balance of accuracy and speed. Performs well on structured and semi-structured documents with complex or varied layouts.
+ | High
+a| * Performs better than Einstein OpenAI GPT-5.2 on handwritten documents
+   * Medium accuracy on reading checkboxes in forms
+ | Not supported
+| Self-reported
+a| * Supports up to 15 fields per document action
+   * Ask the model to not make up information to prevent hallucinations
+   * List of https://platform.claude.com/docs/en/build-with-claude/multilingual-support[languages supported] by Anthropic models 
+
 |===
 
 ////
@@ -97,10 +110,30 @@ Gemini 3 removed from product; restore this table row (before `|===`) when the m
 a| High 
 a| * High accuracy on reading checkboxes in forms when processing one page at a time
 | Supported
+| Self-reported
 a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models.  
 * This model is in beta and may be deprecated or removed. It can cause extraction failures and occasionally cause the application to stop responding.
 * To use this model, go to the Einstein Setup in your Salesforce org and enable beta generative AI models. See https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein_models_beta.htm&release=258&type=5[Turn On Beta Generative AI Models] for more details.
 ////
+
+[[confidence-scores]]
+== Confidence Scores by Model
+
+Each model returns a confidence score for every extracted value. Depending on the model, the score is calculated or self-reported. This applies to all document action types.
+
+* *Calculated*: IDP derives the confidence score from model probabilities rather than self-reported estimates. This score reflects model certainty and is generally more stable, but it doesn't guarantee that the extracted value is accurate.
+* *Self-reported*: IDP prompts the model to rate its own confidence when model probabilities aren't available. This score reflects the model's self-assessment and is generally less stable than a calculated score, but it provides a baseline estimate.
+
+Self-reported confidence scores become less reliable as document processing complexity increases. Reliability depends not only on schema complexity, such as processing numerous fields or complex tables, but also on document quality, prompt logic, and structural variability across document groups. Low-quality scans, prompts that require data transformation alongside extraction, and inconsistent field availability across uploads can all degrade model self-assessment. Fields that are correctly returned as not found can show a low or 0% confidence score, which sends the document to human review even though the extraction is correct.
+
+IDP continues to refine how it requests self-reported confidence scores, which reduces how often this happens. However, because the model estimates its own confidence, no level of complexity guarantees consistent scores. Prompt instructions about confidence, such as `Fields that return "Not found" must have a 99% confidence rate`, don't reliably change the reported score.
+
+To get more reliable results with self-reported confidence scores:
+
+* Keep the document action as simple as possible. Remove fields, tables, and prompts that aren't required, and consider splitting large extractions into multiple document actions.
+* Test the document action against a large, representative set of documents, including documents where optional fields are missing, before moving to production.
+* Account for this behavior when setting confidence thresholds and assigning reviewers.
+* If confidence scores for not-found fields are critical for your use case, select a model that uses calculated confidence scores.
 
 == Model Errors 
 
