@@ -62,13 +62,6 @@ a| * Medium accuracy on reading checkboxes in forms when processing one page at 
 | Supported
 | Calculated
 a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models
-| Einstein GEMINI-2.5 Flash 
- | Good for analyzing images due to increased accuracy in this type of document. Performs quicker and with higher accuracy than Einstein GEMINI-2.0 Flash 001. 
-a| Standard 
-a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
-| Supported
-| Calculated
-a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models 
 
 | Einstein GEMINI-3.5 Flash
  | Fast and the strongest all-round performer in current testing. Handles structured documents and invoices, including non-English formats (localized dates, currency, and thousand separators). Leads in checkboxes and handwriting.
