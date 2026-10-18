@@ -1,4 +1,5 @@
 = Supported Models
+:keywords: supported models, model errors, ai models, mulesoft ai, model configuration
 
 Einstein supports these predictive multimodal models: 
 

@@ -1,4 +1,5 @@
 = Getting Started with Document Processing
+:keywords: idp, document processing, document actions, idp api, idp rpa integration, intelligent document processing, reviews
 
 Before you analyze documents with IDP, you must create and publish document actions, the configurable schema definitions containing the necessary instructions to process your documents. 
 

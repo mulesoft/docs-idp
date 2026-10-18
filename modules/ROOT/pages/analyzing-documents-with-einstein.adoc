@@ -1,4 +1,5 @@
 = Analyzing Documents With Custom User-Defined Schemas
+:keywords: einstein document analysis, custom schema, document action, field extraction, table extraction, anypoint einstein, user-defined schema
 
 Analyze any type of document and fully customize the output structure by creating a Generic document action and enabling *Customize Schema*. Define the output fields and tables and configure prompt instructions for Einstein to analyze the document and extract the data.
 

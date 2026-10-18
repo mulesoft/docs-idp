@@ -1,4 +1,5 @@
 = Adding Reviewers 
+:keywords: adding reviewers, document action, review workflow, anypoint, reviewer assignment, document collaboration
 
 Add one or more reviewers to a document action to verify and correct the documents queued for review due to low confidence score values or missing required fields. You can add single Anypoint Platform users or teams as reviewers. 
 

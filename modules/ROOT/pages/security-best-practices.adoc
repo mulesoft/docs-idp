@@ -1,4 +1,5 @@
 = Security Best Practices
+:keywords: anypoint idp, acl management, granular authorization, environment separation, cryptographic nonce, sapi security, access control list
 
 Securing your IDP implementation requires an intermediary API layer to enforce granular access control, along with governance practices for reviewer access. These measures help align with enterprise security standards for Non-Human Accounts, Separation of Duties, and Change Management. Native IDP access is controlled at the Anypoint Platform Business Group level, which means any connected app within that organizational unit can invoke any document action or version.
 

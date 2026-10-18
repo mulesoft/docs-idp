@@ -1,4 +1,5 @@
 = Publishing Document Actions
+:keywords: document actions, publishing document actions, document action versioning, anypoint exchange, publish workflow, version management
 
 You can build an automated pipeline for document processing by integrating your published document actions with RPA, Mule applications, and other systems. Publishing a document action makes it discoverable in RPA and available in Anypoint Exchange as an API that you can call.
 

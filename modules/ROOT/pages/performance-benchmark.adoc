@@ -1,4 +1,5 @@
 = Performance Benchmarks
+:keywords: performance benchmarks, benchmark metrics, latency types, test configuration, performance testing, latency measurement
 
 MuleSoft Intelligent Document Processing (IDP) performance benchmarks demonstrate how IDP performs under controlled test scenarios, including document processing speed, system scaling behavior, and response times under normal and peak load conditions. Use these metrics for capacity planning, SLA establishment, and workload design.
 

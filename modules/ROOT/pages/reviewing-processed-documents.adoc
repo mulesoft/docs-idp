@@ -1,4 +1,5 @@
 = Reviewing Processed Documents 
+:keywords: reviewing processed documents, document processing, intelligent document processing, idp, document review, ui review
 
 After processing a document, IDP queues it for review if:
 

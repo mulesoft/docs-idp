@@ -1,4 +1,5 @@
 = Data Extraction Best Practices
+:keywords: data extraction, prompt engineering, multimodal models, field instructions, filtering logic, table context, ai best practices
 
 MuleSoft Intelligent Document Processing (IDP) uses multimodal AI models to extract, structure, and normalize data from diverse document types. Follow these best practices to design effective prompts and improve extraction accuracy.
 
