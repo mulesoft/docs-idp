@@ -5,7 +5,7 @@ After processing a document, IDP queues it for review if:
 * At least one field marked as _visible_ shows a confidence score lower than the configured threshold.
 * At least one field marked as _visible_ and _required_ is missing or could not be extracted.
 
-In this case, a user must review the document to verify the values for the conflicting fields. After the review is finished, the status of the extraction changes to `SUCCEEDED`.
+In this case, a user must review the document to verify the values for the conflicting fields. After you submit the review, the status of the extraction changes to `SUCCEEDED`. If you dismiss the review instead, the status changes to `DISMISSED` and the extraction isn't approved.
 
 == Before You Begin 
 
@@ -13,7 +13,7 @@ Before you can review a document, ensure that:
 
 * You are assigned as a reviewer in the corresponding document action.
 
-== Review a Document in the UI
+== Review and Correct Extracted Values
 
 To review the results of a processed document:
 
@@ -27,6 +27,24 @@ include::partial$create-document-actions.adoc[tag=highlightedValues]
 . After reviewing all values, click *Submit This Page*.
 +
 If there are more than one results page, click *Submit and Next* and continue the process until you review all pages.
+
+[[dismiss-review]]
+== Dismiss a Review Without Approving the Results
+
+If you don't want to approve the extracted results of a document, dismiss its review. When you dismiss a review, IDP changes the status of the execution to `DISMISSED` and doesn't submit the extracted results. If you defined a callback URL for the execution, IDP calls it to notify that the review was dismissed.
+
+[WARNING]
+====
+You can't undo this action. To process a dismissed document again, resubmit it as a new execution. Resubmitting the document creates a new execution and consumes additional credits.
+A dismissed execution remains billable and consumes Automation Credits. 
+====
+
+To dismiss a review:
+
+. In the navigation panel, click *Review Tasks*.
+. Click the name of the document whose review you want to dismiss.
+. Click *Dismiss Review*.
+. In the confirmation message, confirm that you want to dismiss the review.
 
 == See Also
 

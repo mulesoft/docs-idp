@@ -56,7 +56,7 @@ include::partial$document-action.adoc[tag=modelUsage]
 [[callback-url]]
 === Define a Callback URL
 
-You can define a callback URL when you call IDP to execute your document actions. If defined, IDP calls the callback URL when the document action execution finishes with state `SUCCEEDED`, `FAILED`, or `MANUAL_VALIDATION_REQUIRED`. The callback URL must use HTTPS.
+You can define a callback URL when you call IDP to execute your document actions. If defined, IDP calls the callback URL when the document action execution finishes with state `SUCCEEDED`, `FAILED`, `DISMISSED`, or `MANUAL_VALIDATION_REQUIRED`. The callback URL must use HTTPS.
 
 To specify the callback URL, include the `callback` field in your API call and define a JSON value with the callback URL. The following example adds a callback to the previous `curl` command example:
 
@@ -96,7 +96,7 @@ Replace `<18-char-sfdc-org-id>` with your Salesforce Org ID.
 
 == Retrieve the Results of the Execution
 
-After a document action successfully processes a document, or after a reviewer verifies and submits a document queued for review, the results are available for consumption.
+After a document action successfully processes a document, or after a reviewer verifies and submits a document queued for review, the results are available for consumption. If a reviewer dismisses the review, the execution status changes to `DISMISSED` and the extracted results aren't submitted.
 
 When you use the IDP API to execute your document actions, retrieve the results by calling the `/executions` endpoint and providing an `executionId`, for example:
 
@@ -182,10 +182,11 @@ When you query the results of an execution, the IDP API returns any of the follo
 * `FAILED`: The execution request finished unsuccessfully.
 * `PARTIAL_SUCCESS`: The execution request finished but some sub-tasks failed.
 * `SUCCEEDED`: The execution request finished successfully.
+* `DISMISSED`: A reviewer dismissed the review of the execution. The extracted results weren't submitted.
 
 [IMPORTANT]
 ====
-Resubmitting a document after a `FAILED` or `PARTIAL_SUCCESS` execution creates a new execution and consumes Automation Credits in full, in addition to the credits already consumed by the original execution. See xref:quotas-and-limits.adoc#automation-credits[Automation Credit Consumption and Estimation].
+Resubmitting a document after a `FAILED`, `PARTIAL_SUCCESS`, or `DISMISSED` execution creates a new execution and consumes Automation Credits in full, in addition to the credits already consumed by the original execution. See xref:quotas-and-limits.adoc#automation-credits[Automation Credit Consumption and Estimation].
 ====
 
 == IDP API Documentation
