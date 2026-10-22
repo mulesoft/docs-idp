@@ -29,7 +29,7 @@ A document is queued for review if any of the following conditions is met:
 * At least one non-hidden field shows a confidence score lower than the configured threshold.
 * At least one non-hidden field marked as required is missing or could not be extracted.
 
-After a reviewer verifies and approves the result, the execution status changes to `SUCCEEDED`. For the possible statuses and their definitions, see the xref:automate-document-processing-with-the-idp-api.adoc#execution-status-reference[Execution Status Reference].
+After a reviewer verifies and approves the result, the execution status changes to `SUCCEEDED`. If a reviewer dismisses the review instead, the status changes to `DISMISSED` and the extracted results aren't submitted. For the possible statuses and their definitions, see the xref:automate-document-processing-with-the-idp-api.adoc#execution-status-reference[Execution Status Reference].
 
 == IDP API 
 
