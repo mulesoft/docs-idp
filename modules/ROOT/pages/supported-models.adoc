@@ -54,22 +54,6 @@ a|* Ask the model to not make up information to prevent hallucinations
     * Ask the model to not make up information to prevent hallucinations
     * List of https://help.openai.com/en/articles/8357869-how-to-change-your-language-setting-in-chatgpt#h_513834920e[languages supported] by OpenAI models
 
-
-| Einstein GEMINI-2.0 Flash 001 
- | Good for analyzing images due to increased accuracy in this type of documents.
-a| Standard 
-a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
-| Supported
-| Calculated
-a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models
-| Einstein GEMINI-2.5 Flash 
- | Good for analyzing images due to increased accuracy in this type of document. Performs quicker and with higher accuracy than Einstein GEMINI-2.0 Flash 001. 
-a| Standard 
-a| * Medium accuracy on reading checkboxes in forms when processing one page at a time
-| Supported
-| Calculated
-a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models 
-
 | Einstein GEMINI-3.5 Flash
  | Fast and the strongest all-round performer in current testing. Handles structured documents and invoices, including non-English formats (localized dates, currency, and thousand separators). Leads in checkboxes and handwriting.
  | Standard
@@ -103,18 +87,18 @@ a| * Supports up to 15 fields per document action
 
 |===
 
-////
-Gemini 3 removed from product; restore this table row (before `|===`) when the model returns:
-| Einstein GEMINI-3 Flash (Beta)
- | Best for analyzing images due to increased accuracy in this type of document. Performs quicker and with higher accuracy than Einstein GEMINI-2.0 Flash 001 and GEMINI-2.5 Flash. 
-a| High 
-a| * High accuracy on reading checkboxes in forms when processing one page at a time
-| Supported
-| Self-reported
-a|  * List of https://support.google.com/gemini/answer/13575153?hl=en[languages supported] by Gemini models.  
-* This model is in beta and may be deprecated or removed. It can cause extraction failures and occasionally cause the application to stop responding.
-* To use this model, go to the Einstein Setup in your Salesforce org and enable beta generative AI models. See https://help.salesforce.com/s/articleView?id=release-notes.rn_einstein_models_beta.htm&release=258&type=5[Turn On Beta Generative AI Models] for more details.
-////
+[[retired-models]]
+== Retired Models
+
+After a model retires, IDP temporarily routes requests for that model to a current model. Eventually, IDP removes the retired model from the product and you can no longer select it. To avoid errors or service interruptions, update your document actions to use a supported model as soon as possible.
+
+[%header%autowidth.spread,cols=".^a,.^a,.^a"]
+|===
+| Model Name | Retirement Date | Suggested Replacement
+| Einstein GEMINI-2.0 Flash 001 | June 1, 2026 | Einstein GEMINI-3.5 Flash
+| Einstein GEMINI-2.5 Flash | October 16, 2026 | Einstein GEMINI-3.5 Flash
+
+|===
 
 [[confidence-scores]]
 == Confidence Scores by Model
