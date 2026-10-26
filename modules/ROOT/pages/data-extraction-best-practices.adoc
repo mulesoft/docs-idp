@@ -59,6 +59,31 @@ Ignore dimension information.
 If the value is in a merged cell, interpret the topmost label as the column header.
 ----
 
+[[optional-fields]]
+=== Handle Optional Fields
+
+When a model doesn't find a value, it can return an empty string (`""`) instead of `null`. IDP scores an empty string at 0% confidence, which sends the document to review if the threshold is greater than 0. A `null` value isn't scored this way and doesn't trigger a review.
+
+For optional fields, explicitly instruct the model to return `null` when the value is absent:
+
+[%header,cols="1,1"]
+|===
+|Prompt That Can Cause Empty Strings | Prompt That Returns Null
+
+a|[source]
+----
+Extract the PO number. 
+If there is no PO number, return an empty response.
+----
+a|[source]
+----
+Extract the PO number. 
+If there is no PO number in the document, return null.
+----
+|===
+
+Model output can vary between runs, so test prompt changes against real documents, including documents with blank optional fields, before you change confidence thresholds.
+
 == Data Quality and Troubleshooting
 
 If your prompts are well-structured but the results are still inconsistent, the issue may relate to data quality rather than the model itself. Multimodal models process documents visually, so visual clarity is vital for accuracy.
