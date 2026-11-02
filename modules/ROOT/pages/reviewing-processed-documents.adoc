@@ -7,6 +7,8 @@ After processing a document, IDP queues it for review if:
 
 In this case, a user must review the document to verify the values for the conflicting fields. After you submit the review, the status of the extraction changes to `SUCCEEDED`. If you dismiss the review instead, the status changes to `DISMISSED` and the extraction isn't approved.
 
+If documents go to review because optional fields are blank, see <<empty-values>>.
+
 == Before You Begin 
 
 Before you can review a document, ensure that: 
@@ -45,6 +47,33 @@ To dismiss a review:
 . Click the name of the document whose review you want to dismiss.
 . Click *Dismiss Review*.
 . In the confirmation message, confirm that you want to dismiss the review.
+
+[[empty-values]]
+== Prevent Unnecessary Reviews for Blank Optional Fields
+
+When a model doesn't find a value for a field, it can return an empty string (`""`) or `null`. IDP treats these outputs differently when it decides whether to queue a document for review:
+
+[%header,cols="1,2,2"]
+|===
+|Model Output |Confidence Score |Effect on Review
+
+|Empty string (`""`)
+|0%
+|Any configured threshold greater than 0 is not met, so IDP queues the document for review, even if the field is optional.
+
+|`null`
+|Not scored
+|Doesn't trigger a review for a visible, optional field.
+|===
+
+Models, such as the Einstein OpenAI GPT-5.x models, might return an empty string for optional fields that don't appear in the document. In this case, documents are sent to *Review Tasks* even though the extraction is correct.
+
+To reduce unnecessary reviews:
+
+* In the prompt for each optional field, instruct the model to return `null` when the value is absent. For example, `If the value isn't in the document, return null.`
+* Avoid instructions such as `return an empty response` or `leave the field blank`, which can lead the model to return an empty string.
+
+Model output can vary between runs. Before you change confidence thresholds, test prompt changes against a representative set of real documents, including documents where optional fields are blank. For more guidance, see xref:data-extraction-best-practices.adoc#optional-fields[Handle Optional Fields] and xref:supported-models.adoc#confidence-scores[Confidence Scores by Model].
 
 == See Also
 

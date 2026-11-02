@@ -110,6 +110,8 @@ Each model returns a confidence score for every extracted value. Depending on th
 
 Self-reported confidence scores become less reliable as document processing complexity increases. Reliability depends not only on schema complexity, such as processing numerous fields or complex tables, but also on document quality, prompt logic, and structural variability across document groups. Low-quality scans, prompts that require data transformation alongside extraction, and inconsistent field availability across uploads can all degrade model self-assessment. Fields that are correctly returned as not found can show a low or 0% confidence score, which sends the document to human review even though the extraction is correct.
 
+Optional fields that the model returns as an empty string (`""`) are scored at 0% confidence, while `null` values aren't scored. For more information, see xref:reviewing-processed-documents.adoc#empty-values[How IDP Treats Empty and Null Values].
+
 IDP continues to refine how it requests self-reported confidence scores, which reduces how often this happens. However, because the model estimates its own confidence, no level of complexity guarantees consistent scores. Prompt instructions about confidence, such as `Fields that return "Not found" must have a 99% confidence rate`, don't reliably change the reported score.
 
 To get more reliable results with self-reported confidence scores:
