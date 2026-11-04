@@ -62,7 +62,7 @@ If the value is in a merged cell, interpret the topmost label as the column head
 [[optional-fields]]
 === Handle Optional Fields
 
-When a model doesn't find a value, it can return an empty string (`""`) instead of `null`. IDP scores an empty string at 0% confidence, which sends the document to review if the threshold is greater than 0. A `null` value isn't scored this way and doesn't trigger a review.
+When a model returns an empty string (`""`) instead of `null`, IDP treats it as a value and scores its confidence. If the score is lower than the configured confidence threshold, the empty string triggers a review, even in an optional field. IDP doesn't score `null`, so it doesn't trigger a review.
 
 For optional fields, explicitly instruct the model to return `null` when the value is absent:
 
