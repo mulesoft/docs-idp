@@ -98,6 +98,18 @@ After you finish configuring the output schema for your documents, add reviewers
 [NOTE]
 Some models provide self-reported confidence scores, which become less reliable as the document action gets more complex. See xref:supported-models.adoc#confidence-scores[Confidence Scores by Model] for additional information.
 
+[[office-files]]
+== Microsoft Office File Types Support
+
+Generic document actions with *Customize Schema* enabled can analyze Excel (.xlsx) files. You upload, configure, and run these files the same way as any other file type. For supported formats, see xref:quotas-and-limits.adoc[].
+
+IDP doesn't read the workbook directly. Before extraction, IDP converts the workbook to an A4 landscape PDF using its own pagination, and the model analyzes that PDF. As a result:
+
+* A table that spans multiple sheets or print areas can split across pages.
+* A large or dense sheet can cause the model to omit or alter data. If the results are incomplete, split the workbook into smaller files.
+
+IDP doesn't support .xls files, .xlsm files, or password-protected workbooks.
+
 [[settings]]
 == Configure Document Action Settings
 

@@ -6,8 +6,13 @@ The following table shows the quotas and limitations of the IDP service:
 |===
 | Limit | Description
 | Accepted File Formats 
-a| PDF, PNG, JPG, TIFF (150 DPI or more recommended) +
+a| PDF, PNG, JPG, TIFF (150 DPI or more recommended), XLSX +
 The document action builder does not support previewing TIFF files. However, you can extract data and review results from these files.
+
+[NOTE]
+====
+IDP supports XLSX files when using Generic document actions with *Customize Schema* enabled. IDP doesn't support .xls files, .xlsm files, or password-protected workbooks.
+====
 | File Size Limits
 a|
 [%header%autowidth.spread,cols="a,a"]
