@@ -101,14 +101,21 @@ Some models provide self-reported confidence scores, which become less reliable 
 [[office-files]]
 == Microsoft Office File Types Support
 
-Generic document actions with *Customize Schema* enabled can analyze Excel (.xlsx) files. You upload, configure, and run these files the same way as any other file type. For supported formats, see xref:quotas-and-limits.adoc[].
+Generic document actions with *Customize Schema* enabled can analyze the following Microsoft Office file types:
 
-IDP doesn't read the workbook directly. Before extraction, IDP converts the workbook to an A4 landscape PDF using its own pagination, and the model analyzes that PDF. As a result:
+* Excel (.xlsx)
+* Word (.docx)
+* PowerPoint (.pptx)
 
-* A table that spans multiple sheets or print areas can split across pages.
-* A large or dense sheet can cause the model to omit or alter data. If the results are incomplete, split the workbook into smaller files.
+You upload, configure, and run these files the same way as any other file type. For supported formats, see xref:quotas-and-limits.adoc[].
 
-IDP doesn't support .xls files, .xlsm files, or password-protected workbooks.
+IDP doesn't read Office files directly. Before extraction, IDP converts the file to a PDF, and the model analyzes that PDF. For Excel workbooks, IDP uses A4 landscape pages with its own pagination. As a result:
+
+* The page layout and page count of the converted PDF can differ from what you see in Excel, Word, or PowerPoint.
+* A table that spans multiple sheets, print areas, or slides can split across pages.
+* A large or dense file can cause the model to omit or alter data. If the results are incomplete, split the file into smaller files.
+
+IDP doesn't support legacy formats (.xls, .doc, .ppt), macro-enabled formats (.xlsm, .docm, .pptm), or password-protected files.
 
 [[settings]]
 == Configure Document Action Settings
