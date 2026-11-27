@@ -98,6 +98,50 @@ After you finish configuring the output schema for your documents, add reviewers
 [NOTE]
 Some models provide self-reported confidence scores, which become less reliable as the document action gets more complex. See xref:supported-models.adoc#confidence-scores[Confidence Scores by Model] for additional information.
 
+[[compare-models]]
+== Compare Models Before Extracting Data
+
+Compare the extraction results of different models on the same document before you decide which model to use. You can compare the results for fields and tables side by side with a baseline and up to two alternatives.
+
+Compare models is available for Generic document actions with *Customize Schema* enabled.
+
+=== Set Up and Run a Comparison
+
+. In the document action builder, click *Select Files* and upload one or more files.
++
+*Compare Models* is enabled after you upload at least one file.
+. Click *Compare Models*.
++
+The compare models setup page opens with the document that was in focus in the document action builder.
+. Review the *Baseline* and *Alternative* models to compare.
+. (Optional) You can add a second alternative and select another model for it.
+. Click *Compare*.
++
+The page shows the progress of the comparison, including any failures, and the model settings used. 
+** To view the settings used for the comparison, click *View Model Settings*.
+** To edit the comparison parameters, click *Edit Comparison* and then click *Compare* again.
+. When the results are available, click *View Results* to review them in the *Fields* and *Tables* views.
+
+=== Compare Fields
+
+In the *Fields* view, compare the baseline against either alternative, or view the baseline and both alternatives next to each other by using the *Compare with* selector.
+
+To show only the values that differ between models, select *Value differences only*. IDP highlights the differing values. If the results are identical, nothing is highlighted.
+
+To show the confidence score of each returned value from every model, select *Show confidence*.
+
+=== Compare Tables
+
+Select the *Tables* view and compare values by customizing these options:
+
+* *Table*: select the table to compare. You can select one table at a time.
+* *Compare with*: compare the baseline against all models or against a single alternative at a time.
+* *Match rows by*: defines how IDP matches each baseline row with a row in an alternative:
+** *Exact rows* (default): IDP compares all the values in a baseline row with the rows in the alternative and matches only rows with identical values. If any value in a row differs, IDP can treat it as a different row and show it as a new row.
+** A specific column: IDP matches rows using the value of the column you select. Use this option when a value can differ between models but both values can be correct.
+* *Value differences only*: select this option to show only the values that differ between models.
+* *Show confidence*: select this option to show the confidence score of each returned value from every model.
+
 [[office-files]]
 == Microsoft Office File Types Support
 
