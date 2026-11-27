@@ -33,7 +33,7 @@ If there are more than one results page, click *Submit and Next* and continue th
 [[dismiss-review]]
 == Dismiss Review Tasks Without Approving the Results
 
-Dismiss a review task to discard the extracted results of a document instead of approving them. When you dismiss a review, IDP changes the status of the execution to `DISMISSED` and doesn't submit the extracted results. If you defined a callback URL for the execution, IDP calls it to notify that the review was dismissed.
+Dismiss a review task to reject the extracted results of a document without approving or submitting them. When you dismiss a review, IDP changes the status of the execution to `DISMISSED` and doesn't submit the extracted results. If you defined a callback URL for the execution, IDP calls it to notify that the review was dismissed.
 
 You can dismiss one or multiple review tasks at a time.
 
