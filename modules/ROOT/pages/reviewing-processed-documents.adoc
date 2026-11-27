@@ -31,9 +31,11 @@ include::partial$create-document-actions.adoc[tag=highlightedValues]
 If there are more than one results page, click *Submit and Next* and continue the process until you review all pages.
 
 [[dismiss-review]]
-== Dismiss a Review Without Approving the Results
+== Dismiss Review Tasks Without Approving the Results
 
-If you don't want to approve the extracted results of a document, dismiss its review. When you dismiss a review, IDP changes the status of the execution to `DISMISSED` and doesn't submit the extracted results. If you defined a callback URL for the execution, IDP calls it to notify that the review was dismissed.
+Dismiss a review task to reject the extracted results of a document without approving or submitting them. When you dismiss a review, IDP changes the status of the execution to `DISMISSED` and doesn't submit the extracted results. If you defined a callback URL for the execution, IDP calls it to notify that the review was dismissed.
+
+You can dismiss one or multiple review tasks at a time.
 
 [WARNING]
 ====
@@ -41,12 +43,28 @@ You can't undo this action. To process a dismissed document again, resubmit it a
 A dismissed execution remains billable and consumes Automation Credits. 
 ====
 
-To dismiss a review:
+[[dismiss-single-review]]
+=== Dismiss a Single Review Task
 
 . In the navigation panel, click *Review Tasks*.
 . Click the name of the document whose review you want to dismiss.
 . Click *Dismiss Review*.
 . In the confirmation message, confirm that you want to dismiss the review.
+
+[[dismiss-multiple-reviews]]
+=== Dismiss Multiple Review Tasks
+
+. In the navigation panel, click *Review Tasks*.
+. Select the checkbox next to each review task you want to dismiss.
++
+To select all the tasks loaded on the page, select the *Select all* checkbox.
++
+[NOTE]
+====
+*Select all* selects only the tasks that are currently loaded on the page, not all the available tasks. To load and select more tasks, scroll down the list.
+====
+. Click *Dismiss*.
+. In the confirmation message, click *Dismiss* to confirm.
 
 [[empty-values]]
 == Prevent Unnecessary Reviews for Blank Optional Fields
